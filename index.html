@@ -3,388 +3,1450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tokey Sifullah Tanjil — Applied Mathematician</title>
-<meta name="google-site-verification" content="hfWrPwQb-TDru_CsdWd3CK1TnCTB4SjWTJGuEOG8WEc" />
-<meta name="description" content="Tokey Sifullah Tanjil is an applied mathematician working on nonlinear waves, plasma dynamics, and computational neuroscience, currently applying for PhD positions abroad.">
-<meta property="og:title" content="Tokey Sifullah Tanjil — Applied Mathematician">
-<meta property="og:description" content="Research in nonlinear waves, plasma dynamics, and computational neuroscience.">
+
+<title>Tokey Sifullah Tanjil</title>
+<meta name="description" content="Tokey Sifullah Tanjil — Research Assistant in Applied Mathematics, working on nonlinear dynamics, mathematical modeling, plasma physics, and computational neuroscience.">
+
+<meta property="og:title" content="Tokey Sifullah Tanjil">
+<meta property="og:description" content="Research Assistant in Applied Mathematics working on nonlinear dynamics, mathematical modeling, plasma physics, and computational neuroscience.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tokeyst.github.io/">
 <meta property="og:image" content="https://tokeyst.github.io/photo.jpg">
 <meta name="twitter:card" content="summary">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --navy:#152A3E;
-    --navy-light:#1E3A51;
-    --lightest-navy:#33526E;
-    --slate:#9BABBC;
-    --light-slate:#BAC6D3;
-    --lightest-slate:#E7ECF2;
-    --accent:#5FE3D0;
-    --mono:'IBM Plex Mono', monospace;
-    --sans:'IBM Plex Sans', -apple-system, sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--navy);
-    color:var(--slate);
-    font-family:var(--sans);
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{ margin:0; color:var(--lightest-slate); font-family:var(--sans); }
-  a{ color:var(--accent); text-decoration:none; }
-  p{ margin:0 0 14px; max-width:60ch; }
-  p:last-child{ margin-bottom:0; }
+:root{
+  --navy:#152A3E;
+  --navy-light:#1E3A51;
+  --lightest-navy:#33526E;
+  --slate:#9BABBC;
+  --light-slate:#BAC6D3;
+  --lightest-slate:#E7ECF2;
+  --accent:#5FE3D0;
+  --mono:'IBM Plex Mono',monospace;
+  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
 
-  .layout{ display:flex; align-items:flex-start; }
+*{box-sizing:border-box;}
 
-  /* ---------- Sticky sidebar (pins while you scroll, but stays in normal flow) ---------- */
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--navy);
+  color:var(--slate);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3{
+  margin:0;
+  color:var(--lightest-slate);
+  font-family:var(--sans);
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+p{
+  margin:0 0 14px;
+  max-width:68ch;
+}
+
+p:last-child{
+  margin-bottom:0;
+}
+
+.layout{
+  display:flex;
+  align-items:flex-start;
+  max-width:1500px;
+  margin:0 auto;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar{
+  position:sticky;
+  top:0;
+  flex:0 0 350px;
+  height:100vh;
+  overflow-y:auto;
+  scrollbar-width:none;
+  padding:58px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.sidebar::-webkit-scrollbar{
+  display:none;
+}
+
+.sidebar-top{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.avatar{
+  width:155px;
+  height:155px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid var(--lightest-navy);
+}
+
+.sidebar h1{
+  font-size:2rem;
+  font-weight:700;
+  line-height:1.18;
+  letter-spacing:-.02em;
+}
+
+.sidebar .role{
+  font-size:1rem;
+  color:var(--light-slate);
+  font-weight:500;
+  margin-top:8px;
+}
+
+.sidebar .intro{
+  font-size:14px;
+  color:var(--slate);
+  max-width:275px;
+  line-height:1.65;
+}
+
+.sidebar-metrics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px 18px;
+  margin-top:2px;
+}
+
+.metric{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--light-slate);
+  line-height:1.35;
+}
+
+.metric strong{
+  display:block;
+  color:var(--accent);
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:2px;
+}
+
+nav{
+  margin-top:6px;
+}
+
+nav ol{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+nav a{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--light-slate);
+  border-left:2px solid transparent;
+  padding-left:9px;
+  letter-spacing:.02em;
+  transition:color .15s ease,border-color .15s ease;
+}
+
+nav a .num{
+  color:var(--accent);
+  font-size:10.5px;
+}
+
+nav a:hover,
+nav a.active{
+  color:var(--accent);
+  border-left-color:var(--accent);
+}
+
+.social-icons{
+  display:flex;
+  gap:17px;
+  list-style:none;
+  margin:28px 0 0;
+  padding:0;
+}
+
+.social-icons a{
+  color:var(--light-slate);
+  display:flex;
+  transition:color .15s ease,transform .15s ease;
+}
+
+.social-icons a:hover{
+  color:var(--accent);
+  transform:translateY(-2px);
+}
+
+.social-icons svg{
+  width:19px;
+  height:19px;
+}
+
+.side-email{
+  position:fixed;
+  right:25px;
+  bottom:0;
+  writing-mode:vertical-rl;
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--light-slate);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:17px;
+  padding-bottom:20px;
+  z-index:5;
+}
+
+.side-email::after{
+  content:'';
+  width:1px;
+  height:65px;
+  background:var(--light-slate);
+}
+
+.side-email:hover{
+  color:var(--accent);
+}
+
+/* =========================
+   MAIN
+   ========================= */
+
+main{
+  flex:1;
+  min-width:0;
+  padding:62px 72px 90px 38px;
+  max-width:980px;
+}
+
+section{
+  padding-bottom:92px;
+  scroll-margin-top:30px;
+}
+
+.section-heading{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.section-heading .num{
+  font-family:var(--mono);
+  color:var(--accent);
+  font-size:1rem;
+  flex:0 0 auto;
+}
+
+.section-heading h2{
+  font-size:1.42rem;
+  white-space:nowrap;
+  letter-spacing:-.01em;
+}
+
+.section-heading .rule{
+  flex:1;
+  height:1px;
+  background:var(--lightest-navy);
+}
+
+/* Hero */
+.hero{
+  min-height:310px;
+  display:flex;
+  align-items:center;
+  padding-bottom:100px;
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero-kicker{
+  font-family:var(--mono);
+  color:var(--accent);
+  font-size:12px;
+  margin-bottom:13px;
+  letter-spacing:.03em;
+}
+
+.hero h2{
+  font-size:clamp(2rem,4vw,3.15rem);
+  line-height:1.12;
+  letter-spacing:-.035em;
+  margin-bottom:17px;
+}
+
+.hero h2 span{
+  color:var(--light-slate);
+  font-weight:500;
+}
+
+.hero-description{
+  font-size:16px;
+  max-width:650px;
+  color:var(--light-slate);
+}
+
+.hero-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+}
+
+.hero-links a{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--accent);
+  border:1px solid var(--lightest-navy);
+  padding:9px 13px;
+  border-radius:4px;
+  transition:background .15s ease,border-color .15s ease;
+}
+
+.hero-links a:hover{
+  background:var(--navy-light);
+  border-color:var(--accent);
+}
+
+/* About */
+#about p{
+  font-size:15px;
+  max-width:76ch;
+}
+
+/* Research */
+.research-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.research-card{
+  padding:18px 19px;
+  border:1px solid var(--lightest-navy);
+  border-radius:6px;
+  transition:background .18s ease,transform .18s ease,border-color .18s ease;
+}
+
+.research-card:hover{
+  background:var(--navy-light);
+  transform:translateY(-2px);
+  border-color:rgba(95,227,208,.45);
+}
+
+.research-card h3{
+  font-size:1rem;
+  margin-bottom:7px;
+}
+
+.research-card p{
+  font-size:14px;
+  line-height:1.55;
+}
+
+/* Publications */
+.pub{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  text-decoration:none;
+  color:inherit;
+  position:relative;
+  margin-bottom:14px;
+  padding:18px;
+  border-radius:6px;
+  border:1px solid transparent;
+  transition:background .18s ease,transform .18s ease,border-color .18s ease;
+}
+
+.pub:hover{
+  background:var(--navy-light);
+  transform:translateX(3px);
+  border-color:var(--lightest-navy);
+}
+
+.pub:last-of-type{
+  margin-bottom:0;
+}
+
+.pub .num{
+  font-family:var(--mono);
+  color:var(--accent);
+  font-size:.9rem;
+  flex:0 0 auto;
+  width:1.35em;
+  padding-top:2px;
+}
+
+.pub-fig{
+  flex:0 0 auto;
+  width:145px;
+  height:96px;
+  object-fit:cover;
+  border-radius:5px;
+  border:1px solid var(--lightest-navy);
+  background:var(--navy-light);
+}
+
+.pub .body{
+  min-width:0;
+  padding-right:22px;
+}
+
+.pub .title{
+  color:var(--lightest-slate);
+  margin:0 0 7px;
+  font-size:15.5px;
+  line-height:1.45;
+  font-weight:500;
+}
+
+.pub .authors{
+  color:var(--slate);
+  font-size:13.5px;
+  margin-bottom:3px;
+}
+
+.pub .authors strong{
+  color:var(--light-slate);
+  font-weight:600;
+}
+
+.pub .venue{
+  color:var(--light-slate);
+  font-size:13.5px;
+}
+
+.pub .doi{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--slate);
+  margin-top:4px;
+}
+
+.pub .go{
+  position:absolute;
+  top:18px;
+  right:17px;
+  color:var(--slate);
+  opacity:0;
+  transition:opacity .15s ease,color .15s ease;
+}
+
+.pub:hover .go{
+  opacity:1;
+  color:var(--accent);
+}
+
+.pub .go svg{
+  width:15px;
+  height:15px;
+}
+
+.publication-note{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--slate);
+  margin-top:18px;
+}
+
+/* Details */
+details{
+  margin-top:12px;
+  border-top:1px solid var(--lightest-navy);
+}
+
+details:last-child{
+  border-bottom:1px solid var(--lightest-navy);
+}
+
+details summary{
+  cursor:pointer;
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--light-slate);
+  list-style:none;
+  padding:13px 2px;
+}
+
+details summary::-webkit-details-marker{
+  display:none;
+}
+
+details summary::before{
+  content:'+ ';
+  color:var(--accent);
+}
+
+details[open] summary::before{
+  content:'– ';
+}
+
+details[open] summary{
+  color:var(--accent);
+}
+
+details ul{
+  margin:4px 0 14px;
+  padding-left:20px;
+}
+
+details li{
+  margin-bottom:8px;
+  font-size:14px;
+  color:var(--slate);
+}
+
+/* Experience */
+.exp-list{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.exp-item{
+  border-left:2px solid var(--lightest-navy);
+  padding:17px 20px;
+  border-radius:0 6px 6px 0;
+  transition:background .18s ease,border-color .18s ease;
+}
+
+.exp-item:hover{
+  background:var(--navy-light);
+  border-left-color:var(--accent);
+}
+
+.exp-item h3{
+  font-size:1rem;
+}
+
+.exp-item h3 span{
+  color:var(--accent);
+  font-weight:400;
+  font-size:.92rem;
+}
+
+.exp-item .when{
+  display:block;
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--slate);
+  margin:5px 0 9px;
+}
+
+.exp-item p{
+  font-size:14.5px;
+  max-width:72ch;
+}
+
+/* Education */
+.entry{
+  margin-bottom:22px;
+  padding-left:2px;
+}
+
+.entry:last-child{
+  margin-bottom:0;
+}
+
+.entry .when{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--accent);
+  display:block;
+  margin-bottom:3px;
+}
+
+.entry .what{
+  font-weight:600;
+  color:var(--lightest-slate);
+  font-size:16px;
+}
+
+.entry .where{
+  color:var(--slate);
+  font-size:14.5px;
+}
+
+/* Skills */
+.skill-group{
+  margin-bottom:22px;
+}
+
+.skill-group:last-child{
+  margin-bottom:0;
+}
+
+.skill-label{
+  color:var(--slate);
+  font-size:12px;
+  font-family:var(--mono);
+  margin-bottom:9px;
+}
+
+.interest-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.interest-list li{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--light-slate);
+  background:var(--navy-light);
+  border:1px solid var(--lightest-navy);
+  padding:6px 11px;
+  border-radius:4px;
+}
+
+/* Profiles */
+.profile-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.profile-list a{
+  display:block;
+  font-family:var(--mono);
+  font-size:13px;
+  color:var(--lightest-slate);
+  border:1px solid var(--lightest-navy);
+  padding:12px 14px;
+  border-radius:5px;
+  transition:background .15s ease,border-color .15s ease,color .15s ease;
+}
+
+.profile-list a:hover{
+  color:var(--accent);
+  background:var(--navy-light);
+  border-color:var(--accent);
+}
+
+/* Contact */
+.contact-cta{
+  padding:5px 0 0;
+}
+
+.contact-cta p{
+  font-size:15px;
+  max-width:62ch;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  padding:11px 18px;
+  border-radius:4px;
+  transition:background .18s ease,color .18s ease;
+}
+
+.btn:hover{
+  background:rgba(95,227,208,.1);
+}
+
+footer{
+  padding:15px 0 50px;
+  color:var(--slate);
+  font-family:var(--mono);
+  font-size:11.5px;
+}
+
+a:focus-visible,
+button:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width:1100px){
   .sidebar{
-    position:sticky;
-    top:0;
-    flex:0 0 330px;
-    height:100vh;
-    overflow-y:auto;
-    scrollbar-width:none;
-    -ms-overflow-style:none;
-    padding:60px 44px;
-    display:flex;
-    flex-direction:column;
-    gap:22px;
+    flex-basis:310px;
+    padding-left:34px;
+    padding-right:32px;
   }
-  .sidebar::-webkit-scrollbar{ display:none; }
-  .avatar{
-    width:168px;
-    height:168px;
-    object-fit:cover;
-    border-radius:12px;
-    border:1px solid var(--lightest-navy);
-  }
-  .sidebar h1{ font-size:2rem; font-weight:700; line-height:1.2; }
-  .sidebar .role{ font-size:1.05rem; color:var(--light-slate); font-weight:600; margin-top:6px; }
-  .sidebar .intro{ font-size:14.5px; color:var(--slate); max-width:280px; }
 
-  nav ol{ list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:13px; }
-  nav a{
-    display:flex; align-items:center; gap:11px;
-    font-family:var(--mono); font-size:12.5px; color:var(--light-slate);
-    border-left:2px solid transparent; padding-left:9px; letter-spacing:.03em;
-    transition:color .15s ease, border-color .15s ease;
+  main{
+    padding-right:50px;
   }
-  nav a .num{ color:var(--accent); font-size:11px; }
-  nav a:hover, nav a.active{ color:var(--accent); border-left-color:var(--accent); }
-
-  .social-icons{ display:flex; gap:18px; list-style:none; margin:0; padding:0; }
-  .social-icons a{ color:var(--light-slate); display:flex; }
-  .social-icons a:hover{ color:var(--accent); transform:translateY(-2px); }
-  .social-icons svg{ width:20px; height:20px; }
 
   .side-email{
-    position:fixed; right:26px; bottom:0;
-    writing-mode:vertical-rl;
-    font-family:var(--mono); font-size:12.5px; color:var(--light-slate);
-    display:flex; flex-direction:column; align-items:center; gap:18px;
-    padding-bottom:20px;
+    display:none;
   }
-  .side-email::after{ content:''; width:1px; height:70px; background:var(--light-slate); }
-  .side-email:hover{ color:var(--accent); }
+}
 
-  /* ---------- Main content ---------- */
-  #about p{ font-size:14px; text-align:justify; max-width:none; }
-
-  main{ flex:1; min-width:0; padding:60px 60px 100px; max-width:800px; }
-  section{ padding-bottom:90px; scroll-margin-top:30px; }
-
-  .section-heading{ display:flex; align-items:center; gap:20px; margin-bottom:32px; }
-  .section-heading .num{ font-family:var(--mono); color:var(--accent); font-size:1.1rem; flex:0 0 auto; }
-  .section-heading h2{ font-size:1.55rem; white-space:nowrap; }
-  .section-heading .rule{ flex:1; height:1px; background:var(--lightest-navy); }
-
-  .interest-list{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:0; list-style:none; }
-  .interest-list li{
-    font-family:var(--mono); font-size:13px; color:var(--light-slate);
-    background:var(--navy-light); border:1px solid var(--lightest-navy);
-    padding:7px 14px; border-radius:4px;
+@media (max-width:900px){
+  .layout{
+    flex-direction:column;
   }
 
-  .card{
-    padding:18px 20px; border-radius:6px;
-    transition:background .18s ease, transform .18s ease;
+  .sidebar{
+    position:static;
+    width:100%;
+    height:auto;
+    overflow:visible;
+    padding:42px 28px 18px;
   }
-  .card:hover{ background:var(--navy-light); transform:translateX(4px); }
+
+  .sidebar-top{
+    max-width:650px;
+  }
+
+  nav ol{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:10px 17px;
+    margin-top:22px;
+  }
+
+  nav a{
+    border-left:0;
+    padding-left:0;
+  }
+
+  nav a:hover,
+  nav a.active{
+    border-left:0;
+  }
+
+  main{
+    width:100%;
+    max-width:none;
+    padding:35px 28px 70px;
+  }
+
+  .hero{
+    min-height:0;
+    padding-bottom:75px;
+  }
+}
+
+@media (max-width:620px){
+  body{
+    font-size:15px;
+  }
+
+  .sidebar{
+    padding:34px 20px 15px;
+  }
+
+  .avatar{
+    width:125px;
+    height:125px;
+  }
+
+  .sidebar h1{
+    font-size:1.75rem;
+  }
+
+  main{
+    padding:30px 20px 60px;
+  }
+
+  section{
+    padding-bottom:70px;
+  }
+
+  .section-heading{
+    gap:12px;
+    margin-bottom:23px;
+  }
+
+  .section-heading h2{
+    font-size:1.25rem;
+  }
+
+  .section-heading .rule{
+    min-width:20px;
+  }
+
+  .hero h2{
+    font-size:2.1rem;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .research-grid{
+    grid-template-columns:1fr;
+  }
 
   .pub{
-    display:flex; gap:16px; align-items:flex-start;
-    text-decoration:none; color:inherit; position:relative;
-    margin-bottom:16px;
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:10px 12px;
   }
-  .pub:last-of-type{ margin-bottom:0; }
-  .pub .num{ font-family:var(--mono); color:var(--accent); font-size:.95rem; flex:0 0 auto; width:1.4em; padding-top:2px; }
-  .pub-fig{ flex:0 0 auto; width:150px; height:100px; object-fit:cover; border-radius:5px; border:1px solid var(--lightest-navy); }
-  .pub .body p{ color:var(--lightest-slate); margin:0 0 5px; font-size:15.5px; }
-  .pub .venue{ color:var(--slate); font-size:14.5px; }
-  .pub .doi{ font-family:var(--mono); font-size:12.5px; color:var(--slate); }
+
+  .pub-fig{
+    grid-column:2;
+    grid-row:1;
+    width:100%;
+    height:145px;
+    margin-bottom:3px;
+  }
+
+  .pub .body{
+    grid-column:2;
+    grid-row:2;
+    padding-right:0;
+  }
+
+  .pub .num{
+    grid-column:1;
+    grid-row:1 / span 2;
+  }
+
   .pub .go{
-    position:absolute; top:16px; right:14px; color:var(--slate);
-    opacity:0; transition:opacity .15s ease, color .15s ease;
+    top:15px;
+    right:14px;
   }
-  .pub:hover .go{ opacity:1; color:var(--accent); }
-  .pub .go svg{ width:16px; height:16px; }
 
-  details{ margin-top:14px; }
-  details summary{
-    cursor:pointer; font-family:var(--mono); font-size:13px;
-    color:var(--light-slate); list-style:none; padding:6px 0;
+  .profile-list{
+    grid-template-columns:1fr;
   }
-  details summary::-webkit-details-marker{ display:none; }
-  details summary::before{ content:'+ '; color:var(--accent); }
-  details[open] summary::before{ content:'– '; }
-  details[open] summary{ color:var(--accent); }
-  details ul{ margin:8px 0 0; padding-left:20px; }
-  details li{ margin-bottom:8px; font-size:15px; color:var(--slate); }
 
-  /* ---------- Experience: separate cards ---------- */
-  .exp-list{ display:flex; flex-direction:column; gap:6px; }
-  .exp-item{ border-left:2px solid var(--lightest-navy); }
-  .exp-item h3{ font-size:1.05rem; }
-  .exp-item h3 span{ color:var(--accent); font-weight:400; font-size:.95rem; }
-  .exp-item .when{ display:block; font-family:var(--mono); font-size:12.5px; color:var(--slate); margin:5px 0 10px; }
-  .exp-item p{ font-size:15.5px; }
-
-  .entry{ margin-bottom:20px; }
-  .entry:last-child{ margin-bottom:0; }
-  .entry .when{ font-family:var(--mono); font-size:12.5px; color:var(--accent); display:block; margin-bottom:3px; }
-  .entry .what{ font-weight:600; color:var(--lightest-slate); }
-  .entry .where{ color:var(--slate); font-size:15px; }
-
-  .link-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
-  .link-list a{
-    font-family:var(--mono); font-size:14.5px; color:var(--lightest-slate);
-    border-bottom:1px solid rgba(79,216,196,0.25);
+  .sidebar-metrics{
+    gap:12px 18px;
   }
-  .link-list a:hover{ color:var(--accent); border-bottom-color:var(--accent); }
-
-  .contact-cta{ text-align:left; }
-  .contact-cta p{ font-size:15.5px; }
-  .btn{
-    display:inline-block; margin-top:22px; font-family:var(--mono); font-size:13.5px;
-    color:var(--accent); border:1px solid var(--accent); padding:14px 26px; border-radius:4px;
-    transition:background .18s ease, color .18s ease;
-  }
-  .btn:hover{ background:rgba(79,216,196,0.1); }
-
-  footer{ padding:40px 0 60px; color:var(--slate); font-family:var(--mono); font-size:12.5px; text-align:left; }
-
-  a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
-
-  @media (max-width:1000px){
-    .layout{ flex-direction:column; }
-    .sidebar{ position:static; flex:none; width:auto; height:auto; overflow:visible; padding:40px 28px 10px; }
-    main{ padding:0 28px 80px; max-width:none; }
-    .side-email{ display:none; }
-    nav ol{ flex-direction:row; flex-wrap:wrap; gap:14px 20px; }
-  }
+}
 </style>
 </head>
+
 <body>
 
 <div class="layout">
+
+  <!-- =========================
+       LEFT SIDEBAR
+       ========================= -->
   <header class="sidebar">
-    <div>
+
+    <div class="sidebar-top">
+
       <img src="photo.jpg" alt="Tokey Sifullah Tanjil" class="avatar">
-      <h1>Tokey Sifullah Tanjil</h1>
-      <p class="role">Applied Mathematician</p>
-      <p class="intro">Nonlinear waves, plasma dynamics &amp; computational neuroscience. Currently applying for PhD positions abroad.</p>
+
+      <div>
+        <h1>Tokey Sifullah Tanjil</h1>
+        <p class="role">Research Assistant · Applied Mathematics</p>
+        <p class="intro">
+          Research in nonlinear dynamics, mathematical modeling,
+          plasma physics, and computational neuroscience.
+        </p>
+      </div>
+
+      <div class="sidebar-metrics">
+        <div class="metric">
+          <strong>3</strong>
+          Q1 publications
+        </div>
+        <div class="metric">
+          <strong>3.73/4</strong>
+          M.Sc. CGPA
+        </div>
+        <div class="metric">
+          <strong>2nd</strong>
+          M.Sc. position
+        </div>
+      </div>
+
+      <nav>
+        <ol id="site-nav">
+          <li><a href="#about"><span class="num">01.</span> About</a></li>
+          <li><a href="#research"><span class="num">02.</span> Research</a></li>
+          <li><a href="#publications"><span class="num">03.</span> Publications</a></li>
+          <li><a href="#experience"><span class="num">04.</span> Experience</a></li>
+          <li><a href="#education"><span class="num">05.</span> Education</a></li>
+          <li><a href="#skills"><span class="num">06.</span> Skills</a></li>
+          <li><a href="#profiles"><span class="num">07.</span> Profiles</a></li>
+          <li><a href="#contact"><span class="num">08.</span> Contact</a></li>
+        </ol>
+      </nav>
+
     </div>
 
-    <nav>
-      <ol id="site-nav">
-        <li><a href="#about"><span class="num">01.</span> About</a></li>
-        <li><a href="#research"><span class="num">02.</span> Research</a></li>
-        <li><a href="#publications"><span class="num">03.</span> Publications</a></li>
-        <li><a href="#experience"><span class="num">04.</span> Experience</a></li>
-        <li><a href="#education"><span class="num">05.</span> Education</a></li>
-        <li><a href="#skills"><span class="num">06.</span> Skills</a></li>
-        <li><a href="#links"><span class="num">07.</span> Important Links</a></li>
-        <li><a href="#contact"><span class="num">08.</span> Contact</a></li>
-      </ol>
-    </nav>
+    <ul class="social-icons" aria-label="Academic profiles">
 
-  
+      <li>
+        <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
+           target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M3 10.2 12 4l9 6.2-9 6.2-9-6.2Z"/>
+            <path d="M7 13.2V17c0 1.8 2.2 3 5 3s5-1.2 5-3v-3.8"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.researchgate.net/profile/Tokey-Sifullah"
+           target="_blank" rel="noopener" aria-label="ResearchGate">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.7 4.2h5.1c3.2 0 5.2 1.7 5.2 4.3 0 1.8-.9 3.1-2.3 3.8 1.5.6 2.3 1.8 2.3 3.6 0 2.6-2 4.1-5.1 4.1H8.7V4.2Zm3 2.4v4.5h1.8c1.6 0 2.5-.8 2.5-2.3 0-1.5-.9-2.2-2.5-2.2h-1.8Zm0 6.9v4.2h2c1.6 0 2.5-.7 2.5-2.1 0-1.4-.9-2.1-2.5-2.1h-2Z"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="mailto:tsifullaht@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m4 7 8 6 8-6"/>
+          </svg>
+        </a>
+      </li>
+
+    </ul>
+
   </header>
 
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
   <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <div class="hero-kicker">WELCOME — ACADEMIC PROFILE</div>
+
+        <h2>
+          Tokey Sifullah Tanjil
+          <span>· Research Assistant in Applied Mathematics</span>
+        </h2>
+
+        <p class="hero-description">
+          I work on mathematical models of nonlinear and complex systems,
+          with research spanning nonlinear waves, plasma dynamics,
+          epidemiological modeling, and computational neuroscience.
+        </p>
+
+        <div class="hero-links">
+          <a href="cv.pdf" target="_blank">Curriculum Vitae ↗</a>
+          <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
+             target="_blank" rel="noopener">Google Scholar ↗</a>
+          <a href="mailto:tsifullaht@gmail.com">Email ↗</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
     <section id="about">
-      <div class="section-heading"><span class="num">01.</span><h2>About Me</h2><span class="rule"></span></div>
-      <p>I started doing research in the third year of my BSc, building a compartmental model for dengue transmission under Professor Dr. Mohammed Aman Ullah — my first exposure to nonlinear ODEs, equilibrium analysis, and numerical work in MATLAB and Python.</p>
-      <p>In my Master's, I moved into plasma physics with Assistant Professor Shahrina Akter, learning Maple from scratch to study ion-acoustic wave propagation in Venus' upper ionosphere, and later the head-on collision of dust-acoustic solitary waves in dusty plasma. I picked up LaTeX along the way to write up the results.</p>
-      <p>I'm now a Research Assistant at CUET under Prof. Dr. M. G. Hafez, working on a fractal-fractional hybrid neuron-network model for neurodegenerative disease progression, combining Hodgkin–Huxley dynamics with Wilson–Cowan mean-field theory. Along the way I've also helped train other Master's, MPhil, and PhD students in the lab.</p>
-      <p>The common thread across epidemiology, plasma physics, and computational neuroscience is that I can pick up the tools a new field needs quickly enough to contribute, then pass that on to others — part of why I'm comfortable applying for a PhD without narrowing to one subfield in advance.</p>
+      <div class="section-heading">
+        <span class="num">01.</span>
+        <h2>About Me</h2>
+        <span class="rule"></span>
+      </div>
+
+      <p>
+        I am a Research Assistant in Applied Mathematics with research
+        experience in nonlinear dynamical systems, mathematical modeling,
+        plasma physics, and computational neuroscience. My work has included
+        nonlinear wave propagation, soliton interactions, fractional-order
+        models, epidemiological modeling, and neuron dynamics.
+      </p>
+
+      <p>
+        I began research during my undergraduate studies through mathematical
+        modeling of dengue transmission and later moved into plasma physics
+        and nonlinear wave theory during my Master's. My current research
+        focuses on mathematical models of neuronal dynamics and network
+        behavior.
+      </p>
     </section>
 
+
+    <!-- RESEARCH -->
     <section id="research">
-      <div class="section-heading"><span class="num">02.</span><h2>Research Interests</h2><span class="rule"></span></div>
-      <ul class="interest-list">
-        <li>Nonlinear waves &amp; solitons</li>
-        <li>Plasma physics &amp; fluid dynamics</li>
-        <li>Mathematical modelling</li>
-        <li>Nonlinear dynamical systems</li>
-        <li>Fractional-order differential equations</li>
-        <li>Computational neuroscience</li>
-        <li>Data-driven modelling &amp; machine learning</li>
-      </ul>
+      <div class="section-heading">
+        <span class="num">02.</span>
+        <h2>Research</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <h3>Nonlinear Dynamics</h3>
+          <p>
+            Nonlinear waves, solitons, dynamical systems, stability,
+            and nonlinear wave interactions.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>Plasma Physics</h3>
+          <p>
+            Ion-acoustic and dust-acoustic waves, nonlinear propagation,
+            multi-soliton structures, and dusty plasma.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>Mathematical Modeling</h3>
+          <p>
+            Mathematical models of biological and physical systems,
+            including epidemiological and dynamical models.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>Computational Neuroscience</h3>
+          <p>
+            Neuron dynamics, fractional-order models, Hodgkin–Huxley
+            systems, and network-based modeling.
+          </p>
+        </article>
+
+      </div>
     </section>
 
+
+    <!-- PUBLICATIONS -->
     <section id="publications">
-      <div class="section-heading"><span class="num">03.</span><h2>Publications</h2><span class="rule"></span></div>
+      <div class="section-heading">
+        <span class="num">03.</span>
+        <h2>Selected Publications</h2>
+        <span class="rule"></span>
+      </div>
 
-      <a class="pub card" href="https://doi.org/10.1016/j.asr.2026.09.001" target="_blank" rel="noopener">
-        <span class="num">1.</span>
-        <img class="pub-fig" src="pub1.jpg" alt="Figure from publication 1">
+      <a class="pub" href="https://doi.org/10.1016/j.asr.2026.09.001"
+         target="_blank" rel="noopener">
+
+        <span class="num">01.</span>
+
+        <!-- Keep your publication image -->
+        <img class="pub-fig" src="pub1.jpg"
+             alt="Figure from publication on ion-acoustic wave structures">
+
         <div class="body">
-          <p>Islam, M.A., Tanjil, T.S. &amp; Hafez, M.G. (2026). Cylindrical and spherical propagation of ion-acoustic overtaking multi-wave structures in the upper ionosphere of Venus.</p>
-          <p class="venue">Advances in Space Research</p>
-          <p class="doi">doi.org/10.1016/j.asr.2026.09.001</p>
+          <p class="title">
+            Cylindrical and Spherical Propagation of Ion-Acoustic
+            Overtaking Multi-Wave Structures in the Upper Ionosphere of Venus
+          </p>
+
+          <p class="authors">
+            M. A. Islam, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
+          </p>
+
+          <p class="venue">
+            <em>Advances in Space Research</em> · 2026 · Q1
+          </p>
+
+          <p class="doi">
+            DOI: 10.1016/j.asr.2026.09.001
+          </p>
         </div>
-        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+
+        <span class="go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17 17 7M9 7h8v8"/>
+          </svg>
+        </span>
       </a>
 
-      <a class="pub card" href="https://doi.org/10.1038/s41598-026-57659-z" target="_blank" rel="noopener">
-        <span class="num">2.</span>
-        <img class="pub-fig" src="pub2.jpg" alt="Figure from publication 2">
+
+      <a class="pub" href="https://doi.org/10.1038/s41598-026-57659-z"
+         target="_blank" rel="noopener">
+
+        <span class="num">02.</span>
+
+        <!-- Keep your publication image -->
+        <img class="pub-fig" src="pub2.jpg"
+             alt="Figure from publication on dust-acoustic multi-solitons">
+
         <div class="body">
-          <p>Akter, S., Tanjil, T.S. &amp; Hafez, M.G. (2026). Interacting dust-acoustic multi-soliton and periodic waves in strongly coupled dusty plasma with ion-drag force.</p>
-          <p class="venue">Scientific Reports, 16, 28115</p>
-          <p class="doi">doi.org/10.1038/s41598-026-57659-z</p>
+          <p class="title">
+            Interacting Dust-Acoustic Multi-Soliton and Periodic Waves
+            in Strongly Coupled Dusty Plasma with Ion-Drag Force
+          </p>
+
+          <p class="authors">
+            S. Akter, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
+          </p>
+
+          <p class="venue">
+            <em>Scientific Reports</em>, 16, 28115 · 2026 · Q1
+          </p>
+
+          <p class="doi">
+            DOI: 10.1038/s41598-026-57659-z
+          </p>
         </div>
-        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+
+        <span class="go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17 17 7M9 7h8v8"/>
+          </svg>
+        </span>
       </a>
 
-      <a class="pub card" href="https://doi.org/10.1016/j.asr.2025.12.043" target="_blank" rel="noopener">
-        <span class="num">3.</span>
-        <img class="pub-fig" src="pub3.jpg" alt="Figure from publication 3">
+
+      <a class="pub" href="https://doi.org/10.1016/j.asr.2025.12.043"
+         target="_blank" rel="noopener">
+
+        <span class="num">03.</span>
+
+        <!-- Keep your publication image -->
+        <img class="pub-fig" src="pub3.jpg"
+             alt="Figure from publication on ion-acoustic solitons">
+
         <div class="body">
-          <p>Akter, S., Tanjil, T.S. &amp; Hafez, M.G. (2026). Propagation and interaction of ion-acoustic single, N-solitons, and periodic waves in Venus' upper ionosphere.</p>
-          <p class="venue">Advances in Space Research, 77(4), 5236–5253</p>
-          <p class="doi">doi.org/10.1016/j.asr.2025.12.043</p>
+          <p class="title">
+            Propagation and Interaction of Ion-Acoustic Single,
+            N-Solitons, and Periodic Waves in Venus' Upper Ionosphere
+          </p>
+
+          <p class="authors">
+            S. Akter, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
+          </p>
+
+          <p class="venue">
+            <em>Advances in Space Research</em>, 77(4), 5236–5253 · 2026 · Q1
+          </p>
+
+          <p class="doi">
+            DOI: 10.1016/j.asr.2025.12.043
+          </p>
         </div>
-        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+
+        <span class="go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17 17 7M9 7h8v8"/>
+          </svg>
+        </span>
       </a>
+
 
       <details>
-        <summary>Working papers &amp; in progress</summary>
+        <summary>Working papers &amp; research in progress</summary>
         <ul>
-          <li>A Fractal-Fractional Hybrid Neuron-Network Model for Neurodegenerative Disease Progression: Merging Hodgkin–Huxley Dynamics with Wilson–Cowan Mean-Field Theory — in progress, CUET.</li>
-          <li>Mathematical Model for Dengue Transmission: A Comparative Study for Urban and Rural Areas in Bangladesh — presented at AMSE-2025.</li>
-          <li>The Head-on Collision in Dust-Acoustic Solitary Waves in an Unmagnetized Dusty Plasma with Trapped Ion Distribution — in preparation.</li>
+          <li>
+            <strong>Firing Dynamics of a Caputo Fractional-Order Memristive
+            Hodgkin–Huxley Neuron Model with a Calcium Channel</strong>
+            — under submission.
+          </li>
+          <li>
+            <strong>Mathematical Model for Dengue Transmission:
+            A Comparative Study for Urban and Rural Areas in Bangladesh</strong>
+            — submitted; presented at AMSE-2025.
+          </li>
+          <li>
+            <strong>The Head-on Collision in Dust-Acoustic Solitary Waves
+            in an Unmagnetized Dusty Plasma with Trapped Ion Distribution</strong>
+            — under development.
+          </li>
         </ul>
       </details>
+
 
       <details>
         <summary>Conference presentations</summary>
         <ul>
-          <li>4th International Conference on Applied Mathematics in Science and Engineering (AMSE-2025), India — Aug 2025.</li>
-          <li>24th International Mathematics Conference (24IMC 2025), Bangladesh — Dec 2025.</li>
+          <li>
+            <strong>4th International Conference on Applied Mathematics
+            in Science and Engineering (AMSE-2025)</strong>, India —
+            August 2025.
+          </li>
+          <li>
+            <strong>24th International Mathematics Conference (24IMC 2025)</strong>,
+            Bangladesh — December 2025.
+          </li>
         </ul>
       </details>
+
+      <p class="publication-note">
+        Publication titles link directly to their DOI pages.
+      </p>
     </section>
 
+
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <div class="section-heading"><span class="num">04.</span><h2>Experience</h2><span class="rule"></span></div>
+      <div class="section-heading">
+        <span class="num">04.</span>
+        <h2>Experience</h2>
+        <span class="rule"></span>
+      </div>
 
       <div class="exp-list">
-        <div class="exp-item card">
-          <h3>Research Assistant <span>@ Chittagong University of Science and Technology (CUET)</span></h3>
-          <span class="when">Dec 2025 – Present</span>
-          <p>Working under Prof. Dr. M. G. Hafez on a fractal-fractional hybrid neuron-network model for neurodegenerative disease progression, combining Hodgkin–Huxley dynamics with Wilson–Cowan mean-field theory.</p>
+
+        <div class="exp-item">
+          <h3>
+            Research Assistant
+            <span>@ Chittagong University of Engineering and Technology (CUET)</span>
+          </h3>
+          <span class="when">December 2025 – Present</span>
+          <p>
+            Working under Prof. Dr. M. G. Hafez on a fractal-fractional
+            hybrid neuron-network model for neurodegenerative disease
+            progression, combining Hodgkin–Huxley dynamics with
+            Wilson–Cowan mean-field theory.
+          </p>
         </div>
-        <div class="exp-item card">
-          <h3>Research Assistant <span>@ University of Chittagong</span></h3>
-          <span class="when">Nov 2025 – Mar 2026</span>
-          <p>Working under Assistant Prof. Shahrina Akter on the head-on collision of dust-acoustic solitary waves in an unmagnetized dusty plasma with trapped ion distribution.</p>
+
+        <div class="exp-item">
+          <h3>
+            Research Assistant
+            <span>@ University of Chittagong</span>
+          </h3>
+          <span class="when">November 2025 – March 2026</span>
+          <p>
+            Worked under Assistant Professor Shahrina Akter on the
+            head-on collision of dust-acoustic solitary waves in an
+            unmagnetized dusty plasma with trapped ion distribution.
+          </p>
         </div>
-        <div class="exp-item card">
-          <h3>Teaching Assistant (Intern) <span>@ Katirhat Mohila Degree College</span></h3>
-          <span class="when">Sep 2023 – Jan 2024</span>
-          <p>Taught HSC first-year students and Business Mathematics for the Management Department, Hathazari, Chittagong.</p>
+
+        <div class="exp-item">
+          <h3>
+            Teaching Assistant (Intern)
+            <span>@ Katirhat Mohila Degree College</span>
+          </h3>
+          <span class="when">September 2023 – January 2024</span>
+          <p>
+            Completed a five-month teaching internship, teaching HSC
+            first-year mathematics and Business Mathematics for the
+            Management Department.
+          </p>
         </div>
-        <div class="exp-item card">
-          <h3>Associate Editor <span>@ Competitive Math Booster</span></h3>
-          <span class="when">Nov 2022</span>
-          <p>Edited a mathematics reference book prepared for the BCS competitive examination.</p>
+
+        <div class="exp-item">
+          <h3>
+            Associate Editor
+            <span>@ Competitive Math Booster</span>
+          </h3>
+          <span class="when">November 2022</span>
+          <p>
+            Edited a mathematics reference book prepared for the
+            BCS competitive examination.
+          </p>
         </div>
+
       </div>
     </section>
 
+
+    <!-- EDUCATION -->
     <section id="education">
-      <div class="section-heading"><span class="num">05.</span><h2>Education</h2><span class="rule"></span></div>
+      <div class="section-heading">
+        <span class="num">05.</span>
+        <h2>Education</h2>
+        <span class="rule"></span>
+      </div>
+
       <div class="entry">
-        <span class="when">2022 (result published 2025)</span>
+        <span class="when">2022 · Result published 2025</span>
         <div class="what">M.Sc. in Applied Mathematics</div>
-        <div class="where">University of Chittagong — CGPA 3.73/4.00, 1st Class, 2nd Position</div>
+        <div class="where">
+          University of Chittagong · CGPA 3.73/4.00 · 1st Class · 2nd Position
+        </div>
       </div>
+
       <div class="entry">
-        <span class="when">2021</span>
+        <span class="when">2021 · Result published 2023</span>
         <div class="what">B.Sc. (Honours) in Mathematics</div>
-        <div class="where">University of Chittagong — CGPA 3.48/4.00</div>
+        <div class="where">
+          University of Chittagong · CGPA 3.48/4.00
+        </div>
       </div>
     </section>
 
+
+    <!-- SKILLS -->
     <section id="skills">
-      <div class="section-heading"><span class="num">06.</span><h2>Skills</h2><span class="rule"></span></div>
-      <p style="color:var(--slate); font-size:13px; font-family:var(--mono); margin-bottom:10px;">Mathematical software</p>
-      <ul class="interest-list" style="margin-bottom:24px;"><li>Maple</li><li>MATLAB</li><li>Mathematica</li></ul>
-      <p style="color:var(--slate); font-size:13px; font-family:var(--mono); margin-bottom:10px;">Programming</p>
-      <ul class="interest-list" style="margin-bottom:24px;"><li>Python</li><li>Fortran</li><li>C++</li></ul>
-      <p style="color:var(--slate); font-size:13px; font-family:var(--mono); margin-bottom:10px;">Typesetting &amp; design</p>
-      <ul class="interest-list"><li>LaTeX</li><li>Adobe Photoshop</li><li>Adobe Illustrator</li></ul>
+      <div class="section-heading">
+        <span class="num">06.</span>
+        <h2>Technical Skills</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">MATHEMATICAL SOFTWARE</div>
+        <ul class="interest-list">
+          <li>Maple</li>
+          <li>MATLAB</li>
+          <li>Mathematica</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">PROGRAMMING</div>
+        <ul class="interest-list">
+          <li>Python</li>
+          <li>Fortran</li>
+          <li>C++</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">TYPESETTING &amp; DOCUMENTATION</div>
+        <ul class="interest-list">
+          <li>LaTeX</li>
+          <li>Microsoft Word</li>
+          <li>Microsoft Excel</li>
+          <li>Microsoft PowerPoint</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="links">
-      <div class="section-heading"><span class="num">07.</span><h2>Important Links</h2><span class="rule"></span></div>
-      <ul class="link-list">
-        <li><a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-        <li><a href="https://www.researchgate.net/profile/Tokey-Sifullah" target="_blank" rel="noopener">ResearchGate</a></li>
-        <li><a href="mailto:tsifullaht@gmail.com">tsifullaht@gmail.com</a></li>
-        <li><a href="cv.pdf">CV (PDF)</a></li>
+
+    <!-- PROFILES -->
+    <section id="profiles">
+      <div class="section-heading">
+        <span class="num">07.</span>
+        <h2>Academic Profiles</h2>
+        <span class="rule"></span>
+      </div>
+
+      <ul class="profile-list">
+        <li>
+          <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
+             target="_blank" rel="noopener">
+            Google Scholar ↗
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.researchgate.net/profile/Tokey-Sifullah"
+             target="_blank" rel="noopener">
+            ResearchGate ↗
+          </a>
+        </li>
+
+        <li>
+          <a href="cv.pdf" target="_blank">
+            Curriculum Vitae ↗
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:tsifullaht@gmail.com">
+            tsifullaht@gmail.com ↗
+          </a>
+        </li>
       </ul>
     </section>
 
+
+    <!-- CONTACT -->
     <section id="contact">
-      <div class="section-heading"><span class="num">08.</span><h2>Contact</h2><span class="rule"></span></div>
+      <div class="section-heading">
+        <span class="num">08.</span>
+        <h2>Contact</h2>
+        <span class="rule"></span>
+      </div>
+
       <div class="contact-cta">
-        <p>Based in Dhaka, Bangladesh. Feel free to reach out directly.</p>
-        <a class="btn" href="mailto:tsifullaht@gmail.com">Say Hello</a>
+        <p>
+          I am interested in research opportunities in applied mathematics,
+          nonlinear dynamics, mathematical modeling, plasma physics,
+          and computational neuroscience.
+        </p>
+
+        <a class="btn" href="mailto:tsifullaht@gmail.com">
+          Get in touch ↗
+        </a>
       </div>
     </section>
 
-    <footer>Tokey Sifullah Tanjil</footer>
+
+    <footer>
+      © Tokey Sifullah Tanjil
+    </footer>
+
   </main>
 </div>
 
-<a class="side-email" href="mailto:tsifullaht@gmail.com">tsifullaht@gmail.com</a>
+
+<a class="side-email" href="mailto:tsifullaht@gmail.com">
+  tsifullaht@gmail.com
+</a>
+
 
 <script>
 (function(){
-  var nav = document.getElementById('site-nav');
-  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
-  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+
+  const nav = document.getElementById('site-nav');
+  const links = Array.from(nav.querySelectorAll('a'));
+
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
   function onScroll(){
-    var pos = window.scrollY + 120;
-    var current = sections[0];
-    sections.forEach(function(sec){ if(sec && sec.offsetTop <= pos) current = sec; });
-    links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current.id); });
+
+    const position = window.scrollY + 140;
+    let current = sections[0];
+
+    sections.forEach(section => {
+      if(section.offsetTop <= position){
+        current = section;
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.toggle(
+        'active',
+        link.getAttribute('href') === '#' + current.id
+      );
+    });
   }
+
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
+
 })();
 </script>
+
 </body>
 </html>
