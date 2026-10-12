@@ -19,7 +19,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1f44'/%3E%3Cpath d='M2 25C10 25 12 7 16 7S22 25 30 25' fill='none' stroke='%23f5b544' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261012c">
+<link rel="stylesheet" href="style.css?v=20261012d">
 
 <script type="application/ld+json">
 {
@@ -70,8 +70,13 @@
 
     <div class="hero-grid">
       <div class="hero-text">
-        <h1>Tokey Sifullah Tanjil</h1>
-        <p class="role">Research Assistant in Applied Mathematics at the Chittagong University of Engineering and Technology (CUET), Bangladesh</p>
+        <div class="id">
+          <img class="portrait" src="photo.jpg" width="1254" height="1254" alt="Portrait of Tokey Sifullah Tanjil">
+          <div>
+            <h1>Tokey Sifullah Tanjil</h1>
+            <p class="role">Research Assistant in Applied Mathematics at the Chittagong University of Engineering and Technology (CUET), Bangladesh</p>
+          </div>
+        </div>
         <p class="lede">I build and analyze mathematical models of nonlinear systems: solitary waves in plasmas, and the dynamics of neurons and neural networks. My three journal articles so far study multi-soliton and periodic waves in space and dusty plasmas.</p>
         <p class="seek">I am seeking a PhD position in applied mathematics, in nonlinear waves, plasma physics or computational neuroscience.</p>
         <div class="actions">
@@ -84,14 +89,11 @@
           <a href="https://www.researchgate.net/profile/Tokey-Sifullah" target="_blank" rel="noopener">ResearchGate</a>
         </p>
       </div>
-      <img class="portrait" src="photo.jpg" width="1254" height="1254" alt="Portrait of Tokey Sifullah Tanjil">
-    </div>
 
-    <!-- live figure -->
     <figure class="sim" id="sim">
       <div class="sim-head">
         <h2 class="sim-title">Two solitons colliding</h2>
-        <p class="sim-hint">Drag the time slider to step through the collision.</p>
+        <p class="sim-hint">Drag the slider to step through time.</p>
       </div>
 
       <canvas id="sim-profile" role="img" aria-label="Plot of the wave height u against position x at the chosen time. Two solitary waves, one tall and one short, approach, interact and separate."></canvas>
@@ -99,11 +101,11 @@
 
       <div class="sim-controls">
         <button type="button" id="sim-play" class="btn small">Play</button>
-        <label class="ctl grow">Time
+        <label class="ctl">Time
           <input id="sim-t" type="range" min="-0.6" max="2.4" step="0.01" value="-0.6">
           <output id="sim-tval" for="sim-t">t = &minus;0.60</output>
         </label>
-        <label class="ctl grow">Amplitude of the taller soliton
+        <label class="ctl wide">Amplitude of the taller soliton
           <input id="sim-k2" type="range" min="1.3" max="1.9" step="0.01" value="1.55">
           <output id="sim-amp" for="sim-k2">4.80</output>
         </label>
@@ -111,9 +113,11 @@
 
       <p class="sim-read" id="sim-read" aria-live="polite"></p>
 
-      <figcaption>Figure 1. Two solitons of the KdV equation, <i>u</i><sub><i>t</i></sub> + 6<i>uu</i><sub><i>x</i></sub> + <i>u</i><sub><i>xxx</i></sub> = 0. The upper plot shows the wave at the chosen time. The lower map shows position against time, with time upward. Dashed lines mark where each soliton would be if the two did not interact. The taller soliton moves faster, overtakes the shorter one, and both keep their shapes, shifted from the dashed lines.</figcaption>
+      <figcaption>Figure 1. Two solitons of the KdV equation, <i>u</i><sub><i>t</i></sub> + 6<i>uu</i><sub><i>x</i></sub> + <i>u</i><sub><i>xxx</i></sub> = 0. Lower map: position against time, time upward. Dashed lines show where each soliton would be without the collision.</figcaption>
       <noscript><p class="sim-noscript">This figure needs JavaScript to run.</p></noscript>
     </figure>
+    </div>
+
 
   </div>
 </div>
@@ -347,6 +351,6 @@
   </div>
 </section>
 
-<script src="app.js?v=20261012b" defer></script>
+<script src="app.js?v=20261012d" defer></script>
 </body>
 </html>

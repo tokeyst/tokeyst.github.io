@@ -59,10 +59,10 @@
     outA.textContent = (2 * k2 * k2).toFixed(2);
     var L = shiftL();
     read.innerHTML =
-      '<span class="dot amber"></span><b>Taller soliton</b>: amplitude ' + (2 * k2 * k2).toFixed(2) +
-      ', ends up ' + (L / (2 * k2)).toFixed(2) + ' ahead of its dashed line. ' +
-      '<span class="dot sky" style="margin-left:.6em"></span><b>Shorter soliton</b>: amplitude ' + (2 * K1 * K1).toFixed(2) +
-      ', ends up ' + (L / (2 * K1)).toFixed(2) + ' behind its dashed line.';
+      '<span class="dot amber"></span><b>Taller</b>: amplitude ' + (2 * k2 * k2).toFixed(2) +
+      ', ends ' + (L / (2 * k2)).toFixed(2) + ' ahead of its dashed line. ' +
+      '<span class="dot sky" style="margin-left:.5em"></span><b>Shorter</b>: amplitude ' + (2 * K1 * K1).toFixed(2) +
+      ', ends ' + (L / (2 * K1)).toFixed(2) + ' behind.';
   }
 
   function size() {
