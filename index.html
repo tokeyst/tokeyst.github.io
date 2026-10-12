@@ -4,1429 +4,738 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Tokey Sifullah Tanjil</title>
-<meta name="description" content="Tokey Sifullah Tanjil — Research Assistant in Applied Mathematics, working on nonlinear dynamics, mathematical modeling, plasma physics, and computational neuroscience.">
+<title>Tokey Sifullah Tanjil | Applied Mathematics</title>
+<meta name="description" content="Tokey Sifullah Tanjil is a research assistant in applied mathematics at CUET, working on nonlinear waves, plasma physics and computational neuroscience. Seeking a PhD position.">
+<link rel="canonical" href="https://tokeyst.github.io/">
+<meta name="theme-color" content="#ffffff">
 
-<meta property="og:title" content="Tokey Sifullah Tanjil">
-<meta property="og:description" content="Research Assistant in Applied Mathematics working on nonlinear dynamics, mathematical modeling, plasma physics, and computational neuroscience.">
+<meta property="og:title" content="Tokey Sifullah Tanjil | Applied Mathematics">
+<meta property="og:description" content="Research assistant in applied mathematics working on nonlinear waves, plasma physics and computational neuroscience. Seeking a PhD position.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tokeyst.github.io/">
 <meta property="og:image" content="https://tokeyst.github.io/photo.jpg">
 <meta name="twitter:card" content="summary">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23fff'/%3E%3Cpath d='M2 25C10 25 12 7 16 7S22 25 30 25' fill='none' stroke='%231f3bb3' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tokey Sifullah Tanjil",
+  "url": "https://tokeyst.github.io/",
+  "image": "https://tokeyst.github.io/photo.jpg",
+  "jobTitle": "Research Assistant in Applied Mathematics",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Chittagong University of Engineering and Technology"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Chittagong"
+  },
+  "knowsAbout": ["Nonlinear waves", "Solitons", "Plasma physics", "Computational neuroscience", "Mathematical modeling"],
+  "sameAs": [
+    "https://orcid.org/0009-0008-6421-7897",
+    "https://scholar.google.com/citations?user=dAgMZWwAAAAJ",
+    "https://www.researchgate.net/profile/Tokey-Sifullah"
+  ]
+}
+</script>
 
 <style>
+@font-face{
+  font-family:"Newsreader";
+  src:url("fonts/newsreader-latin-wght-normal.woff2") format("woff2");
+  font-weight:200 800;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Source Sans 3";
+  src:url("fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");
+  font-weight:200 900;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Source Sans 3";
+  src:url("fonts/source-sans-3-latin-wght-italic.woff2") format("woff2");
+  font-weight:200 900;font-style:italic;font-display:swap;
+}
+
 :root{
-  --navy:#152A3E;
-  --navy-light:#1E3A51;
-  --lightest-navy:#33526E;
-  --slate:#9BABBC;
-  --light-slate:#BAC6D3;
-  --lightest-slate:#E7ECF2;
-  --accent:#5FE3D0;
-  --mono:'IBM Plex Mono',monospace;
-  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --paper:#ffffff;
+  --ink:#1a2233;
+  --muted:#596275;
+  --rule:#d9dde6;
+  --tint:#f1f3fa;
+  --accent:#1f3bb3;
+  --accent-dark:#162b86;
+  --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(20px,5vw,48px);
+  color-scheme:light;
 }
 
 *{box-sizing:border-box;}
-
-html{
-  scroll-behavior:smooth;
-}
-
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
 body{
   margin:0;
-  background:var(--navy);
-  color:var(--slate);
-  font-family:var(--sans);
-  font-size:16px;
-  line-height:1.65;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:1.125rem;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
+h1,h2,h3,p,ul,dl,dd,figure{margin:0;}
+ul{padding:0;list-style:none;}
+img{max-width:100%;}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px;}
+a:hover{color:var(--accent-dark);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
 
-h1,h2,h3{
-  margin:0;
-  color:var(--lightest-slate);
-  font-family:var(--sans);
+.skip{
+  position:absolute;left:var(--gutter);top:-60px;z-index:20;
+  background:var(--accent);color:#fff;padding:10px 16px;border-radius:4px;
+  font-family:var(--sans);font-weight:600;text-decoration:none;
 }
+.skip:focus{top:10px;color:#fff;}
 
-a{
-  color:var(--accent);
-  text-decoration:none;
-}
-
-p{
-  margin:0 0 14px;
-  max-width:68ch;
-}
-
-p:last-child{
-  margin-bottom:0;
-}
-
-.layout{
-  display:flex;
-  align-items:flex-start;
-  max-width:1500px;
+.wrap{
+  max-width:1160px;
   margin:0 auto;
+  padding-inline:var(--gutter);
 }
 
-/* =========================
-   SIDEBAR
-   ========================= */
-
-.sidebar{
-  position:sticky;
-  top:0;
-  flex:0 0 350px;
-  height:100vh;
-  overflow-y:auto;
-  scrollbar-width:none;
-  padding:58px 48px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+/* ---------- top bar ---------- */
+.top{
+  position:sticky;top:0;z-index:10;
+  background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
 }
-
-.sidebar::-webkit-scrollbar{
-  display:none;
+.bar{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  min-height:60px;
 }
-
-.sidebar-top{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
+.brand{
+  flex:none;
+  font-weight:600;font-size:1.15rem;letter-spacing:-.005em;
+  color:var(--ink);text-decoration:none;
 }
-
-.avatar{
-  width:155px;
-  height:155px;
-  object-fit:cover;
-  border-radius:10px;
-  border:1px solid var(--lightest-navy);
+.brand:hover{color:var(--ink);}
+.menu{
+  display:flex;align-items:center;gap:26px;
+  font-family:var(--sans);font-size:.98rem;
+  overflow-x:auto;scrollbar-width:none;white-space:nowrap;
 }
-
-.sidebar h1{
-  font-size:2rem;
-  font-weight:700;
-  line-height:1.18;
-  letter-spacing:-.02em;
+.menu::-webkit-scrollbar{display:none;}
+.menu a{color:var(--muted);text-decoration:none;padding:6px 0;}
+.menu a:hover{color:var(--ink);}
+.menu a.cv{
+  color:var(--accent);font-weight:600;
+  border:1px solid var(--accent);border-radius:4px;padding:5px 14px;
 }
+.menu a.cv:hover{background:var(--accent);color:#fff;}
 
-.sidebar .role{
-  font-size:1rem;
-  color:var(--light-slate);
-  font-weight:500;
-  margin-top:8px;
-}
-
-.sidebar .intro{
-  font-size:14px;
-  color:var(--slate);
-  max-width:275px;
-  line-height:1.65;
-}
-
-
-nav{
-  margin-top:8px;
-}
-
-nav ol{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-nav a{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--light-slate);
-  border-left:2px solid transparent;
-  padding-left:9px;
-  letter-spacing:.02em;
-  transition:color .15s ease,border-color .15s ease;
-}
-
-nav a .num{
-  color:var(--accent);
-  font-size:10.5px;
-}
-
-nav a:hover,
-nav a.active{
-  color:var(--accent);
-  border-left-color:var(--accent);
-}
-
-.social-icons{
-  display:flex;
-  gap:17px;
-  list-style:none;
-  margin:28px 0 0;
-  padding:0;
-}
-
-.social-icons a{
-  color:var(--light-slate);
-  display:flex;
-  transition:color .15s ease,transform .15s ease;
-}
-
-.social-icons a:hover{
-  color:var(--accent);
-  transform:translateY(-2px);
-}
-
-.social-icons svg{
-  width:19px;
-  height:19px;
-}
-
-.side-email{
-  position:fixed;
-  right:25px;
-  bottom:0;
-  writing-mode:vertical-rl;
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--light-slate);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:17px;
-  padding-bottom:20px;
-  z-index:5;
-}
-
-.side-email::after{
-  content:'';
-  width:1px;
-  height:65px;
-  background:var(--light-slate);
-}
-
-.side-email:hover{
-  color:var(--accent);
-}
-
-/* =========================
-   MAIN
-   ========================= */
-
-main{
-  flex:1;
-  min-width:0;
-  padding:62px 72px 90px 38px;
-  max-width:980px;
-}
-
-section{
-  padding-bottom:92px;
-  scroll-margin-top:30px;
-}
-
-.section-heading{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  margin-bottom:30px;
-}
-
-.section-heading .num{
-  font-family:var(--mono);
-  color:var(--accent);
-  font-size:1rem;
-  flex:0 0 auto;
-}
-
-.section-heading h2{
-  font-size:1.42rem;
-  white-space:nowrap;
-  letter-spacing:-.01em;
-}
-
-.section-heading .rule{
-  flex:1;
-  height:1px;
-  background:var(--lightest-navy);
-}
-
-/* Hero */
+/* ---------- hero ---------- */
 .hero{
-  min-height:310px;
-  display:flex;
-  align-items:center;
-  padding-bottom:100px;
-}
-
-.hero-content{
-  max-width:760px;
-}
-
-.hero-kicker{
-  font-family:var(--mono);
-  color:var(--accent);
-  font-size:12px;
-  margin-bottom:13px;
-  letter-spacing:.03em;
-}
-
-.hero h2{
-  font-size:clamp(2rem,4vw,3.15rem);
-  line-height:1.12;
-  letter-spacing:-.035em;
-  margin-bottom:17px;
-}
-
-.hero h2 span{
-  display:block;
-  color:var(--light-slate);
-  font-weight:500;
-}
-
-.hero-description{
-  font-size:16px;
-  max-width:650px;
-  color:var(--light-slate);
-}
-
-.hero-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:25px;
-}
-
-.hero-links a{
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--accent);
-  border:1px solid var(--lightest-navy);
-  padding:9px 13px;
-  border-radius:4px;
-  transition:background .15s ease,border-color .15s ease;
-}
-
-.hero-links a:hover{
-  background:var(--navy-light);
-  border-color:var(--accent);
-}
-
-/* About */
-#about p{
-  font-size:15px;
-  max-width:76ch;
-}
-
-/* Research */
-.research-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:24px 72px;
+  align-items:start;
+  padding-block:64px 36px;
 }
-
-.research-card{
-  padding:18px 19px;
-  border:1px solid var(--lightest-navy);
-  border-radius:6px;
-  transition:background .18s ease,transform .18s ease,border-color .18s ease;
-}
-
-.research-card:hover{
-  background:var(--navy-light);
-  transform:translateY(-2px);
-  border-color:rgba(95,227,208,.45);
-}
-
-.research-card h3{
-  font-size:1rem;
-  margin-bottom:7px;
-}
-
-.research-card p{
-  font-size:14px;
-  line-height:1.55;
-}
-
-/* Publications */
-.pub{
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
-  text-decoration:none;
-  color:inherit;
-  position:relative;
-  margin-bottom:14px;
-  padding:18px;
-  border-radius:6px;
-  border:1px solid transparent;
-  transition:background .18s ease,transform .18s ease,border-color .18s ease;
-}
-
-.pub:hover{
-  background:var(--navy-light);
-  transform:translateX(3px);
-  border-color:var(--lightest-navy);
-}
-
-.pub:last-of-type{
-  margin-bottom:0;
-}
-
-.pub .num{
-  font-family:var(--mono);
-  color:var(--accent);
-  font-size:.9rem;
-  flex:0 0 auto;
-  width:1.35em;
-  padding-top:2px;
-}
-
-.pub-fig{
-  flex:0 0 auto;
-  width:145px;
-  height:96px;
-  object-fit:cover;
-  border-radius:5px;
-  border:1px solid var(--lightest-navy);
-  background:var(--navy-light);
-}
-
-.pub .body{
-  min-width:0;
-  padding-right:22px;
-}
-
-.pub .title{
-  color:var(--lightest-slate);
-  margin:0 0 7px;
-  font-size:15.5px;
-  line-height:1.45;
+.hero h1{
+  font-size:clamp(2.7rem,6.2vw,4.5rem);
   font-weight:500;
+  line-height:1.02;
+  letter-spacing:-.028em;
+  margin-bottom:.32em;
 }
-
-.pub .authors{
-  color:var(--slate);
-  font-size:13.5px;
-  margin-bottom:3px;
+.role{
+  font-family:var(--sans);
+  font-size:1.15rem;line-height:1.4;
+  color:var(--muted);
+  max-width:34em;
+  margin-bottom:1.5rem;
 }
-
-.pub .authors strong{
-  color:var(--light-slate);
-  font-weight:600;
+.lede{
+  font-size:1.36rem;line-height:1.5;
+  max-width:33em;
 }
-
-.pub .venue{
-  color:var(--light-slate);
-  font-size:13.5px;
+.seek{
+  max-width:34em;
+  margin-top:1.7rem;
+  padding:14px 20px;
+  background:var(--tint);
+  border-left:3px solid var(--accent);
+  border-radius:0 4px 4px 0;
+  font-size:1.1rem;line-height:1.5;
 }
-
-.pub .doi{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--slate);
-  margin-top:4px;
+.actions{
+  display:flex;flex-wrap:wrap;gap:12px;
+  margin-top:1.8rem;
 }
-
-.pub .go{
-  position:absolute;
-  top:18px;
-  right:17px;
-  color:var(--slate);
-  opacity:0;
-  transition:opacity .15s ease,color .15s ease;
-}
-
-.pub:hover .go{
-  opacity:1;
-  color:var(--accent);
-}
-
-.pub .go svg{
-  width:15px;
-  height:15px;
-}
-
-.publication-note{
-  font-family:var(--mono);
-  font-size:11.5px;
-  color:var(--slate);
-  margin-top:18px;
-}
-
-/* Details */
-details{
-  margin-top:12px;
-  border-top:1px solid var(--lightest-navy);
-}
-
-details:last-child{
-  border-bottom:1px solid var(--lightest-navy);
-}
-
-details summary{
-  cursor:pointer;
-  font-family:var(--mono);
-  font-size:12.5px;
-  color:var(--light-slate);
-  list-style:none;
-  padding:13px 2px;
-}
-
-details summary::-webkit-details-marker{
-  display:none;
-}
-
-details summary::before{
-  content:'+ ';
-  color:var(--accent);
-}
-
-details[open] summary::before{
-  content:'– ';
-}
-
-details[open] summary{
-  color:var(--accent);
-}
-
-details ul{
-  margin:4px 0 14px;
-  padding-left:20px;
-}
-
-details li{
-  margin-bottom:8px;
-  font-size:14px;
-  color:var(--slate);
-}
-
-/* Experience */
-.exp-list{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.exp-item{
-  border-left:2px solid var(--lightest-navy);
-  padding:17px 20px;
-  border-radius:0 6px 6px 0;
-  transition:background .18s ease,border-color .18s ease;
-}
-
-.exp-item:hover{
-  background:var(--navy-light);
-  border-left-color:var(--accent);
-}
-
-.exp-item h3{
-  font-size:1rem;
-}
-
-.exp-item h3 span{
-  color:var(--accent);
-  font-weight:400;
-  font-size:.92rem;
-}
-
-.exp-item .when{
-  display:block;
-  font-family:var(--mono);
-  font-size:11.5px;
-  color:var(--slate);
-  margin:5px 0 9px;
-}
-
-.exp-item p{
-  font-size:14.5px;
-  max-width:72ch;
-}
-
-/* Education */
-.entry{
-  margin-bottom:22px;
-  padding-left:2px;
-}
-
-.entry:last-child{
-  margin-bottom:0;
-}
-
-.entry .when{
-  font-family:var(--mono);
-  font-size:11.5px;
-  color:var(--accent);
-  display:block;
-  margin-bottom:3px;
-}
-
-.entry .what{
-  font-weight:600;
-  color:var(--lightest-slate);
-  font-size:16px;
-}
-
-.entry .where{
-  color:var(--slate);
-  font-size:14.5px;
-}
-
-/* Skills */
-.skill-group{
-  margin-bottom:22px;
-}
-
-.skill-group:last-child{
-  margin-bottom:0;
-}
-
-.skill-label{
-  color:var(--slate);
-  font-size:12px;
-  font-family:var(--mono);
-  margin-bottom:9px;
-}
-
-.interest-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  padding:0;
-  margin:0;
-  list-style:none;
-}
-
-.interest-list li{
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--light-slate);
-  background:var(--navy-light);
-  border:1px solid var(--lightest-navy);
-  padding:6px 11px;
-  border-radius:4px;
-}
-
-/* Profiles */
-.profile-list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.profile-list a{
-  display:block;
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--lightest-slate);
-  border:1px solid var(--lightest-navy);
-  padding:12px 14px;
-  border-radius:5px;
-  transition:background .15s ease,border-color .15s ease,color .15s ease;
-}
-
-.profile-list a:hover{
-  color:var(--accent);
-  background:var(--navy-light);
-  border-color:var(--accent);
-}
-
-/* Contact */
-.contact-cta{
-  padding:5px 0 0;
-}
-
-.contact-cta p{
-  font-size:15px;
-  max-width:62ch;
-}
-
 .btn{
   display:inline-block;
-  margin-top:15px;
-  font-family:var(--mono);
-  font-size:12.5px;
-  color:var(--accent);
+  font-family:var(--sans);font-weight:600;font-size:1rem;
+  padding:11px 20px;border-radius:4px;
   border:1px solid var(--accent);
-  padding:11px 18px;
-  border-radius:4px;
-  transition:background .18s ease,color .18s ease;
+  color:var(--accent);background:transparent;
+  text-decoration:none;
+}
+.btn:hover{background:var(--tint);color:var(--accent-dark);}
+.btn.primary{background:var(--accent);color:#fff;}
+.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;}
+.profiles{
+  display:flex;flex-wrap:wrap;gap:6px 24px;
+  margin-top:1.3rem;
+  font-family:var(--sans);font-size:1rem;
 }
 
-.btn:hover{
-  background:rgba(95,227,208,.1);
+.hero-side{display:block;}
+.portrait{
+  display:block;
+  width:100%;height:auto;aspect-ratio:4/5;
+  object-fit:cover;object-position:50% 16%;
+  border:1px solid var(--rule);border-radius:6px;
+  background:#fff;
+}
+.facts{
+  display:grid;
+  grid-template-columns:1.8fr 1fr 1fr 1fr;
+  gap:18px 40px;
+  margin-top:28px;
+  padding-block:22px;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  font-family:var(--sans);
+}
+.facts dt{font-size:.88rem;font-weight:600;color:var(--muted);}
+.facts dd{font-size:1rem;line-height:1.4;margin-top:3px;}
+
+/* ---------- wave figure ---------- */
+.wave{margin-block:48px 80px;}
+.wave-svg{display:block;width:100%;height:auto;}
+.wave-svg .s{
+  fill:var(--paper);
+  stroke:var(--accent);
+  stroke-width:1.35;
+  stroke-opacity:var(--o);
+  stroke-linejoin:round;
+  animation:rise .8s cubic-bezier(.2,.7,.2,1) both;
+  animation-delay:calc(var(--i) * 38ms + 120ms);
+}
+@keyframes rise{
+  from{opacity:0;transform:translateY(12px);}
+  to{opacity:1;transform:none;}
+}
+.wave figcaption{
+  font-family:var(--sans);font-size:.92rem;line-height:1.5;
+  color:var(--muted);
+  max-width:62ch;
+  margin-top:14px;
+}
+.wave figcaption i{font-style:italic;}
+.wave figcaption sub{font-size:.75em;line-height:0;}
+
+/* ---------- sections ---------- */
+.block{
+  display:grid;
+  grid-template-columns:200px minmax(0,1fr);
+  gap:0 64px;
+  border-top:1px solid var(--rule);
+  padding-block:48px 72px;
+  scroll-margin-top:60px;
+}
+.block > h2{
+  font-size:1.9rem;font-weight:500;
+  line-height:1.15;letter-spacing:-.012em;
+  position:sticky;top:92px;align-self:start;
+}
+.block-body{min-width:0;}
+
+h3{font-size:1.2rem;font-weight:600;line-height:1.3;letter-spacing:-.003em;}
+.sub{
+  font-family:var(--sans);font-size:1rem;font-weight:600;
+  color:var(--muted);
+  margin:52px 0 14px;
+}
+.sub:first-child{margin-top:0;}
+.note{
+  font-family:var(--sans);font-size:.95rem;line-height:1.5;
+  color:var(--muted);
 }
 
-footer{
-  padding:15px 0 50px;
-  color:var(--slate);
-  font-family:var(--mono);
-  font-size:11.5px;
+/* research */
+.topics{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:40px 56px;
+}
+.topic p{margin-top:8px;}
+.topic .note{margin-top:10px;}
+
+/* publications */
+.pub{
+  display:grid;
+  grid-template-columns:200px minmax(0,1fr);
+  gap:8px 28px;
+  padding:26px 0;
+  border-top:1px solid var(--rule);
+}
+.pub:first-child{border-top:0;padding-top:0;}
+.fig{
+  display:block;
+  aspect-ratio:8/5;
+  background:#fff;
+  border:1px solid var(--rule);border-radius:4px;
+  overflow:hidden;
+}
+.fig img{display:block;width:100%;height:100%;object-fit:contain;}
+.ptitle{margin:0;font-size:1.22rem;font-weight:600;line-height:1.32;}
+.ptitle a{color:var(--ink);text-decoration:none;}
+.ptitle a:hover{color:var(--accent);text-decoration:underline;}
+.authors,.venue{
+  font-family:var(--sans);font-size:1rem;line-height:1.5;
+  margin-top:8px;
+}
+.authors{color:var(--muted);}
+.authors strong{color:var(--ink);font-weight:600;}
+.venue{margin-top:6px;}
+.venue .doi{white-space:nowrap;}
+.tag{
+  display:inline-block;
+  font-size:.82rem;font-weight:600;
+  color:var(--accent);background:var(--tint);
+  padding:1px 8px;border-radius:3px;margin-left:4px;
 }
 
-a:focus-visible,
-button:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
+/* ruled rows: experience, education, talks, skills */
+.row{
+  display:grid;
+  grid-template-columns:168px minmax(0,1fr);
+  gap:6px 28px;
+  padding:20px 0;
+  border-top:1px solid var(--rule);
+}
+.row:first-child{border-top:0;padding-top:0;}
+.when{
+  font-family:var(--sans);font-size:.95rem;line-height:1.5;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.row h3 + .org{
+  font-family:var(--sans);font-size:1rem;color:var(--muted);
+  margin-top:2px;
+}
+.row p{margin-top:8px;}
+.row .when{margin-top:0;padding-top:.22rem;}
+.row .sans,.row .val{font-family:var(--sans);font-size:1rem;line-height:1.55;}
+.row .val{margin-top:0;padding-top:.12rem;}
+.row .ttl{margin-top:0;font-weight:500;}
+.row .note{margin-top:4px;}
+
+/* contact */
+.mail{
+  display:inline-block;
+  font-size:clamp(1.55rem,3.6vw,2.3rem);font-weight:500;
+  letter-spacing:-.012em;
+  margin-top:10px;
+  text-decoration-thickness:1px;
+}
+.contact-links{
+  margin-top:34px;
+  font-family:var(--sans);font-size:1.02rem;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* footer */
+.foot{
+  border-top:1px solid var(--rule);
+  padding-block:26px 40px;
+  font-family:var(--sans);font-size:.9rem;color:var(--muted);
+}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;}
 
-@media (max-width:1100px){
-  .sidebar{
-    flex-basis:310px;
-    padding-left:34px;
-    padding-right:32px;
-  }
-
-  main{
-    padding-right:50px;
-  }
-
-  .side-email{
-    display:none;
-  }
+/* ---------- smaller screens ---------- */
+@media (max-width:980px){
+  .hero{grid-template-columns:minmax(0,1fr);padding-block:40px 24px;gap:32px;}
+  .hero-side{order:-1;width:150px;}
+  .facts{grid-template-columns:1fr 1fr;gap:18px 28px;margin-top:8px;}
+  .facts div:first-child{grid-column:1 / -1;}
+  .block{grid-template-columns:minmax(0,1fr);gap:22px;padding-block:40px 56px;}
+  .block > h2{position:static;font-size:1.7rem;}
+}
+@media (max-width:640px){
+  body{font-size:1.06rem;}
+  .hero-side{width:104px;}
+  .facts{gap:16px 20px;}
+  .hero h1{font-size:2.55rem;}
+  .lede{font-size:1.2rem;}
+  .topics{grid-template-columns:minmax(0,1fr);gap:30px;}
+  .pub{grid-template-columns:minmax(0,1fr);gap:14px;}
+  .fig{max-width:300px;}
+  .row{grid-template-columns:minmax(0,1fr);gap:4px;}
+  .bar{gap:14px;}
+  .menu{gap:18px;}
+  .brand{font-size:1.02rem;}
+  .wave{margin-bottom:56px;}
 }
 
-@media (max-width:900px){
-  .layout{
-    flex-direction:column;
-  }
-
-  .sidebar{
-    position:static;
-    width:100%;
-    height:auto;
-    overflow:visible;
-    padding:42px 28px 18px;
-  }
-
-  .sidebar-top{
-    max-width:650px;
-  }
-
-  nav ol{
-    flex-direction:row;
-    flex-wrap:wrap;
-    gap:10px 17px;
-    margin-top:22px;
-  }
-
-  nav a{
-    border-left:0;
-    padding-left:0;
-  }
-
-  nav a:hover,
-  nav a.active{
-    border-left:0;
-  }
-
-  main{
-    width:100%;
-    max-width:none;
-    padding:35px 28px 70px;
-  }
-
-  .hero{
-    min-height:0;
-    padding-bottom:75px;
-  }
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .wave-svg .s{animation:none;}
 }
-
-@media (max-width:620px){
-  body{
-    font-size:15px;
-  }
-
-  .sidebar{
-    padding:34px 20px 15px;
-  }
-
-  .avatar{
-    width:125px;
-    height:125px;
-  }
-
-  .sidebar h1{
-    font-size:1.75rem;
-  }
-
-  main{
-    padding:30px 20px 60px;
-  }
-
-  section{
-    padding-bottom:70px;
-  }
-
-  .section-heading{
-    gap:12px;
-    margin-bottom:23px;
-  }
-
-  .section-heading h2{
-    font-size:1.25rem;
-  }
-
-  .section-heading .rule{
-    min-width:20px;
-  }
-
-  .hero h2{
-    font-size:2.1rem;
-  }
-
-  .hero-description{
-    font-size:15px;
-  }
-
-  .research-grid{
-    grid-template-columns:1fr;
-  }
-
-  .pub{
-    display:grid;
-    grid-template-columns:34px 1fr;
-    gap:10px 12px;
-  }
-
-  .pub-fig{
-    grid-column:2;
-    grid-row:1;
-    width:100%;
-    height:145px;
-    margin-bottom:3px;
-  }
-
-  .pub .body{
-    grid-column:2;
-    grid-row:2;
-    padding-right:0;
-  }
-
-  .pub .num{
-    grid-column:1;
-    grid-row:1 / span 2;
-  }
-
-  .pub .go{
-    top:15px;
-    right:14px;
-  }
-
-  .profile-list{
-    grid-template-columns:1fr;
-  }
+@media print{
+  .top,.skip{display:none;}
+  .wave-svg .s{animation:none;}
+  .block{break-inside:avoid;}
 }
 </style>
 </head>
 
 <body>
+<a class="skip" href="#research">Skip to content</a>
 
-<div class="layout">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Tokey Sifullah Tanjil</a>
+    <nav class="menu" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a class="cv" href="cv.pdf">CV</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- =========================
-       LEFT SIDEBAR
-       ========================= -->
-  <header class="sidebar">
+<main id="top" class="wrap">
 
-    <div class="sidebar-top">
-
-      <img src="photo.jpg" alt="Tokey Sifullah Tanjil" class="avatar">
-
-      <div>
-        <h1>Tokey Sifullah Tanjil</h1>
-        <p class="role">Research Assistant · Applied Mathematics</p>
-        <p class="intro">
-          Research in nonlinear dynamics, mathematical modeling,
-          plasma physics, and computational neuroscience.
-        </p>
+  <section class="hero" aria-labelledby="name">
+    <div class="hero-text">
+      <h1 id="name">Tokey Sifullah Tanjil</h1>
+      <p class="role">Research Assistant in Applied Mathematics at the Chittagong University of Engineering and Technology (CUET), Bangladesh</p>
+      <p class="lede">I build and analyze mathematical models of nonlinear systems: solitary waves in plasmas, and the dynamics of neurons and neural networks. My three journal articles so far study multi-soliton and periodic waves in space and dusty plasmas.</p>
+      <p class="seek">I am seeking a PhD position in applied mathematics, in nonlinear waves, plasma physics or computational neuroscience.</p>
+      <div class="actions">
+        <a class="btn primary" href="cv.pdf">Download CV</a>
+        <a class="btn" href="mailto:tsifullaht@gmail.com">Email me</a>
       </div>
-
-      <nav>
-        <ol id="site-nav">
-          <li><a href="#about"><span class="num">01.</span> About</a></li>
-          <li><a href="#research"><span class="num">02.</span> Research</a></li>
-          <li><a href="#publications"><span class="num">03.</span> Publications</a></li>
-          <li><a href="#experience"><span class="num">04.</span> Experience</a></li>
-          <li><a href="#education"><span class="num">05.</span> Education</a></li>
-          <li><a href="#skills"><span class="num">06.</span> Skills</a></li>
-          <li><a href="#profiles"><span class="num">07.</span> Profiles</a></li>
-          <li><a href="#contact"><span class="num">08.</span> Contact</a></li>
-        </ol>
-      </nav>
-
+      <p class="profiles">
+        <a href="https://orcid.org/0009-0008-6421-7897" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Tokey-Sifullah" target="_blank" rel="noopener">ResearchGate</a>
+      </p>
     </div>
 
-    <ul class="social-icons" aria-label="Academic profiles">
+    <aside class="hero-side">
+      <img class="portrait" src="photo.jpg" width="1254" height="1254" alt="Portrait of Tokey Sifullah Tanjil">
+    </aside>
+  </section>
 
-      <li>
-        <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
-           target="_blank" rel="noopener" aria-label="Google Scholar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M3 10.2 12 4l9 6.2-9 6.2-9-6.2Z"/>
-            <path d="M7 13.2V17c0 1.8 2.2 3 5 3s5-1.2 5-3v-3.8"/>
-          </svg>
-        </a>
-      </li>
+  <dl class="facts" aria-label="At a glance">
+    <div><dt>Degree</dt><dd>M.Sc. Applied Mathematics, University of Chittagong. CGPA 3.73/4.00, first class, 2nd position</dd></div>
+    <div><dt>Journal articles</dt><dd>3 published, all in Q1 journals</dd></div>
+    <div><dt>Conference talks</dt><dd>2 international conferences</dd></div>
+    <div><dt>Based in</dt><dd>Chattogram, Bangladesh</dd></div>
+  </dl>
 
-      <li>
-        <a href="https://www.researchgate.net/profile/Tokey-Sifullah"
-           target="_blank" rel="noopener" aria-label="ResearchGate">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8.7 4.2h5.1c3.2 0 5.2 1.7 5.2 4.3 0 1.8-.9 3.1-2.3 3.8 1.5.6 2.3 1.8 2.3 3.6 0 2.6-2 4.1-5.1 4.1H8.7V4.2Zm3 2.4v4.5h1.8c1.6 0 2.5-.8 2.5-2.3 0-1.5-.9-2.2-2.5-2.2h-1.8Zm0 6.9v4.2h2c1.6 0 2.5-.7 2.5-2.1 0-1.4-.9-2.1-2.5-2.1h-2Z"/>
-          </svg>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://orcid.org/0009-0008-6421-7897"
-           target="_blank" rel="noopener" aria-label="ORCID">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M9.2 8v8.4M9.2 8h2.6c2.4 0 3.6 1.5 3.6 4.2s-1.2 4.2-3.6 4.2H9.2"/>
-          </svg>
-        </a>
-      </li>
-
-      <li>
-        <a href="mailto:tsifullaht@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m4 7 8 6 8-6"/>
-          </svg>
-        </a>
-      </li>
-
-    </ul>
-
-  </header>
+  <figure class="wave">
+    <svg class="wave-svg" viewBox="0 0 1000 330" role="img" aria-label="Waterfall plot of two solitons colliding: a tall, fast soliton overtakes a short, slow one and both keep their shape.">
+      <path class="s" style="--i:23;--o:0.40" d="M0,160.0 L4,160.0 L9,160.0 L13,160.0 L17,160.0 L22,160.0 L26,160.0 L31,160.0 L35,160.0 L39,160.0 L44,160.0 L48,160.0 L52,160.0 L57,160.0 L61,160.0 L66,160.0 L70,160.0 L74,160.0 L79,160.0 L83,160.0 L87,160.0 L92,160.0 L96,160.0 L100,160.0 L105,160.0 L109,160.0 L114,160.0 L118,160.0 L122,160.0 L127,160.0 L131,160.0 L135,160.0 L140,160.0 L144,160.0 L148,160.0 L153,160.0 L157,160.0 L162,160.0 L166,160.0 L170,160.0 L175,160.0 L179,160.0 L183,160.0 L188,160.0 L192,160.0 L197,160.0 L201,160.0 L205,160.0 L210,160.0 L214,160.0 L218,160.0 L223,160.0 L227,160.0 L231,160.0 L236,160.0 L240,160.0 L245,160.0 L249,160.0 L253,160.0 L258,160.0 L262,160.0 L266,160.0 L271,160.0 L275,160.0 L279,160.0 L284,160.0 L288,160.0 L293,160.0 L297,160.0 L301,160.0 L306,160.0 L310,160.0 L314,160.0 L319,160.0 L323,160.0 L328,160.0 L332,160.0 L336,160.0 L341,160.0 L345,160.0 L349,160.0 L354,160.0 L358,160.0 L362,160.0 L367,160.0 L371,160.0 L376,160.0 L380,160.0 L384,160.0 L389,160.0 L393,160.0 L397,160.0 L402,160.0 L406,160.0 L410,160.0 L415,160.0 L419,160.0 L424,160.0 L428,160.0 L432,160.0 L437,160.0 L441,160.0 L445,160.0 L450,160.0 L454,160.0 L459,160.0 L463,160.0 L467,160.0 L472,160.0 L476,160.0 L480,160.0 L485,160.0 L489,159.9 L493,159.9 L498,159.9 L502,159.8 L507,159.7 L511,159.6 L515,159.4 L520,159.1 L524,158.7 L528,158.2 L533,157.3 L537,156.2 L541,154.6 L546,152.4 L550,149.3 L555,145.3 L559,140.0 L563,133.4 L568,125.7 L572,117.6 L576,110.0 L581,104.4 L585,102.0 L590,103.5 L594,108.3 L598,115.5 L603,123.6 L607,131.5 L611,138.4 L616,144.0 L620,148.4 L624,151.7 L629,154.1 L633,155.9 L638,157.1 L642,158.0 L646,158.6 L651,159.0 L655,159.3 L659,159.5 L664,159.7 L668,159.8 L672,159.8 L677,159.9 L681,159.9 L686,159.9 L690,159.9 L694,159.9 L699,159.9 L703,159.8 L707,159.6 L712,159.3 L716,158.8 L721,157.9 L725,156.2 L729,153.4 L734,148.6 L738,140.5 L742,127.4 L747,107.6 L751,80.8 L755,50.7 L760,27.1 L764,21.3 L769,36.4 L773,64.5 L777,93.9 L782,117.7 L786,134.2 L790,144.8 L795,151.2 L799,154.9 L803,157.1 L808,158.4 L812,159.1 L817,159.5 L821,159.7 L825,159.8 L830,159.9 L834,159.9 L838,160.0 L843,160.0 L847,160.0 L852,160.0 L856,160.0 L860,160.0 L865,160.0 L869,160.0 L873,160.0 L878,160.0 L882,160.0 L886,160.0 L891,160.0 L895,160.0 L900,160.0 L904,160.0 L908,160.0 L913,160.0 L917,160.0 L921,160.0 L926,160.0 L930,160.0 L934,160.0 L939,160.0 L943,160.0 L948,160.0 L952,160.0 L956,160.0 L961,160.0 L965,160.0 L969,160.0 L974,160.0 L978,160.0 L983,160.0 L987,160.0 L991,160.0 L996,160.0 L1000,160.0 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:22;--o:0.43" d="M0,166.9 L4,166.9 L9,166.9 L13,166.9 L17,166.9 L22,166.9 L26,166.9 L31,166.9 L35,166.9 L39,166.9 L44,166.9 L48,166.9 L52,166.9 L57,166.9 L61,166.9 L66,166.9 L70,166.9 L74,166.9 L79,166.9 L83,166.9 L87,166.9 L92,166.9 L96,166.9 L100,166.9 L105,166.9 L109,166.9 L114,166.9 L118,166.9 L122,166.9 L127,166.9 L131,166.9 L135,166.9 L140,166.9 L144,166.9 L148,166.9 L153,166.9 L157,166.9 L162,166.9 L166,166.9 L170,166.9 L175,166.9 L179,166.9 L183,166.9 L188,166.9 L192,166.9 L197,166.9 L201,166.9 L205,166.9 L210,166.9 L214,166.9 L218,166.9 L223,166.9 L227,166.9 L231,166.9 L236,166.9 L240,166.9 L245,166.9 L249,166.9 L253,166.9 L258,166.9 L262,166.9 L266,166.9 L271,166.9 L275,166.9 L279,166.9 L284,166.9 L288,166.9 L293,166.9 L297,166.9 L301,166.9 L306,166.9 L310,166.9 L314,166.9 L319,166.9 L323,166.9 L328,166.9 L332,166.9 L336,166.9 L341,166.9 L345,166.9 L349,166.9 L354,166.9 L358,166.9 L362,166.9 L367,166.9 L371,166.9 L376,166.9 L380,166.9 L384,166.9 L389,166.9 L393,166.9 L397,166.9 L402,166.9 L406,166.9 L410,166.9 L415,166.9 L419,166.9 L424,166.9 L428,166.9 L432,166.9 L437,166.9 L441,166.9 L445,166.9 L450,166.9 L454,166.9 L459,166.9 L463,166.8 L467,166.8 L472,166.8 L476,166.8 L480,166.8 L485,166.7 L489,166.7 L493,166.6 L498,166.5 L502,166.3 L507,166.0 L511,165.7 L515,165.1 L520,164.4 L524,163.3 L528,161.8 L533,159.7 L537,156.7 L541,152.8 L546,147.7 L550,141.3 L555,133.8 L559,125.7 L563,118.0 L568,112.0 L572,109.0 L576,109.9 L581,114.3 L585,121.2 L590,129.2 L594,137.2 L598,144.3 L603,150.1 L607,154.7 L611,158.1 L616,160.7 L620,162.5 L624,163.8 L629,164.7 L633,165.4 L638,165.8 L642,166.1 L646,166.4 L651,166.5 L655,166.6 L659,166.7 L664,166.7 L668,166.7 L672,166.6 L677,166.5 L681,166.2 L686,165.7 L690,164.9 L694,163.4 L699,160.9 L703,156.5 L707,149.0 L712,136.9 L716,118.3 L721,92.5 L725,62.4 L729,36.9 L734,27.6 L738,39.6 L742,66.4 L747,96.2 L751,121.1 L755,138.8 L760,150.2 L764,157.2 L769,161.3 L773,163.7 L777,165.1 L782,165.8 L786,166.3 L790,166.5 L795,166.7 L799,166.8 L803,166.8 L808,166.8 L812,166.9 L817,166.9 L821,166.9 L825,166.9 L830,166.9 L834,166.9 L838,166.9 L843,166.9 L847,166.9 L852,166.9 L856,166.9 L860,166.9 L865,166.9 L869,166.9 L873,166.9 L878,166.9 L882,166.9 L886,166.9 L891,166.9 L895,166.9 L900,166.9 L904,166.9 L908,166.9 L913,166.9 L917,166.9 L921,166.9 L926,166.9 L930,166.9 L934,166.9 L939,166.9 L943,166.9 L948,166.9 L952,166.9 L956,166.9 L961,166.9 L965,166.9 L969,166.9 L974,166.9 L978,166.9 L983,166.9 L987,166.9 L991,166.9 L996,166.9 L1000,166.9 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:21;--o:0.45" d="M0,173.7 L4,173.7 L9,173.7 L13,173.7 L17,173.7 L22,173.7 L26,173.7 L31,173.7 L35,173.7 L39,173.7 L44,173.7 L48,173.7 L52,173.7 L57,173.7 L61,173.7 L66,173.7 L70,173.7 L74,173.7 L79,173.7 L83,173.7 L87,173.7 L92,173.7 L96,173.7 L100,173.7 L105,173.7 L109,173.7 L114,173.7 L118,173.7 L122,173.7 L127,173.7 L131,173.7 L135,173.7 L140,173.7 L144,173.7 L148,173.7 L153,173.7 L157,173.7 L162,173.7 L166,173.7 L170,173.7 L175,173.7 L179,173.7 L183,173.7 L188,173.7 L192,173.7 L197,173.7 L201,173.7 L205,173.7 L210,173.7 L214,173.7 L218,173.7 L223,173.7 L227,173.7 L231,173.7 L236,173.7 L240,173.7 L245,173.7 L249,173.7 L253,173.7 L258,173.7 L262,173.7 L266,173.7 L271,173.7 L275,173.7 L279,173.7 L284,173.7 L288,173.7 L293,173.7 L297,173.7 L301,173.7 L306,173.7 L310,173.7 L314,173.7 L319,173.7 L323,173.7 L328,173.7 L332,173.7 L336,173.7 L341,173.7 L345,173.7 L349,173.7 L354,173.7 L358,173.7 L362,173.7 L367,173.7 L371,173.7 L376,173.7 L380,173.7 L384,173.7 L389,173.7 L393,173.7 L397,173.7 L402,173.7 L406,173.7 L410,173.7 L415,173.7 L419,173.7 L424,173.7 L428,173.7 L432,173.7 L437,173.7 L441,173.7 L445,173.7 L450,173.7 L454,173.7 L459,173.7 L463,173.7 L467,173.7 L472,173.6 L476,173.6 L480,173.5 L485,173.4 L489,173.2 L493,172.9 L498,172.6 L502,172.1 L507,171.4 L511,170.3 L515,168.9 L520,166.9 L524,164.1 L528,160.4 L533,155.5 L537,149.3 L541,141.9 L546,133.8 L550,126.0 L555,119.6 L559,116.1 L563,116.3 L568,120.2 L572,126.9 L576,134.8 L581,142.9 L585,150.1 L590,156.1 L594,160.9 L598,164.5 L603,167.2 L607,169.1 L611,170.5 L616,171.5 L620,172.1 L624,172.6 L629,172.9 L633,173.1 L638,173.3 L642,173.3 L646,173.2 L651,173.0 L655,172.6 L659,171.9 L664,170.6 L668,168.2 L672,164.2 L677,157.4 L681,146.2 L686,128.7 L690,104.0 L694,74.3 L699,47.2 L703,34.5 L707,43.1 L712,68.3 L716,98.4 L721,124.4 L725,143.2 L729,155.6 L734,163.1 L738,167.6 L742,170.2 L747,171.8 L751,172.6 L755,173.1 L760,173.4 L764,173.5 L769,173.6 L773,173.7 L777,173.7 L782,173.7 L786,173.7 L790,173.7 L795,173.7 L799,173.7 L803,173.7 L808,173.7 L812,173.7 L817,173.7 L821,173.7 L825,173.7 L830,173.7 L834,173.7 L838,173.7 L843,173.7 L847,173.7 L852,173.7 L856,173.7 L860,173.7 L865,173.7 L869,173.7 L873,173.7 L878,173.7 L882,173.7 L886,173.7 L891,173.7 L895,173.7 L900,173.7 L904,173.7 L908,173.7 L913,173.7 L917,173.7 L921,173.7 L926,173.7 L930,173.7 L934,173.7 L939,173.7 L943,173.7 L948,173.7 L952,173.7 L956,173.7 L961,173.7 L965,173.7 L969,173.7 L974,173.7 L978,173.7 L983,173.7 L987,173.7 L991,173.7 L996,173.7 L1000,173.7 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:20;--o:0.48" d="M0,180.6 L4,180.6 L9,180.6 L13,180.6 L17,180.6 L22,180.6 L26,180.6 L31,180.6 L35,180.6 L39,180.6 L44,180.6 L48,180.6 L52,180.6 L57,180.6 L61,180.6 L66,180.6 L70,180.6 L74,180.6 L79,180.6 L83,180.6 L87,180.6 L92,180.6 L96,180.6 L100,180.6 L105,180.6 L109,180.6 L114,180.6 L118,180.6 L122,180.6 L127,180.6 L131,180.6 L135,180.6 L140,180.6 L144,180.6 L148,180.6 L153,180.6 L157,180.6 L162,180.6 L166,180.6 L170,180.6 L175,180.6 L179,180.6 L183,180.6 L188,180.6 L192,180.6 L197,180.6 L201,180.6 L205,180.6 L210,180.6 L214,180.6 L218,180.6 L223,180.6 L227,180.6 L231,180.6 L236,180.6 L240,180.6 L245,180.6 L249,180.6 L253,180.6 L258,180.6 L262,180.6 L266,180.6 L271,180.6 L275,180.6 L279,180.6 L284,180.6 L288,180.6 L293,180.6 L297,180.6 L301,180.6 L306,180.6 L310,180.6 L314,180.6 L319,180.6 L323,180.6 L328,180.6 L332,180.6 L336,180.6 L341,180.6 L345,180.6 L349,180.6 L354,180.6 L358,180.6 L362,180.6 L367,180.6 L371,180.6 L376,180.6 L380,180.6 L384,180.6 L389,180.6 L393,180.6 L397,180.6 L402,180.6 L406,180.6 L410,180.6 L415,180.6 L419,180.6 L424,180.6 L428,180.6 L432,180.6 L437,180.6 L441,180.6 L445,180.6 L450,180.6 L454,180.5 L459,180.5 L463,180.4 L467,180.4 L472,180.2 L476,180.1 L480,179.9 L485,179.5 L489,179.0 L493,178.4 L498,177.4 L502,176.0 L507,174.1 L511,171.5 L515,167.9 L520,163.2 L524,157.2 L528,150.0 L533,142.0 L537,134.0 L541,127.3 L546,123.3 L550,122.9 L555,126.3 L559,132.6 L563,140.4 L568,148.5 L572,155.9 L576,162.2 L581,167.1 L585,170.9 L590,173.7 L594,175.7 L598,177.1 L603,178.2 L607,178.8 L611,179.3 L616,179.5 L620,179.5 L624,179.3 L629,178.7 L633,177.6 L638,175.5 L642,171.8 L646,165.6 L651,155.2 L655,139.0 L659,115.5 L664,86.2 L668,57.9 L672,42.1 L677,47.2 L681,70.3 L686,100.3 L690,127.4 L694,147.5 L699,160.8 L703,169.0 L707,173.9 L712,176.8 L716,178.4 L721,179.4 L725,179.9 L729,180.2 L734,180.4 L738,180.5 L742,180.5 L747,180.6 L751,180.6 L755,180.6 L760,180.6 L764,180.6 L769,180.6 L773,180.6 L777,180.6 L782,180.6 L786,180.6 L790,180.6 L795,180.6 L799,180.6 L803,180.6 L808,180.6 L812,180.6 L817,180.6 L821,180.6 L825,180.6 L830,180.6 L834,180.6 L838,180.6 L843,180.6 L847,180.6 L852,180.6 L856,180.6 L860,180.6 L865,180.6 L869,180.6 L873,180.6 L878,180.6 L882,180.6 L886,180.6 L891,180.6 L895,180.6 L900,180.6 L904,180.6 L908,180.6 L913,180.6 L917,180.6 L921,180.6 L926,180.6 L930,180.6 L934,180.6 L939,180.6 L943,180.6 L948,180.6 L952,180.6 L956,180.6 L961,180.6 L965,180.6 L969,180.6 L974,180.6 L978,180.6 L983,180.6 L987,180.6 L991,180.6 L996,180.6 L1000,180.6 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:19;--o:0.50" d="M0,187.5 L4,187.5 L9,187.5 L13,187.5 L17,187.5 L22,187.5 L26,187.5 L31,187.5 L35,187.5 L39,187.5 L44,187.5 L48,187.5 L52,187.5 L57,187.5 L61,187.5 L66,187.5 L70,187.5 L74,187.5 L79,187.5 L83,187.5 L87,187.5 L92,187.5 L96,187.5 L100,187.5 L105,187.5 L109,187.5 L114,187.5 L118,187.5 L122,187.5 L127,187.5 L131,187.5 L135,187.5 L140,187.5 L144,187.5 L148,187.5 L153,187.5 L157,187.5 L162,187.5 L166,187.5 L170,187.5 L175,187.5 L179,187.5 L183,187.5 L188,187.5 L192,187.5 L197,187.5 L201,187.5 L205,187.5 L210,187.5 L214,187.5 L218,187.5 L223,187.5 L227,187.5 L231,187.5 L236,187.5 L240,187.5 L245,187.5 L249,187.5 L253,187.5 L258,187.5 L262,187.5 L266,187.5 L271,187.5 L275,187.5 L279,187.5 L284,187.5 L288,187.5 L293,187.5 L297,187.5 L301,187.5 L306,187.5 L310,187.5 L314,187.5 L319,187.5 L323,187.5 L328,187.5 L332,187.5 L336,187.5 L341,187.5 L345,187.5 L349,187.5 L354,187.5 L358,187.5 L362,187.5 L367,187.5 L371,187.5 L376,187.5 L380,187.5 L384,187.5 L389,187.5 L393,187.5 L397,187.5 L402,187.5 L406,187.5 L410,187.5 L415,187.5 L419,187.5 L424,187.5 L428,187.5 L432,187.4 L437,187.4 L441,187.4 L445,187.4 L450,187.3 L454,187.2 L459,187.1 L463,187.0 L467,186.8 L472,186.5 L476,186.0 L480,185.4 L485,184.4 L489,183.1 L493,181.3 L498,178.8 L502,175.4 L507,170.9 L511,165.1 L515,158.1 L520,150.1 L524,142.0 L528,135.1 L533,130.6 L537,129.6 L541,132.4 L546,138.3 L550,146.0 L555,154.2 L559,161.7 L563,168.1 L568,173.3 L572,177.2 L576,180.1 L581,182.2 L585,183.6 L590,184.5 L594,184.9 L598,184.8 L603,184.0 L607,182.3 L611,179.1 L616,173.5 L620,164.0 L624,148.9 L629,126.7 L633,98.1 L638,69.0 L642,50.3 L646,51.8 L651,72.6 L655,102.2 L659,130.2 L664,151.5 L668,165.8 L672,174.7 L677,180.1 L681,183.3 L686,185.1 L690,186.1 L694,186.7 L699,187.0 L703,187.2 L707,187.3 L712,187.4 L716,187.4 L721,187.5 L725,187.5 L729,187.5 L734,187.5 L738,187.5 L742,187.5 L747,187.5 L751,187.5 L755,187.5 L760,187.5 L764,187.5 L769,187.5 L773,187.5 L777,187.5 L782,187.5 L786,187.5 L790,187.5 L795,187.5 L799,187.5 L803,187.5 L808,187.5 L812,187.5 L817,187.5 L821,187.5 L825,187.5 L830,187.5 L834,187.5 L838,187.5 L843,187.5 L847,187.5 L852,187.5 L856,187.5 L860,187.5 L865,187.5 L869,187.5 L873,187.5 L878,187.5 L882,187.5 L886,187.5 L891,187.5 L895,187.5 L900,187.5 L904,187.5 L908,187.5 L913,187.5 L917,187.5 L921,187.5 L926,187.5 L930,187.5 L934,187.5 L939,187.5 L943,187.5 L948,187.5 L952,187.5 L956,187.5 L961,187.5 L965,187.5 L969,187.5 L974,187.5 L978,187.5 L983,187.5 L987,187.5 L991,187.5 L996,187.5 L1000,187.5 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:18;--o:0.53" d="M0,194.3 L4,194.3 L9,194.3 L13,194.3 L17,194.3 L22,194.3 L26,194.3 L31,194.3 L35,194.3 L39,194.3 L44,194.3 L48,194.3 L52,194.3 L57,194.3 L61,194.3 L66,194.3 L70,194.3 L74,194.3 L79,194.3 L83,194.3 L87,194.3 L92,194.3 L96,194.3 L100,194.3 L105,194.3 L109,194.3 L114,194.3 L118,194.3 L122,194.3 L127,194.3 L131,194.3 L135,194.3 L140,194.3 L144,194.3 L148,194.3 L153,194.3 L157,194.3 L162,194.3 L166,194.3 L170,194.3 L175,194.3 L179,194.3 L183,194.3 L188,194.3 L192,194.3 L197,194.3 L201,194.3 L205,194.3 L210,194.3 L214,194.3 L218,194.3 L223,194.3 L227,194.3 L231,194.3 L236,194.3 L240,194.3 L245,194.3 L249,194.3 L253,194.3 L258,194.3 L262,194.3 L266,194.3 L271,194.3 L275,194.3 L279,194.3 L284,194.3 L288,194.3 L293,194.3 L297,194.3 L301,194.3 L306,194.3 L310,194.3 L314,194.3 L319,194.3 L323,194.3 L328,194.3 L332,194.3 L336,194.3 L341,194.3 L345,194.3 L349,194.3 L354,194.3 L358,194.3 L362,194.3 L367,194.3 L371,194.3 L376,194.3 L380,194.3 L384,194.3 L389,194.3 L393,194.3 L397,194.3 L402,194.3 L406,194.3 L410,194.3 L415,194.3 L419,194.3 L424,194.3 L428,194.3 L432,194.2 L437,194.2 L441,194.1 L445,194.0 L450,193.9 L454,193.7 L459,193.4 L463,193.0 L467,192.3 L472,191.5 L476,190.3 L480,188.5 L485,186.1 L489,182.9 L493,178.5 L498,172.9 L502,166.1 L507,158.2 L511,150.1 L515,142.9 L520,137.9 L524,136.3 L528,138.6 L533,144.1 L537,151.6 L541,159.7 L546,167.4 L550,173.9 L555,179.2 L559,183.1 L563,185.8 L568,187.5 L572,188.1 L576,187.4 L581,185.1 L585,180.4 L590,172.0 L594,158.2 L598,137.5 L603,110.0 L607,80.6 L611,59.5 L616,57.3 L620,75.2 L624,104.0 L629,132.6 L633,155.1 L638,170.5 L642,180.3 L646,186.2 L651,189.6 L655,191.6 L659,192.8 L664,193.5 L668,193.8 L672,194.1 L677,194.2 L681,194.3 L686,194.3 L690,194.3 L694,194.3 L699,194.3 L703,194.3 L707,194.3 L712,194.3 L716,194.3 L721,194.3 L725,194.3 L729,194.3 L734,194.3 L738,194.3 L742,194.3 L747,194.3 L751,194.3 L755,194.3 L760,194.3 L764,194.3 L769,194.3 L773,194.3 L777,194.3 L782,194.3 L786,194.3 L790,194.3 L795,194.3 L799,194.3 L803,194.3 L808,194.3 L812,194.3 L817,194.3 L821,194.3 L825,194.3 L830,194.3 L834,194.3 L838,194.3 L843,194.3 L847,194.3 L852,194.3 L856,194.3 L860,194.3 L865,194.3 L869,194.3 L873,194.3 L878,194.3 L882,194.3 L886,194.3 L891,194.3 L895,194.3 L900,194.3 L904,194.3 L908,194.3 L913,194.3 L917,194.3 L921,194.3 L926,194.3 L930,194.3 L934,194.3 L939,194.3 L943,194.3 L948,194.3 L952,194.3 L956,194.3 L961,194.3 L965,194.3 L969,194.3 L974,194.3 L978,194.3 L983,194.3 L987,194.3 L991,194.3 L996,194.3 L1000,194.3 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:17;--o:0.56" d="M0,201.2 L4,201.2 L9,201.2 L13,201.2 L17,201.2 L22,201.2 L26,201.2 L31,201.2 L35,201.2 L39,201.2 L44,201.2 L48,201.2 L52,201.2 L57,201.2 L61,201.2 L66,201.2 L70,201.2 L74,201.2 L79,201.2 L83,201.2 L87,201.2 L92,201.2 L96,201.2 L100,201.2 L105,201.2 L109,201.2 L114,201.2 L118,201.2 L122,201.2 L127,201.2 L131,201.2 L135,201.2 L140,201.2 L144,201.2 L148,201.2 L153,201.2 L157,201.2 L162,201.2 L166,201.2 L170,201.2 L175,201.2 L179,201.2 L183,201.2 L188,201.2 L192,201.2 L197,201.2 L201,201.2 L205,201.2 L210,201.2 L214,201.2 L218,201.2 L223,201.2 L227,201.2 L231,201.2 L236,201.2 L240,201.2 L245,201.2 L249,201.2 L253,201.2 L258,201.2 L262,201.2 L266,201.2 L271,201.2 L275,201.2 L279,201.2 L284,201.2 L288,201.2 L293,201.2 L297,201.2 L301,201.2 L306,201.2 L310,201.2 L314,201.2 L319,201.2 L323,201.2 L328,201.2 L332,201.2 L336,201.2 L341,201.2 L345,201.2 L349,201.2 L354,201.2 L358,201.2 L362,201.2 L367,201.2 L371,201.2 L376,201.2 L380,201.2 L384,201.2 L389,201.2 L393,201.2 L397,201.2 L402,201.2 L406,201.2 L410,201.2 L415,201.1 L419,201.1 L424,201.1 L428,201.0 L432,200.9 L437,200.8 L441,200.6 L445,200.3 L450,199.9 L454,199.3 L459,198.5 L463,197.3 L467,195.7 L472,193.4 L476,190.3 L480,186.1 L485,180.7 L489,174.1 L493,166.3 L498,158.2 L502,150.7 L507,145.2 L511,143.0 L515,144.7 L520,149.7 L524,156.8 L528,164.8 L533,172.2 L537,178.5 L541,183.0 L546,185.6 L550,186.0 L555,183.5 L559,177.1 L563,165.5 L568,147.0 L572,121.7 L576,93.1 L581,70.6 L585,64.7 L590,78.8 L594,105.7 L598,134.3 L603,157.8 L607,174.4 L611,185.1 L616,191.7 L620,195.7 L624,198.0 L629,199.3 L633,200.1 L638,200.6 L642,200.8 L646,201.0 L651,201.1 L655,201.1 L659,201.2 L664,201.2 L668,201.2 L672,201.2 L677,201.2 L681,201.2 L686,201.2 L690,201.2 L694,201.2 L699,201.2 L703,201.2 L707,201.2 L712,201.2 L716,201.2 L721,201.2 L725,201.2 L729,201.2 L734,201.2 L738,201.2 L742,201.2 L747,201.2 L751,201.2 L755,201.2 L760,201.2 L764,201.2 L769,201.2 L773,201.2 L777,201.2 L782,201.2 L786,201.2 L790,201.2 L795,201.2 L799,201.2 L803,201.2 L808,201.2 L812,201.2 L817,201.2 L821,201.2 L825,201.2 L830,201.2 L834,201.2 L838,201.2 L843,201.2 L847,201.2 L852,201.2 L856,201.2 L860,201.2 L865,201.2 L869,201.2 L873,201.2 L878,201.2 L882,201.2 L886,201.2 L891,201.2 L895,201.2 L900,201.2 L904,201.2 L908,201.2 L913,201.2 L917,201.2 L921,201.2 L926,201.2 L930,201.2 L934,201.2 L939,201.2 L943,201.2 L948,201.2 L952,201.2 L956,201.2 L961,201.2 L965,201.2 L969,201.2 L974,201.2 L978,201.2 L983,201.2 L987,201.2 L991,201.2 L996,201.2 L1000,201.2 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:16;--o:0.58" d="M0,208.1 L4,208.1 L9,208.1 L13,208.1 L17,208.1 L22,208.1 L26,208.1 L31,208.1 L35,208.1 L39,208.1 L44,208.1 L48,208.1 L52,208.1 L57,208.1 L61,208.1 L66,208.1 L70,208.1 L74,208.1 L79,208.1 L83,208.1 L87,208.1 L92,208.1 L96,208.1 L100,208.1 L105,208.1 L109,208.1 L114,208.1 L118,208.1 L122,208.1 L127,208.1 L131,208.1 L135,208.1 L140,208.1 L144,208.1 L148,208.1 L153,208.1 L157,208.1 L162,208.1 L166,208.1 L170,208.1 L175,208.1 L179,208.1 L183,208.1 L188,208.1 L192,208.1 L197,208.1 L201,208.1 L205,208.1 L210,208.1 L214,208.1 L218,208.1 L223,208.1 L227,208.1 L231,208.1 L236,208.1 L240,208.1 L245,208.1 L249,208.1 L253,208.1 L258,208.1 L262,208.1 L266,208.1 L271,208.1 L275,208.1 L279,208.1 L284,208.1 L288,208.1 L293,208.1 L297,208.1 L301,208.1 L306,208.1 L310,208.1 L314,208.1 L319,208.1 L323,208.1 L328,208.1 L332,208.1 L336,208.1 L341,208.1 L345,208.1 L349,208.1 L354,208.1 L358,208.1 L362,208.1 L367,208.1 L371,208.1 L376,208.1 L380,208.1 L384,208.1 L389,208.1 L393,208.1 L397,208.0 L402,208.0 L406,208.0 L410,207.9 L415,207.9 L419,207.8 L424,207.7 L428,207.5 L432,207.2 L437,206.8 L441,206.3 L445,205.5 L450,204.4 L454,202.8 L459,200.7 L463,197.7 L467,193.6 L472,188.4 L476,181.8 L480,174.0 L485,165.6 L489,157.7 L493,151.5 L498,148.4 L502,149.0 L507,153.0 L511,159.1 L515,165.5 L520,170.7 L524,173.3 L528,171.8 L533,165.1 L537,151.9 L541,132.1 L546,108.1 L550,87.1 L555,78.0 L559,86.1 L563,107.7 L568,134.0 L572,157.5 L576,175.3 L581,187.5 L585,195.4 L590,200.3 L594,203.3 L598,205.1 L603,206.3 L607,207.0 L611,207.4 L616,207.6 L620,207.8 L624,207.9 L629,208.0 L633,208.0 L638,208.0 L642,208.1 L646,208.1 L651,208.1 L655,208.1 L659,208.1 L664,208.1 L668,208.1 L672,208.1 L677,208.1 L681,208.1 L686,208.1 L690,208.1 L694,208.1 L699,208.1 L703,208.1 L707,208.1 L712,208.1 L716,208.1 L721,208.1 L725,208.1 L729,208.1 L734,208.1 L738,208.1 L742,208.1 L747,208.1 L751,208.1 L755,208.1 L760,208.1 L764,208.1 L769,208.1 L773,208.1 L777,208.1 L782,208.1 L786,208.1 L790,208.1 L795,208.1 L799,208.1 L803,208.1 L808,208.1 L812,208.1 L817,208.1 L821,208.1 L825,208.1 L830,208.1 L834,208.1 L838,208.1 L843,208.1 L847,208.1 L852,208.1 L856,208.1 L860,208.1 L865,208.1 L869,208.1 L873,208.1 L878,208.1 L882,208.1 L886,208.1 L891,208.1 L895,208.1 L900,208.1 L904,208.1 L908,208.1 L913,208.1 L917,208.1 L921,208.1 L926,208.1 L930,208.1 L934,208.1 L939,208.1 L943,208.1 L948,208.1 L952,208.1 L956,208.1 L961,208.1 L965,208.1 L969,208.1 L974,208.1 L978,208.1 L983,208.1 L987,208.1 L991,208.1 L996,208.1 L1000,208.1 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:15;--o:0.61" d="M0,215.0 L4,215.0 L9,215.0 L13,215.0 L17,215.0 L22,215.0 L26,215.0 L31,215.0 L35,215.0 L39,215.0 L44,215.0 L48,215.0 L52,215.0 L57,215.0 L61,215.0 L66,215.0 L70,215.0 L74,215.0 L79,215.0 L83,215.0 L87,215.0 L92,215.0 L96,215.0 L100,215.0 L105,215.0 L109,215.0 L114,215.0 L118,215.0 L122,215.0 L127,215.0 L131,215.0 L135,215.0 L140,215.0 L144,215.0 L148,215.0 L153,215.0 L157,215.0 L162,215.0 L166,215.0 L170,215.0 L175,215.0 L179,215.0 L183,215.0 L188,215.0 L192,215.0 L197,215.0 L201,215.0 L205,215.0 L210,215.0 L214,215.0 L218,215.0 L223,215.0 L227,215.0 L231,215.0 L236,215.0 L240,215.0 L245,215.0 L249,215.0 L253,215.0 L258,215.0 L262,215.0 L266,215.0 L271,215.0 L275,215.0 L279,215.0 L284,215.0 L288,215.0 L293,215.0 L297,215.0 L301,215.0 L306,215.0 L310,215.0 L314,215.0 L319,215.0 L323,215.0 L328,215.0 L332,215.0 L336,215.0 L341,215.0 L345,215.0 L349,215.0 L354,215.0 L358,215.0 L362,214.9 L367,214.9 L371,214.9 L376,214.9 L380,214.9 L384,214.9 L389,214.9 L393,214.9 L397,214.8 L402,214.8 L406,214.7 L410,214.6 L415,214.4 L419,214.1 L424,213.8 L428,213.2 L432,212.5 L437,211.4 L441,209.8 L445,207.6 L450,204.5 L454,200.2 L459,194.6 L463,187.2 L467,178.3 L472,168.1 L476,157.9 L480,148.9 L485,142.9 L489,140.6 L493,141.5 L498,143.8 L502,145.1 L507,143.3 L511,137.2 L515,127.2 L520,116.1 L524,108.1 L528,107.7 L533,116.4 L537,132.1 L541,150.4 L546,167.5 L550,181.5 L555,191.9 L559,199.4 L563,204.5 L568,208.0 L572,210.3 L576,211.8 L581,212.8 L585,213.5 L590,214.0 L594,214.3 L598,214.5 L603,214.7 L607,214.7 L611,214.8 L616,214.9 L620,214.9 L624,214.9 L629,214.9 L633,214.9 L638,214.9 L642,214.9 L646,214.9 L651,215.0 L655,215.0 L659,215.0 L664,215.0 L668,215.0 L672,215.0 L677,215.0 L681,215.0 L686,215.0 L690,215.0 L694,215.0 L699,215.0 L703,215.0 L707,215.0 L712,215.0 L716,215.0 L721,215.0 L725,215.0 L729,215.0 L734,215.0 L738,215.0 L742,215.0 L747,215.0 L751,215.0 L755,215.0 L760,215.0 L764,215.0 L769,215.0 L773,215.0 L777,215.0 L782,215.0 L786,215.0 L790,215.0 L795,215.0 L799,215.0 L803,215.0 L808,215.0 L812,215.0 L817,215.0 L821,215.0 L825,215.0 L830,215.0 L834,215.0 L838,215.0 L843,215.0 L847,215.0 L852,215.0 L856,215.0 L860,215.0 L865,215.0 L869,215.0 L873,215.0 L878,215.0 L882,215.0 L886,215.0 L891,215.0 L895,215.0 L900,215.0 L904,215.0 L908,215.0 L913,215.0 L917,215.0 L921,215.0 L926,215.0 L930,215.0 L934,215.0 L939,215.0 L943,215.0 L948,215.0 L952,215.0 L956,215.0 L961,215.0 L965,215.0 L969,215.0 L974,215.0 L978,215.0 L983,215.0 L987,215.0 L991,215.0 L996,215.0 L1000,215.0 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:14;--o:0.63" d="M0,221.8 L4,221.8 L9,221.8 L13,221.8 L17,221.8 L22,221.8 L26,221.8 L31,221.8 L35,221.8 L39,221.8 L44,221.8 L48,221.8 L52,221.8 L57,221.8 L61,221.8 L66,221.8 L70,221.8 L74,221.8 L79,221.8 L83,221.8 L87,221.8 L92,221.8 L96,221.8 L100,221.8 L105,221.8 L109,221.8 L114,221.8 L118,221.8 L122,221.8 L127,221.8 L131,221.8 L135,221.8 L140,221.8 L144,221.8 L148,221.8 L153,221.8 L157,221.8 L162,221.8 L166,221.8 L170,221.8 L175,221.8 L179,221.8 L183,221.8 L188,221.8 L192,221.8 L197,221.8 L201,221.8 L205,221.8 L210,221.8 L214,221.8 L218,221.8 L223,221.8 L227,221.8 L231,221.8 L236,221.8 L240,221.8 L245,221.8 L249,221.8 L253,221.8 L258,221.8 L262,221.8 L266,221.8 L271,221.8 L275,221.8 L279,221.8 L284,221.8 L288,221.8 L293,221.8 L297,221.8 L301,221.8 L306,221.8 L310,221.8 L314,221.8 L319,221.8 L323,221.8 L328,221.8 L332,221.8 L336,221.8 L341,221.8 L345,221.8 L349,221.8 L354,221.8 L358,221.8 L362,221.8 L367,221.8 L371,221.8 L376,221.8 L380,221.7 L384,221.7 L389,221.6 L393,221.5 L397,221.4 L402,221.2 L406,220.9 L410,220.5 L415,219.9 L419,218.9 L424,217.4 L428,215.2 L432,211.9 L437,206.9 L441,199.6 L445,189.1 L450,175.0 L454,157.4 L459,138.4 L463,121.7 L467,112.2 L472,112.6 L476,121.4 L480,133.8 L485,145.0 L489,152.3 L493,154.9 L498,153.9 L502,151.4 L507,149.8 L511,150.9 L515,155.7 L520,163.6 L524,173.4 L528,183.3 L533,192.4 L537,200.0 L541,206.0 L546,210.5 L550,213.8 L555,216.2 L559,217.9 L563,219.1 L568,219.9 L572,220.5 L576,220.9 L581,221.2 L585,221.4 L590,221.5 L594,221.6 L598,221.7 L603,221.7 L607,221.8 L611,221.8 L616,221.8 L620,221.8 L624,221.8 L629,221.8 L633,221.8 L638,221.8 L642,221.8 L646,221.8 L651,221.8 L655,221.8 L659,221.8 L664,221.8 L668,221.8 L672,221.8 L677,221.8 L681,221.8 L686,221.8 L690,221.8 L694,221.8 L699,221.8 L703,221.8 L707,221.8 L712,221.8 L716,221.8 L721,221.8 L725,221.8 L729,221.8 L734,221.8 L738,221.8 L742,221.8 L747,221.8 L751,221.8 L755,221.8 L760,221.8 L764,221.8 L769,221.8 L773,221.8 L777,221.8 L782,221.8 L786,221.8 L790,221.8 L795,221.8 L799,221.8 L803,221.8 L808,221.8 L812,221.8 L817,221.8 L821,221.8 L825,221.8 L830,221.8 L834,221.8 L838,221.8 L843,221.8 L847,221.8 L852,221.8 L856,221.8 L860,221.8 L865,221.8 L869,221.8 L873,221.8 L878,221.8 L882,221.8 L886,221.8 L891,221.8 L895,221.8 L900,221.8 L904,221.8 L908,221.8 L913,221.8 L917,221.8 L921,221.8 L926,221.8 L930,221.8 L934,221.8 L939,221.8 L943,221.8 L948,221.8 L952,221.8 L956,221.8 L961,221.8 L965,221.8 L969,221.8 L974,221.8 L978,221.8 L983,221.8 L987,221.8 L991,221.8 L996,221.8 L1000,221.8 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:13;--o:0.66" d="M0,228.7 L4,228.7 L9,228.7 L13,228.7 L17,228.7 L22,228.7 L26,228.7 L31,228.7 L35,228.7 L39,228.7 L44,228.7 L48,228.7 L52,228.7 L57,228.7 L61,228.7 L66,228.7 L70,228.7 L74,228.7 L79,228.7 L83,228.7 L87,228.7 L92,228.7 L96,228.7 L100,228.7 L105,228.7 L109,228.7 L114,228.7 L118,228.7 L122,228.7 L127,228.7 L131,228.7 L135,228.7 L140,228.7 L144,228.7 L148,228.7 L153,228.7 L157,228.7 L162,228.7 L166,228.7 L170,228.7 L175,228.7 L179,228.7 L183,228.7 L188,228.7 L192,228.7 L197,228.7 L201,228.7 L205,228.7 L210,228.7 L214,228.7 L218,228.7 L223,228.7 L227,228.7 L231,228.7 L236,228.7 L240,228.7 L245,228.7 L249,228.7 L253,228.7 L258,228.7 L262,228.7 L266,228.7 L271,228.7 L275,228.7 L279,228.7 L284,228.7 L288,228.7 L293,228.7 L297,228.7 L301,228.7 L306,228.7 L310,228.7 L314,228.7 L319,228.7 L323,228.7 L328,228.7 L332,228.7 L336,228.7 L341,228.7 L345,228.7 L349,228.7 L354,228.7 L358,228.6 L362,228.6 L367,228.6 L371,228.5 L376,228.4 L380,228.3 L384,228.0 L389,227.6 L393,226.9 L397,225.8 L402,224.0 L406,221.0 L410,216.0 L415,208.1 L419,195.8 L424,177.7 L428,153.8 L432,127.2 L437,105.5 L441,97.8 L445,107.5 L450,129.4 L454,153.8 L459,174.0 L463,187.4 L467,194.3 L472,196.0 L476,193.6 L480,188.6 L485,182.0 L489,175.5 L493,170.8 L498,169.1 L502,171.2 L507,176.6 L511,184.2 L515,192.6 L520,200.5 L524,207.4 L528,213.0 L533,217.3 L537,220.6 L541,223.0 L546,224.7 L550,225.9 L555,226.7 L559,227.3 L563,227.7 L568,228.0 L572,228.2 L576,228.4 L581,228.5 L585,228.5 L590,228.6 L594,228.6 L598,228.6 L603,228.7 L607,228.7 L611,228.7 L616,228.7 L620,228.7 L624,228.7 L629,228.7 L633,228.7 L638,228.7 L642,228.7 L646,228.7 L651,228.7 L655,228.7 L659,228.7 L664,228.7 L668,228.7 L672,228.7 L677,228.7 L681,228.7 L686,228.7 L690,228.7 L694,228.7 L699,228.7 L703,228.7 L707,228.7 L712,228.7 L716,228.7 L721,228.7 L725,228.7 L729,228.7 L734,228.7 L738,228.7 L742,228.7 L747,228.7 L751,228.7 L755,228.7 L760,228.7 L764,228.7 L769,228.7 L773,228.7 L777,228.7 L782,228.7 L786,228.7 L790,228.7 L795,228.7 L799,228.7 L803,228.7 L808,228.7 L812,228.7 L817,228.7 L821,228.7 L825,228.7 L830,228.7 L834,228.7 L838,228.7 L843,228.7 L847,228.7 L852,228.7 L856,228.7 L860,228.7 L865,228.7 L869,228.7 L873,228.7 L878,228.7 L882,228.7 L886,228.7 L891,228.7 L895,228.7 L900,228.7 L904,228.7 L908,228.7 L913,228.7 L917,228.7 L921,228.7 L926,228.7 L930,228.7 L934,228.7 L939,228.7 L943,228.7 L948,228.7 L952,228.7 L956,228.7 L961,228.7 L965,228.7 L969,228.7 L974,228.7 L978,228.7 L983,228.7 L987,228.7 L991,228.7 L996,228.7 L1000,228.7 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:12;--o:0.69" d="M0,235.6 L4,235.6 L9,235.6 L13,235.6 L17,235.6 L22,235.6 L26,235.6 L31,235.6 L35,235.6 L39,235.6 L44,235.6 L48,235.6 L52,235.6 L57,235.6 L61,235.6 L66,235.6 L70,235.6 L74,235.6 L79,235.6 L83,235.6 L87,235.6 L92,235.6 L96,235.6 L100,235.6 L105,235.6 L109,235.6 L114,235.6 L118,235.6 L122,235.6 L127,235.6 L131,235.6 L135,235.6 L140,235.6 L144,235.6 L148,235.6 L153,235.6 L157,235.6 L162,235.6 L166,235.6 L170,235.6 L175,235.6 L179,235.6 L183,235.6 L188,235.6 L192,235.6 L197,235.6 L201,235.6 L205,235.6 L210,235.6 L214,235.6 L218,235.6 L223,235.6 L227,235.6 L231,235.6 L236,235.6 L240,235.6 L245,235.6 L249,235.6 L253,235.6 L258,235.6 L262,235.6 L266,235.6 L271,235.6 L275,235.6 L279,235.6 L284,235.6 L288,235.6 L293,235.6 L297,235.6 L301,235.6 L306,235.6 L310,235.6 L314,235.6 L319,235.6 L323,235.6 L328,235.5 L332,235.5 L336,235.5 L341,235.5 L345,235.4 L349,235.3 L354,235.2 L358,234.9 L362,234.5 L367,233.7 L371,232.3 L376,229.9 L380,225.9 L384,219.2 L389,208.3 L393,191.4 L397,167.6 L402,138.7 L406,112.0 L410,98.6 L415,105.4 L419,128.6 L424,157.3 L428,182.5 L432,200.8 L437,212.3 L441,218.7 L445,221.2 L450,221.1 L454,218.7 L459,214.5 L463,208.5 L467,201.3 L472,193.3 L476,185.8 L480,180.1 L485,177.5 L489,178.7 L493,183.4 L498,190.5 L502,198.6 L507,206.5 L511,213.5 L515,219.2 L520,223.7 L524,227.1 L528,229.5 L533,231.3 L537,232.6 L541,233.5 L546,234.1 L550,234.6 L555,234.9 L559,235.1 L563,235.2 L568,235.3 L572,235.4 L576,235.5 L581,235.5 L585,235.5 L590,235.5 L594,235.5 L598,235.5 L603,235.6 L607,235.6 L611,235.6 L616,235.6 L620,235.6 L624,235.6 L629,235.6 L633,235.6 L638,235.6 L642,235.6 L646,235.6 L651,235.6 L655,235.6 L659,235.6 L664,235.6 L668,235.6 L672,235.6 L677,235.6 L681,235.6 L686,235.6 L690,235.6 L694,235.6 L699,235.6 L703,235.6 L707,235.6 L712,235.6 L716,235.6 L721,235.6 L725,235.6 L729,235.6 L734,235.6 L738,235.6 L742,235.6 L747,235.6 L751,235.6 L755,235.6 L760,235.6 L764,235.6 L769,235.6 L773,235.6 L777,235.6 L782,235.6 L786,235.6 L790,235.6 L795,235.6 L799,235.6 L803,235.6 L808,235.6 L812,235.6 L817,235.6 L821,235.6 L825,235.6 L830,235.6 L834,235.6 L838,235.6 L843,235.6 L847,235.6 L852,235.6 L856,235.6 L860,235.6 L865,235.6 L869,235.6 L873,235.6 L878,235.6 L882,235.6 L886,235.6 L891,235.6 L895,235.6 L900,235.6 L904,235.6 L908,235.6 L913,235.6 L917,235.6 L921,235.6 L926,235.6 L930,235.6 L934,235.6 L939,235.6 L943,235.6 L948,235.6 L952,235.6 L956,235.6 L961,235.6 L965,235.6 L969,235.6 L974,235.6 L978,235.6 L983,235.6 L987,235.6 L991,235.6 L996,235.6 L1000,235.6 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:11;--o:0.71" d="M0,242.4 L4,242.4 L9,242.4 L13,242.4 L17,242.4 L22,242.4 L26,242.4 L31,242.4 L35,242.4 L39,242.4 L44,242.4 L48,242.4 L52,242.4 L57,242.4 L61,242.4 L66,242.4 L70,242.4 L74,242.4 L79,242.4 L83,242.4 L87,242.4 L92,242.4 L96,242.4 L100,242.4 L105,242.4 L109,242.4 L114,242.4 L118,242.4 L122,242.4 L127,242.4 L131,242.4 L135,242.4 L140,242.4 L144,242.4 L148,242.4 L153,242.4 L157,242.4 L162,242.4 L166,242.4 L170,242.4 L175,242.4 L179,242.4 L183,242.4 L188,242.4 L192,242.4 L197,242.4 L201,242.4 L205,242.4 L210,242.4 L214,242.4 L218,242.4 L223,242.4 L227,242.4 L231,242.4 L236,242.4 L240,242.4 L245,242.4 L249,242.4 L253,242.4 L258,242.4 L262,242.4 L266,242.4 L271,242.4 L275,242.4 L279,242.4 L284,242.4 L288,242.4 L293,242.4 L297,242.4 L301,242.4 L306,242.4 L310,242.4 L314,242.3 L319,242.3 L323,242.1 L328,241.9 L332,241.5 L336,240.9 L341,239.7 L345,237.6 L349,234.1 L354,228.0 L358,218.1 L362,202.4 L367,179.6 L371,150.8 L376,122.2 L380,105.0 L384,108.1 L389,129.8 L393,159.4 L397,186.7 L402,207.1 L406,220.7 L410,228.9 L415,233.6 L419,235.9 L424,236.6 L428,236.1 L432,234.6 L437,232.1 L441,228.4 L445,223.5 L450,217.3 L454,209.9 L459,201.8 L463,194.0 L467,187.9 L472,184.7 L476,185.2 L480,189.4 L485,196.2 L489,204.2 L493,212.2 L498,219.4 L502,225.3 L507,229.9 L511,233.5 L515,236.1 L520,237.9 L524,239.3 L528,240.2 L533,240.9 L537,241.4 L541,241.7 L546,241.9 L550,242.1 L555,242.2 L559,242.3 L563,242.3 L568,242.4 L572,242.4 L576,242.4 L581,242.4 L585,242.4 L590,242.4 L594,242.4 L598,242.4 L603,242.4 L607,242.4 L611,242.4 L616,242.4 L620,242.4 L624,242.4 L629,242.4 L633,242.4 L638,242.4 L642,242.4 L646,242.4 L651,242.4 L655,242.4 L659,242.4 L664,242.4 L668,242.4 L672,242.4 L677,242.4 L681,242.4 L686,242.4 L690,242.4 L694,242.4 L699,242.4 L703,242.4 L707,242.4 L712,242.4 L716,242.4 L721,242.4 L725,242.4 L729,242.4 L734,242.4 L738,242.4 L742,242.4 L747,242.4 L751,242.4 L755,242.4 L760,242.4 L764,242.4 L769,242.4 L773,242.4 L777,242.4 L782,242.4 L786,242.4 L790,242.4 L795,242.4 L799,242.4 L803,242.4 L808,242.4 L812,242.4 L817,242.4 L821,242.4 L825,242.4 L830,242.4 L834,242.4 L838,242.4 L843,242.4 L847,242.4 L852,242.4 L856,242.4 L860,242.4 L865,242.4 L869,242.4 L873,242.4 L878,242.4 L882,242.4 L886,242.4 L891,242.4 L895,242.4 L900,242.4 L904,242.4 L908,242.4 L913,242.4 L917,242.4 L921,242.4 L926,242.4 L930,242.4 L934,242.4 L939,242.4 L943,242.4 L948,242.4 L952,242.4 L956,242.4 L961,242.4 L965,242.4 L969,242.4 L974,242.4 L978,242.4 L983,242.4 L987,242.4 L991,242.4 L996,242.4 L1000,242.4 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:10;--o:0.74" d="M0,249.3 L4,249.3 L9,249.3 L13,249.3 L17,249.3 L22,249.3 L26,249.3 L31,249.3 L35,249.3 L39,249.3 L44,249.3 L48,249.3 L52,249.3 L57,249.3 L61,249.3 L66,249.3 L70,249.3 L74,249.3 L79,249.3 L83,249.3 L87,249.3 L92,249.3 L96,249.3 L100,249.3 L105,249.3 L109,249.3 L114,249.3 L118,249.3 L122,249.3 L127,249.3 L131,249.3 L135,249.3 L140,249.3 L144,249.3 L148,249.3 L153,249.3 L157,249.3 L162,249.3 L166,249.3 L170,249.3 L175,249.3 L179,249.3 L183,249.3 L188,249.3 L192,249.3 L197,249.3 L201,249.3 L205,249.3 L210,249.3 L214,249.3 L218,249.3 L223,249.3 L227,249.3 L231,249.3 L236,249.3 L240,249.3 L245,249.3 L249,249.3 L253,249.3 L258,249.3 L262,249.3 L266,249.3 L271,249.3 L275,249.3 L279,249.3 L284,249.2 L288,249.2 L293,249.0 L297,248.8 L301,248.5 L306,247.9 L310,246.8 L314,245.0 L319,241.8 L323,236.3 L328,227.1 L332,212.5 L336,190.9 L341,162.7 L345,133.2 L349,113.1 L354,112.6 L358,131.9 L362,161.3 L367,189.6 L371,211.5 L376,226.4 L380,235.7 L384,241.2 L389,244.3 L393,246.0 L397,246.7 L402,246.9 L406,246.5 L410,245.7 L415,244.4 L419,242.5 L424,239.9 L428,236.2 L432,231.4 L437,225.3 L441,218.0 L445,210.0 L450,202.0 L454,195.5 L459,191.8 L463,191.8 L467,195.4 L472,201.9 L476,209.8 L480,217.9 L485,225.2 L489,231.3 L493,236.2 L498,239.9 L502,242.6 L507,244.6 L511,246.0 L515,247.0 L520,247.7 L524,248.2 L528,248.5 L533,248.8 L537,248.9 L541,249.0 L546,249.1 L550,249.2 L555,249.2 L559,249.2 L563,249.3 L568,249.3 L572,249.3 L576,249.3 L581,249.3 L585,249.3 L590,249.3 L594,249.3 L598,249.3 L603,249.3 L607,249.3 L611,249.3 L616,249.3 L620,249.3 L624,249.3 L629,249.3 L633,249.3 L638,249.3 L642,249.3 L646,249.3 L651,249.3 L655,249.3 L659,249.3 L664,249.3 L668,249.3 L672,249.3 L677,249.3 L681,249.3 L686,249.3 L690,249.3 L694,249.3 L699,249.3 L703,249.3 L707,249.3 L712,249.3 L716,249.3 L721,249.3 L725,249.3 L729,249.3 L734,249.3 L738,249.3 L742,249.3 L747,249.3 L751,249.3 L755,249.3 L760,249.3 L764,249.3 L769,249.3 L773,249.3 L777,249.3 L782,249.3 L786,249.3 L790,249.3 L795,249.3 L799,249.3 L803,249.3 L808,249.3 L812,249.3 L817,249.3 L821,249.3 L825,249.3 L830,249.3 L834,249.3 L838,249.3 L843,249.3 L847,249.3 L852,249.3 L856,249.3 L860,249.3 L865,249.3 L869,249.3 L873,249.3 L878,249.3 L882,249.3 L886,249.3 L891,249.3 L895,249.3 L900,249.3 L904,249.3 L908,249.3 L913,249.3 L917,249.3 L921,249.3 L926,249.3 L930,249.3 L934,249.3 L939,249.3 L943,249.3 L948,249.3 L952,249.3 L956,249.3 L961,249.3 L965,249.3 L969,249.3 L974,249.3 L978,249.3 L983,249.3 L987,249.3 L991,249.3 L996,249.3 L1000,249.3 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:9;--o:0.77" d="M0,256.2 L4,256.2 L9,256.2 L13,256.2 L17,256.2 L22,256.2 L26,256.2 L31,256.2 L35,256.2 L39,256.2 L44,256.2 L48,256.2 L52,256.2 L57,256.2 L61,256.2 L66,256.2 L70,256.2 L74,256.2 L79,256.2 L83,256.2 L87,256.2 L92,256.2 L96,256.2 L100,256.2 L105,256.2 L109,256.2 L114,256.2 L118,256.2 L122,256.2 L127,256.2 L131,256.2 L135,256.2 L140,256.2 L144,256.2 L148,256.2 L153,256.2 L157,256.2 L162,256.2 L166,256.2 L170,256.2 L175,256.2 L179,256.2 L183,256.2 L188,256.2 L192,256.2 L197,256.2 L201,256.2 L205,256.2 L210,256.2 L214,256.2 L218,256.2 L223,256.2 L227,256.2 L231,256.2 L236,256.2 L240,256.2 L245,256.1 L249,256.1 L253,256.1 L258,256.0 L262,255.9 L266,255.8 L271,255.5 L275,254.9 L279,253.9 L284,252.2 L288,249.3 L293,244.3 L297,235.9 L301,222.3 L306,201.9 L310,174.6 L314,144.6 L319,122.1 L323,117.9 L328,134.5 L332,163.1 L336,192.2 L341,215.4 L345,231.4 L349,241.5 L354,247.6 L358,251.2 L362,253.2 L367,254.3 L371,254.9 L376,255.2 L380,255.1 L384,254.9 L389,254.6 L393,253.9 L397,253.0 L402,251.7 L406,249.8 L410,247.3 L415,243.8 L419,239.1 L424,233.2 L428,226.1 L432,218.1 L437,210.1 L441,203.3 L445,199.0 L450,198.4 L454,201.5 L459,207.6 L463,215.4 L467,223.5 L472,231.0 L476,237.3 L480,242.4 L485,246.2 L489,249.1 L493,251.2 L498,252.7 L502,253.7 L507,254.5 L511,255.0 L515,255.3 L520,255.6 L524,255.8 L528,255.9 L533,256.0 L537,256.0 L541,256.1 L546,256.1 L550,256.1 L555,256.1 L559,256.2 L563,256.2 L568,256.2 L572,256.2 L576,256.2 L581,256.2 L585,256.2 L590,256.2 L594,256.2 L598,256.2 L603,256.2 L607,256.2 L611,256.2 L616,256.2 L620,256.2 L624,256.2 L629,256.2 L633,256.2 L638,256.2 L642,256.2 L646,256.2 L651,256.2 L655,256.2 L659,256.2 L664,256.2 L668,256.2 L672,256.2 L677,256.2 L681,256.2 L686,256.2 L690,256.2 L694,256.2 L699,256.2 L703,256.2 L707,256.2 L712,256.2 L716,256.2 L721,256.2 L725,256.2 L729,256.2 L734,256.2 L738,256.2 L742,256.2 L747,256.2 L751,256.2 L755,256.2 L760,256.2 L764,256.2 L769,256.2 L773,256.2 L777,256.2 L782,256.2 L786,256.2 L790,256.2 L795,256.2 L799,256.2 L803,256.2 L808,256.2 L812,256.2 L817,256.2 L821,256.2 L825,256.2 L830,256.2 L834,256.2 L838,256.2 L843,256.2 L847,256.2 L852,256.2 L856,256.2 L860,256.2 L865,256.2 L869,256.2 L873,256.2 L878,256.2 L882,256.2 L886,256.2 L891,256.2 L895,256.2 L900,256.2 L904,256.2 L908,256.2 L913,256.2 L917,256.2 L921,256.2 L926,256.2 L930,256.2 L934,256.2 L939,256.2 L943,256.2 L948,256.2 L952,256.2 L956,256.2 L961,256.2 L965,256.2 L969,256.2 L974,256.2 L978,256.2 L983,256.2 L987,256.2 L991,256.2 L996,256.2 L1000,256.2 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:8;--o:0.79" d="M0,263.0 L4,263.0 L9,263.0 L13,263.0 L17,263.0 L22,263.0 L26,263.0 L31,263.0 L35,263.0 L39,263.0 L44,263.0 L48,263.0 L52,263.0 L57,263.0 L61,263.0 L66,263.0 L70,263.0 L74,263.0 L79,263.0 L83,263.0 L87,263.0 L92,263.0 L96,263.0 L100,263.0 L105,263.0 L109,263.0 L114,263.0 L118,263.0 L122,263.0 L127,263.0 L131,263.0 L135,263.0 L140,263.0 L144,263.0 L148,263.0 L153,263.0 L157,263.0 L162,263.0 L166,263.0 L170,263.0 L175,263.0 L179,263.0 L183,263.0 L188,263.0 L192,263.0 L197,263.0 L201,263.0 L205,263.0 L210,263.0 L214,263.0 L218,263.0 L223,263.0 L227,262.9 L231,262.8 L236,262.7 L240,262.4 L245,261.9 L249,261.0 L253,259.5 L258,256.8 L262,252.2 L266,244.4 L271,231.9 L275,212.7 L279,186.4 L284,156.3 L288,131.6 L293,123.9 L297,137.5 L301,164.9 L306,194.6 L310,219.0 L314,236.1 L319,247.1 L323,253.7 L328,257.7 L332,260.0 L336,261.3 L341,262.0 L345,262.4 L349,262.6 L354,262.6 L358,262.6 L362,262.5 L367,262.3 L371,262.0 L376,261.6 L380,261.0 L384,260.1 L389,258.8 L393,257.1 L397,254.6 L402,251.3 L406,246.8 L410,241.1 L415,234.2 L419,226.3 L424,218.2 L428,211.1 L432,206.3 L437,205.1 L441,207.7 L445,213.4 L450,221.0 L454,229.2 L459,236.8 L463,243.3 L467,248.5 L472,252.6 L476,255.6 L480,257.8 L485,259.3 L489,260.4 L493,261.2 L498,261.8 L502,262.2 L507,262.4 L511,262.6 L515,262.7 L520,262.8 L524,262.9 L528,262.9 L533,263.0 L537,263.0 L541,263.0 L546,263.0 L550,263.0 L555,263.0 L559,263.0 L563,263.0 L568,263.0 L572,263.0 L576,263.0 L581,263.0 L585,263.0 L590,263.0 L594,263.0 L598,263.0 L603,263.0 L607,263.0 L611,263.0 L616,263.0 L620,263.0 L624,263.0 L629,263.0 L633,263.0 L638,263.0 L642,263.0 L646,263.0 L651,263.0 L655,263.0 L659,263.0 L664,263.0 L668,263.0 L672,263.0 L677,263.0 L681,263.0 L686,263.0 L690,263.0 L694,263.0 L699,263.0 L703,263.0 L707,263.0 L712,263.0 L716,263.0 L721,263.0 L725,263.0 L729,263.0 L734,263.0 L738,263.0 L742,263.0 L747,263.0 L751,263.0 L755,263.0 L760,263.0 L764,263.0 L769,263.0 L773,263.0 L777,263.0 L782,263.0 L786,263.0 L790,263.0 L795,263.0 L799,263.0 L803,263.0 L808,263.0 L812,263.0 L817,263.0 L821,263.0 L825,263.0 L830,263.0 L834,263.0 L838,263.0 L843,263.0 L847,263.0 L852,263.0 L856,263.0 L860,263.0 L865,263.0 L869,263.0 L873,263.0 L878,263.0 L882,263.0 L886,263.0 L891,263.0 L895,263.0 L900,263.0 L904,263.0 L908,263.0 L913,263.0 L917,263.0 L921,263.0 L926,263.0 L930,263.0 L934,263.0 L939,263.0 L943,263.0 L948,263.0 L952,263.0 L956,263.0 L961,263.0 L965,263.0 L969,263.0 L974,263.0 L978,263.0 L983,263.0 L987,263.0 L991,263.0 L996,263.0 L1000,263.0 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:7;--o:0.82" d="M0,269.9 L4,269.9 L9,269.9 L13,269.9 L17,269.9 L22,269.9 L26,269.9 L31,269.9 L35,269.9 L39,269.9 L44,269.9 L48,269.9 L52,269.9 L57,269.9 L61,269.9 L66,269.9 L70,269.9 L74,269.9 L79,269.9 L83,269.9 L87,269.9 L92,269.9 L96,269.9 L100,269.9 L105,269.9 L109,269.9 L114,269.9 L118,269.9 L122,269.9 L127,269.9 L131,269.9 L135,269.9 L140,269.9 L144,269.9 L148,269.9 L153,269.9 L157,269.9 L162,269.9 L166,269.9 L170,269.9 L175,269.9 L179,269.9 L183,269.9 L188,269.9 L192,269.9 L197,269.8 L201,269.7 L205,269.6 L210,269.3 L214,268.9 L218,268.1 L223,266.7 L227,264.2 L231,260.0 L236,252.9 L240,241.2 L245,223.2 L249,198.0 L253,168.1 L258,141.7 L262,130.6 L266,140.8 L271,166.8 L275,196.8 L279,222.3 L284,240.6 L288,252.5 L293,259.8 L297,264.1 L301,266.6 L306,268.0 L310,268.8 L314,269.3 L319,269.5 L323,269.7 L328,269.7 L332,269.7 L336,269.7 L341,269.7 L345,269.6 L349,269.5 L354,269.3 L358,269.0 L362,268.6 L367,268.0 L371,267.1 L376,265.9 L380,264.2 L384,261.9 L389,258.7 L393,254.4 L397,249.0 L402,242.2 L406,234.4 L410,226.3 L415,218.9 L419,213.7 L424,211.9 L428,213.9 L432,219.2 L437,226.6 L441,234.8 L445,242.5 L450,249.2 L454,254.7 L459,258.9 L463,262.0 L467,264.3 L472,266.0 L476,267.2 L480,268.0 L485,268.6 L489,269.0 L493,269.3 L498,269.5 L502,269.6 L507,269.7 L511,269.8 L515,269.8 L520,269.8 L524,269.9 L528,269.9 L533,269.9 L537,269.9 L541,269.9 L546,269.9 L550,269.9 L555,269.9 L559,269.9 L563,269.9 L568,269.9 L572,269.9 L576,269.9 L581,269.9 L585,269.9 L590,269.9 L594,269.9 L598,269.9 L603,269.9 L607,269.9 L611,269.9 L616,269.9 L620,269.9 L624,269.9 L629,269.9 L633,269.9 L638,269.9 L642,269.9 L646,269.9 L651,269.9 L655,269.9 L659,269.9 L664,269.9 L668,269.9 L672,269.9 L677,269.9 L681,269.9 L686,269.9 L690,269.9 L694,269.9 L699,269.9 L703,269.9 L707,269.9 L712,269.9 L716,269.9 L721,269.9 L725,269.9 L729,269.9 L734,269.9 L738,269.9 L742,269.9 L747,269.9 L751,269.9 L755,269.9 L760,269.9 L764,269.9 L769,269.9 L773,269.9 L777,269.9 L782,269.9 L786,269.9 L790,269.9 L795,269.9 L799,269.9 L803,269.9 L808,269.9 L812,269.9 L817,269.9 L821,269.9 L825,269.9 L830,269.9 L834,269.9 L838,269.9 L843,269.9 L847,269.9 L852,269.9 L856,269.9 L860,269.9 L865,269.9 L869,269.9 L873,269.9 L878,269.9 L882,269.9 L886,269.9 L891,269.9 L895,269.9 L900,269.9 L904,269.9 L908,269.9 L913,269.9 L917,269.9 L921,269.9 L926,269.9 L930,269.9 L934,269.9 L939,269.9 L943,269.9 L948,269.9 L952,269.9 L956,269.9 L961,269.9 L965,269.9 L969,269.9 L974,269.9 L978,269.9 L983,269.9 L987,269.9 L991,269.9 L996,269.9 L1000,269.9 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:6;--o:0.84" d="M0,276.8 L4,276.8 L9,276.8 L13,276.8 L17,276.8 L22,276.8 L26,276.8 L31,276.8 L35,276.8 L39,276.8 L44,276.8 L48,276.8 L52,276.8 L57,276.8 L61,276.8 L66,276.8 L70,276.8 L74,276.8 L79,276.8 L83,276.8 L87,276.8 L92,276.8 L96,276.8 L100,276.8 L105,276.8 L109,276.8 L114,276.8 L118,276.8 L122,276.8 L127,276.8 L131,276.8 L135,276.8 L140,276.8 L144,276.8 L148,276.8 L153,276.8 L157,276.8 L162,276.7 L166,276.7 L170,276.6 L175,276.5 L179,276.2 L183,275.8 L188,275.1 L192,273.8 L197,271.6 L201,267.7 L205,261.2 L210,250.4 L214,233.6 L218,209.5 L223,180.0 L227,152.2 L231,137.8 L236,144.6 L240,168.8 L245,198.8 L249,225.4 L253,244.9 L258,257.7 L262,265.7 L266,270.4 L271,273.1 L275,274.7 L279,275.6 L284,276.1 L288,276.4 L293,276.6 L297,276.6 L301,276.7 L306,276.7 L310,276.7 L314,276.7 L319,276.7 L323,276.6 L328,276.6 L332,276.5 L336,276.4 L341,276.2 L345,275.9 L349,275.5 L354,274.9 L358,274.1 L362,273.0 L367,271.4 L371,269.2 L376,266.1 L380,262.1 L384,256.8 L389,250.2 L393,242.5 L397,234.4 L402,226.8 L406,221.2 L410,218.8 L415,220.2 L419,225.1 L424,232.3 L428,240.4 L432,248.3 L437,255.1 L441,260.8 L445,265.2 L450,268.5 L454,270.9 L459,272.6 L463,273.9 L467,274.8 L472,275.4 L476,275.8 L480,276.1 L485,276.3 L489,276.5 L493,276.6 L498,276.6 L502,276.7 L507,276.7 L511,276.7 L515,276.7 L520,276.8 L524,276.8 L528,276.8 L533,276.8 L537,276.8 L541,276.8 L546,276.8 L550,276.8 L555,276.8 L559,276.8 L563,276.8 L568,276.8 L572,276.8 L576,276.8 L581,276.8 L585,276.8 L590,276.8 L594,276.8 L598,276.8 L603,276.8 L607,276.8 L611,276.8 L616,276.8 L620,276.8 L624,276.8 L629,276.8 L633,276.8 L638,276.8 L642,276.8 L646,276.8 L651,276.8 L655,276.8 L659,276.8 L664,276.8 L668,276.8 L672,276.8 L677,276.8 L681,276.8 L686,276.8 L690,276.8 L694,276.8 L699,276.8 L703,276.8 L707,276.8 L712,276.8 L716,276.8 L721,276.8 L725,276.8 L729,276.8 L734,276.8 L738,276.8 L742,276.8 L747,276.8 L751,276.8 L755,276.8 L760,276.8 L764,276.8 L769,276.8 L773,276.8 L777,276.8 L782,276.8 L786,276.8 L790,276.8 L795,276.8 L799,276.8 L803,276.8 L808,276.8 L812,276.8 L817,276.8 L821,276.8 L825,276.8 L830,276.8 L834,276.8 L838,276.8 L843,276.8 L847,276.8 L852,276.8 L856,276.8 L860,276.8 L865,276.8 L869,276.8 L873,276.8 L878,276.8 L882,276.8 L886,276.8 L891,276.8 L895,276.8 L900,276.8 L904,276.8 L908,276.8 L913,276.8 L917,276.8 L921,276.8 L926,276.8 L930,276.8 L934,276.8 L939,276.8 L943,276.8 L948,276.8 L952,276.8 L956,276.8 L961,276.8 L965,276.8 L969,276.8 L974,276.8 L978,276.8 L983,276.8 L987,276.8 L991,276.8 L996,276.8 L1000,276.8 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:5;--o:0.87" d="M0,283.7 L4,283.7 L9,283.7 L13,283.7 L17,283.7 L22,283.7 L26,283.7 L31,283.7 L35,283.7 L39,283.7 L44,283.7 L48,283.7 L52,283.7 L57,283.7 L61,283.7 L66,283.7 L70,283.7 L74,283.7 L79,283.7 L83,283.7 L87,283.7 L92,283.7 L96,283.7 L100,283.7 L105,283.7 L109,283.6 L114,283.6 L118,283.6 L122,283.6 L127,283.6 L131,283.6 L135,283.6 L140,283.5 L144,283.4 L148,283.2 L153,282.8 L157,282.1 L162,280.9 L166,278.9 L170,275.4 L175,269.4 L179,259.4 L183,243.7 L188,220.9 L192,191.9 L197,163.0 L201,145.7 L205,148.9 L210,170.9 L214,200.8 L218,228.4 L223,249.1 L227,262.9 L231,271.5 L236,276.6 L240,279.6 L245,281.4 L249,282.3 L253,282.9 L258,283.2 L262,283.4 L266,283.5 L271,283.6 L275,283.6 L279,283.6 L284,283.6 L288,283.6 L293,283.6 L297,283.6 L301,283.6 L306,283.6 L310,283.5 L314,283.5 L319,283.4 L323,283.2 L328,283.1 L332,282.8 L336,282.4 L341,281.9 L345,281.1 L349,280.1 L354,278.6 L358,276.4 L362,273.5 L367,269.6 L371,264.5 L376,258.2 L380,250.6 L384,242.5 L389,234.8 L393,228.8 L397,225.8 L402,226.6 L406,231.0 L410,237.9 L415,246.0 L419,254.0 L424,261.0 L428,266.9 L432,271.4 L437,274.9 L441,277.4 L445,279.3 L450,280.6 L454,281.5 L459,282.2 L463,282.6 L467,282.9 L472,283.1 L476,283.3 L480,283.4 L485,283.5 L489,283.5 L493,283.6 L498,283.6 L502,283.6 L507,283.6 L511,283.6 L515,283.6 L520,283.6 L524,283.6 L528,283.6 L533,283.6 L537,283.7 L541,283.7 L546,283.7 L550,283.7 L555,283.7 L559,283.7 L563,283.7 L568,283.7 L572,283.7 L576,283.7 L581,283.7 L585,283.7 L590,283.7 L594,283.7 L598,283.7 L603,283.7 L607,283.7 L611,283.7 L616,283.7 L620,283.7 L624,283.7 L629,283.7 L633,283.7 L638,283.7 L642,283.7 L646,283.7 L651,283.7 L655,283.7 L659,283.7 L664,283.7 L668,283.7 L672,283.7 L677,283.7 L681,283.7 L686,283.7 L690,283.7 L694,283.7 L699,283.7 L703,283.7 L707,283.7 L712,283.7 L716,283.7 L721,283.7 L725,283.7 L729,283.7 L734,283.7 L738,283.7 L742,283.7 L747,283.7 L751,283.7 L755,283.7 L760,283.7 L764,283.7 L769,283.7 L773,283.7 L777,283.7 L782,283.7 L786,283.7 L790,283.7 L795,283.7 L799,283.7 L803,283.7 L808,283.7 L812,283.7 L817,283.7 L821,283.7 L825,283.7 L830,283.7 L834,283.7 L838,283.7 L843,283.7 L847,283.7 L852,283.7 L856,283.7 L860,283.7 L865,283.7 L869,283.7 L873,283.7 L878,283.7 L882,283.7 L886,283.7 L891,283.7 L895,283.7 L900,283.7 L904,283.7 L908,283.7 L913,283.7 L917,283.7 L921,283.7 L926,283.7 L930,283.7 L934,283.7 L939,283.7 L943,283.7 L948,283.7 L952,283.7 L956,283.7 L961,283.7 L965,283.7 L969,283.7 L974,283.7 L978,283.7 L983,283.7 L987,283.7 L991,283.7 L996,283.7 L1000,283.7 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:4;--o:0.90" d="M0,290.5 L4,290.5 L9,290.5 L13,290.5 L17,290.5 L22,290.5 L26,290.5 L31,290.5 L35,290.5 L39,290.5 L44,290.5 L48,290.5 L52,290.5 L57,290.5 L61,290.5 L66,290.5 L70,290.5 L74,290.5 L79,290.5 L83,290.5 L87,290.5 L92,290.5 L96,290.5 L100,290.5 L105,290.4 L109,290.4 L114,290.3 L118,290.1 L122,289.7 L127,289.1 L131,288.1 L135,286.2 L140,283.0 L144,277.5 L148,268.3 L153,253.7 L157,232.0 L162,203.8 L166,174.2 L170,154.2 L175,153.8 L179,173.2 L183,202.7 L188,231.1 L192,253.0 L197,267.9 L201,277.2 L205,282.8 L210,286.1 L214,288.0 L218,289.1 L223,289.7 L227,290.1 L231,290.3 L236,290.4 L240,290.4 L245,290.5 L249,290.5 L253,290.5 L258,290.5 L262,290.5 L266,290.5 L271,290.5 L275,290.5 L279,290.5 L284,290.5 L288,290.5 L293,290.4 L297,290.4 L301,290.3 L306,290.3 L310,290.1 L314,290.0 L319,289.7 L323,289.4 L328,288.9 L332,288.2 L336,287.1 L341,285.7 L345,283.7 L349,280.9 L354,277.2 L358,272.3 L362,266.1 L367,258.7 L371,250.6 L376,242.8 L380,236.4 L384,232.9 L389,233.1 L393,237.0 L397,243.6 L402,251.6 L406,259.6 L410,266.9 L415,272.9 L419,277.7 L424,281.3 L428,284.0 L432,285.9 L437,287.3 L441,288.2 L445,288.9 L450,289.4 L454,289.8 L459,290.0 L463,290.2 L467,290.3 L472,290.3 L476,290.4 L480,290.4 L485,290.5 L489,290.5 L493,290.5 L498,290.5 L502,290.5 L507,290.5 L511,290.5 L515,290.5 L520,290.5 L524,290.5 L528,290.5 L533,290.5 L537,290.5 L541,290.5 L546,290.5 L550,290.5 L555,290.5 L559,290.5 L563,290.5 L568,290.5 L572,290.5 L576,290.5 L581,290.5 L585,290.5 L590,290.5 L594,290.5 L598,290.5 L603,290.5 L607,290.5 L611,290.5 L616,290.5 L620,290.5 L624,290.5 L629,290.5 L633,290.5 L638,290.5 L642,290.5 L646,290.5 L651,290.5 L655,290.5 L659,290.5 L664,290.5 L668,290.5 L672,290.5 L677,290.5 L681,290.5 L686,290.5 L690,290.5 L694,290.5 L699,290.5 L703,290.5 L707,290.5 L712,290.5 L716,290.5 L721,290.5 L725,290.5 L729,290.5 L734,290.5 L738,290.5 L742,290.5 L747,290.5 L751,290.5 L755,290.5 L760,290.5 L764,290.5 L769,290.5 L773,290.5 L777,290.5 L782,290.5 L786,290.5 L790,290.5 L795,290.5 L799,290.5 L803,290.5 L808,290.5 L812,290.5 L817,290.5 L821,290.5 L825,290.5 L830,290.5 L834,290.5 L838,290.5 L843,290.5 L847,290.5 L852,290.5 L856,290.5 L860,290.5 L865,290.5 L869,290.5 L873,290.5 L878,290.5 L882,290.5 L886,290.5 L891,290.5 L895,290.5 L900,290.5 L904,290.5 L908,290.5 L913,290.5 L917,290.5 L921,290.5 L926,290.5 L930,290.5 L934,290.5 L939,290.5 L943,290.5 L948,290.5 L952,290.5 L956,290.5 L961,290.5 L965,290.5 L969,290.5 L974,290.5 L978,290.5 L983,290.5 L987,290.5 L991,290.5 L996,290.5 L1000,290.5 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:3;--o:0.92" d="M0,297.4 L4,297.4 L9,297.4 L13,297.4 L17,297.4 L22,297.4 L26,297.4 L31,297.4 L35,297.4 L39,297.4 L44,297.4 L48,297.4 L52,297.4 L57,297.4 L61,297.4 L66,297.4 L70,297.3 L74,297.3 L79,297.3 L83,297.2 L87,297.0 L92,296.7 L96,296.1 L100,295.1 L105,293.4 L109,290.5 L114,285.5 L118,277.0 L122,263.4 L127,243.0 L131,215.6 L135,185.7 L140,163.2 L144,159.2 L148,175.9 L153,204.5 L157,233.6 L162,256.8 L166,272.7 L170,282.8 L175,289.0 L179,292.5 L183,294.6 L188,295.8 L192,296.5 L197,296.9 L201,297.1 L205,297.2 L210,297.3 L214,297.3 L218,297.4 L223,297.4 L227,297.4 L231,297.4 L236,297.4 L240,297.4 L245,297.4 L249,297.4 L253,297.4 L258,297.4 L262,297.4 L266,297.4 L271,297.4 L275,297.3 L279,297.3 L284,297.3 L288,297.2 L293,297.1 L297,297.0 L301,296.9 L306,296.6 L310,296.3 L314,295.8 L319,295.2 L323,294.2 L328,292.8 L332,290.9 L336,288.3 L341,284.7 L345,280.0 L349,274.0 L354,266.8 L358,258.8 L362,250.8 L367,244.1 L371,240.1 L376,239.7 L380,243.1 L384,249.3 L389,257.2 L393,265.3 L397,272.7 L402,278.9 L406,283.9 L410,287.7 L415,290.5 L419,292.5 L424,294.0 L428,295.0 L432,295.7 L437,296.2 L441,296.6 L445,296.8 L450,297.0 L454,297.1 L459,297.2 L463,297.3 L467,297.3 L472,297.3 L476,297.3 L480,297.4 L485,297.4 L489,297.4 L493,297.4 L498,297.4 L502,297.4 L507,297.4 L511,297.4 L515,297.4 L520,297.4 L524,297.4 L528,297.4 L533,297.4 L537,297.4 L541,297.4 L546,297.4 L550,297.4 L555,297.4 L559,297.4 L563,297.4 L568,297.4 L572,297.4 L576,297.4 L581,297.4 L585,297.4 L590,297.4 L594,297.4 L598,297.4 L603,297.4 L607,297.4 L611,297.4 L616,297.4 L620,297.4 L624,297.4 L629,297.4 L633,297.4 L638,297.4 L642,297.4 L646,297.4 L651,297.4 L655,297.4 L659,297.4 L664,297.4 L668,297.4 L672,297.4 L677,297.4 L681,297.4 L686,297.4 L690,297.4 L694,297.4 L699,297.4 L703,297.4 L707,297.4 L712,297.4 L716,297.4 L721,297.4 L725,297.4 L729,297.4 L734,297.4 L738,297.4 L742,297.4 L747,297.4 L751,297.4 L755,297.4 L760,297.4 L764,297.4 L769,297.4 L773,297.4 L777,297.4 L782,297.4 L786,297.4 L790,297.4 L795,297.4 L799,297.4 L803,297.4 L808,297.4 L812,297.4 L817,297.4 L821,297.4 L825,297.4 L830,297.4 L834,297.4 L838,297.4 L843,297.4 L847,297.4 L852,297.4 L856,297.4 L860,297.4 L865,297.4 L869,297.4 L873,297.4 L878,297.4 L882,297.4 L886,297.4 L891,297.4 L895,297.4 L900,297.4 L904,297.4 L908,297.4 L913,297.4 L917,297.4 L921,297.4 L926,297.4 L930,297.4 L934,297.4 L939,297.4 L943,297.4 L948,297.4 L952,297.4 L956,297.4 L961,297.4 L965,297.4 L969,297.4 L974,297.4 L978,297.4 L983,297.4 L987,297.4 L991,297.4 L996,297.4 L1000,297.4 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:2;--o:0.95" d="M0,304.3 L4,304.3 L9,304.3 L13,304.3 L17,304.3 L22,304.3 L26,304.3 L31,304.2 L35,304.2 L39,304.2 L44,304.2 L48,304.1 L52,304.0 L57,303.9 L61,303.6 L66,303.1 L70,302.2 L74,300.7 L79,298.0 L83,293.4 L87,285.6 L92,273.0 L96,253.8 L100,227.4 L105,197.3 L109,172.7 L114,165.2 L118,178.8 L122,206.3 L127,236.0 L131,260.3 L135,277.4 L140,288.4 L144,295.0 L148,298.9 L153,301.2 L157,302.5 L162,303.3 L166,303.7 L170,303.9 L175,304.1 L179,304.2 L183,304.2 L188,304.2 L192,304.2 L197,304.3 L201,304.3 L205,304.3 L210,304.3 L214,304.3 L218,304.3 L223,304.3 L227,304.3 L231,304.3 L236,304.3 L240,304.3 L245,304.2 L249,304.2 L253,304.2 L258,304.2 L262,304.2 L266,304.2 L271,304.1 L275,304.1 L279,304.0 L284,303.9 L288,303.8 L293,303.5 L297,303.2 L301,302.8 L306,302.1 L310,301.2 L314,299.9 L319,298.1 L323,295.6 L328,292.2 L332,287.7 L336,281.9 L341,274.9 L345,266.9 L349,258.9 L354,251.9 L358,247.4 L362,246.4 L367,249.2 L371,255.1 L376,262.8 L380,270.9 L384,278.5 L389,284.9 L393,290.1 L397,294.0 L402,297.0 L406,299.1 L410,300.6 L415,301.7 L419,302.5 L424,303.0 L428,303.4 L432,303.7 L437,303.8 L441,304.0 L445,304.1 L450,304.1 L454,304.2 L459,304.2 L463,304.2 L467,304.2 L472,304.2 L476,304.2 L480,304.3 L485,304.3 L489,304.3 L493,304.3 L498,304.3 L502,304.3 L507,304.3 L511,304.3 L515,304.3 L520,304.3 L524,304.3 L528,304.3 L533,304.3 L537,304.3 L541,304.3 L546,304.3 L550,304.3 L555,304.3 L559,304.3 L563,304.3 L568,304.3 L572,304.3 L576,304.3 L581,304.3 L585,304.3 L590,304.3 L594,304.3 L598,304.3 L603,304.3 L607,304.3 L611,304.3 L616,304.3 L620,304.3 L624,304.3 L629,304.3 L633,304.3 L638,304.3 L642,304.3 L646,304.3 L651,304.3 L655,304.3 L659,304.3 L664,304.3 L668,304.3 L672,304.3 L677,304.3 L681,304.3 L686,304.3 L690,304.3 L694,304.3 L699,304.3 L703,304.3 L707,304.3 L712,304.3 L716,304.3 L721,304.3 L725,304.3 L729,304.3 L734,304.3 L738,304.3 L742,304.3 L747,304.3 L751,304.3 L755,304.3 L760,304.3 L764,304.3 L769,304.3 L773,304.3 L777,304.3 L782,304.3 L786,304.3 L790,304.3 L795,304.3 L799,304.3 L803,304.3 L808,304.3 L812,304.3 L817,304.3 L821,304.3 L825,304.3 L830,304.3 L834,304.3 L838,304.3 L843,304.3 L847,304.3 L852,304.3 L856,304.3 L860,304.3 L865,304.3 L869,304.3 L873,304.3 L878,304.3 L882,304.3 L886,304.3 L891,304.3 L895,304.3 L900,304.3 L904,304.3 L908,304.3 L913,304.3 L917,304.3 L921,304.3 L926,304.3 L930,304.3 L934,304.3 L939,304.3 L943,304.3 L948,304.3 L952,304.3 L956,304.3 L961,304.3 L965,304.3 L969,304.3 L974,304.3 L978,304.3 L983,304.3 L987,304.3 L991,304.3 L996,304.3 L1000,304.3 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:1;--o:0.97" d="M0,311.1 L4,311.1 L9,311.1 L13,311.1 L17,311.0 L22,310.9 L26,310.8 L31,310.5 L35,310.1 L39,309.3 L44,307.9 L48,305.4 L52,301.2 L57,294.0 L61,282.4 L66,264.3 L70,239.0 L74,209.1 L79,182.8 L83,171.8 L87,182.2 L92,208.2 L96,238.2 L100,263.7 L105,281.9 L109,293.8 L114,301.0 L118,305.3 L122,307.8 L127,309.2 L131,310.1 L135,310.5 L140,310.8 L144,310.9 L148,311.0 L153,311.1 L157,311.1 L162,311.1 L166,311.1 L170,311.1 L175,311.1 L179,311.1 L183,311.1 L188,311.1 L192,311.1 L197,311.1 L201,311.1 L205,311.1 L210,311.1 L214,311.1 L218,311.1 L223,311.1 L227,311.1 L231,311.1 L236,311.1 L240,311.1 L245,311.1 L249,311.1 L253,311.1 L258,311.0 L262,311.0 L266,310.9 L271,310.8 L275,310.7 L279,310.5 L284,310.2 L288,309.7 L293,309.1 L297,308.3 L301,307.0 L306,305.3 L310,302.9 L314,299.7 L319,295.3 L323,289.7 L328,282.9 L332,275.1 L336,266.9 L341,259.7 L345,254.7 L349,253.1 L354,255.4 L358,260.9 L362,268.4 L367,276.5 L371,284.2 L376,290.9 L380,296.2 L384,300.3 L389,303.4 L393,305.7 L397,307.3 L402,308.4 L406,309.3 L410,309.8 L415,310.2 L419,310.5 L424,310.7 L428,310.8 L432,310.9 L437,311.0 L441,311.0 L445,311.1 L450,311.1 L454,311.1 L459,311.1 L463,311.1 L467,311.1 L472,311.1 L476,311.1 L480,311.1 L485,311.1 L489,311.1 L493,311.1 L498,311.1 L502,311.1 L507,311.1 L511,311.1 L515,311.1 L520,311.1 L524,311.1 L528,311.1 L533,311.1 L537,311.1 L541,311.1 L546,311.1 L550,311.1 L555,311.1 L559,311.1 L563,311.1 L568,311.1 L572,311.1 L576,311.1 L581,311.1 L585,311.1 L590,311.1 L594,311.1 L598,311.1 L603,311.1 L607,311.1 L611,311.1 L616,311.1 L620,311.1 L624,311.1 L629,311.1 L633,311.1 L638,311.1 L642,311.1 L646,311.1 L651,311.1 L655,311.1 L659,311.1 L664,311.1 L668,311.1 L672,311.1 L677,311.1 L681,311.1 L686,311.1 L690,311.1 L694,311.1 L699,311.1 L703,311.1 L707,311.1 L712,311.1 L716,311.1 L721,311.1 L725,311.1 L729,311.1 L734,311.1 L738,311.1 L742,311.1 L747,311.1 L751,311.1 L755,311.1 L760,311.1 L764,311.1 L769,311.1 L773,311.1 L777,311.1 L782,311.1 L786,311.1 L790,311.1 L795,311.1 L799,311.1 L803,311.1 L808,311.1 L812,311.1 L817,311.1 L821,311.1 L825,311.1 L830,311.1 L834,311.1 L838,311.1 L843,311.1 L847,311.1 L852,311.1 L856,311.1 L860,311.1 L865,311.1 L869,311.1 L873,311.1 L878,311.1 L882,311.1 L886,311.1 L891,311.1 L895,311.1 L900,311.1 L904,311.1 L908,311.1 L913,311.1 L917,311.1 L921,311.1 L926,311.1 L930,311.1 L934,311.1 L939,311.1 L943,311.1 L948,311.1 L952,311.1 L956,311.1 L961,311.1 L965,311.1 L969,311.1 L974,311.1 L978,311.1 L983,311.1 L987,311.1 L991,311.1 L996,311.1 L1000,311.1 L1008,338 L-8,338Z"/>
+      <path class="s" style="--i:0;--o:1.00" d="M0,317.5 L4,317.0 L9,316.3 L13,315.0 L17,312.8 L22,308.9 L26,302.3 L31,291.5 L35,274.7 L39,250.6 L44,221.0 L48,193.2 L52,179.0 L57,186.0 L61,210.2 L66,240.3 L70,266.8 L74,286.2 L79,299.0 L83,306.9 L87,311.6 L92,314.3 L96,315.9 L100,316.8 L105,317.3 L109,317.6 L114,317.8 L118,317.9 L122,317.9 L127,318.0 L131,318.0 L135,318.0 L140,318.0 L144,318.0 L148,318.0 L153,318.0 L157,318.0 L162,318.0 L166,318.0 L170,318.0 L175,318.0 L179,318.0 L183,318.0 L188,318.0 L192,318.0 L197,318.0 L201,318.0 L205,318.0 L210,318.0 L214,318.0 L218,318.0 L223,318.0 L227,318.0 L231,318.0 L236,318.0 L240,317.9 L245,317.9 L249,317.9 L253,317.8 L258,317.7 L262,317.6 L266,317.4 L271,317.1 L275,316.7 L279,316.1 L284,315.3 L288,314.1 L293,312.5 L297,310.2 L301,307.1 L306,303.0 L310,297.6 L314,290.9 L319,283.2 L323,275.0 L328,267.6 L332,262.2 L336,260.0 L341,261.7 L345,266.7 L349,274.0 L354,282.2 L358,290.0 L362,296.8 L367,302.3 L371,306.6 L376,309.9 L380,312.2 L384,313.9 L389,315.2 L393,316.0 L397,316.6 L402,317.0 L406,317.3 L410,317.5 L415,317.7 L419,317.8 L424,317.8 L428,317.9 L432,317.9 L437,317.9 L441,318.0 L445,318.0 L450,318.0 L454,318.0 L459,318.0 L463,318.0 L467,318.0 L472,318.0 L476,318.0 L480,318.0 L485,318.0 L489,318.0 L493,318.0 L498,318.0 L502,318.0 L507,318.0 L511,318.0 L515,318.0 L520,318.0 L524,318.0 L528,318.0 L533,318.0 L537,318.0 L541,318.0 L546,318.0 L550,318.0 L555,318.0 L559,318.0 L563,318.0 L568,318.0 L572,318.0 L576,318.0 L581,318.0 L585,318.0 L590,318.0 L594,318.0 L598,318.0 L603,318.0 L607,318.0 L611,318.0 L616,318.0 L620,318.0 L624,318.0 L629,318.0 L633,318.0 L638,318.0 L642,318.0 L646,318.0 L651,318.0 L655,318.0 L659,318.0 L664,318.0 L668,318.0 L672,318.0 L677,318.0 L681,318.0 L686,318.0 L690,318.0 L694,318.0 L699,318.0 L703,318.0 L707,318.0 L712,318.0 L716,318.0 L721,318.0 L725,318.0 L729,318.0 L734,318.0 L738,318.0 L742,318.0 L747,318.0 L751,318.0 L755,318.0 L760,318.0 L764,318.0 L769,318.0 L773,318.0 L777,318.0 L782,318.0 L786,318.0 L790,318.0 L795,318.0 L799,318.0 L803,318.0 L808,318.0 L812,318.0 L817,318.0 L821,318.0 L825,318.0 L830,318.0 L834,318.0 L838,318.0 L843,318.0 L847,318.0 L852,318.0 L856,318.0 L860,318.0 L865,318.0 L869,318.0 L873,318.0 L878,318.0 L882,318.0 L886,318.0 L891,318.0 L895,318.0 L900,318.0 L904,318.0 L908,318.0 L913,318.0 L917,318.0 L921,318.0 L926,318.0 L930,318.0 L934,318.0 L939,318.0 L943,318.0 L948,318.0 L952,318.0 L956,318.0 L961,318.0 L965,318.0 L969,318.0 L974,318.0 L978,318.0 L983,318.0 L987,318.0 L991,318.0 L996,318.0 L1000,318.0 L1008,338 L-8,338Z"/>
+    </svg>
+    <figcaption>Illustration: two solitons of the KdV equation, <i>u</i><sub><i>t</i></sub> + 6<i>uu</i><sub><i>x</i></sub> + <i>u</i><sub><i>xxx</i></sub> = 0, drawn at successive times from front to back. The taller soliton travels faster, overtakes the shorter one, and both emerge with their shapes unchanged, shifted slightly in position.</figcaption>
+  </figure>
 
 
-  <!-- =========================
-       MAIN CONTENT
-       ========================= -->
-  <main>
+  <!-- RESEARCH -->
+  <section class="block" id="research" aria-labelledby="h-research">
+    <h2 id="h-research">Research</h2>
+    <div class="block-body">
+      <div class="topics">
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero-content">
-        <div class="hero-kicker">WELCOME — ACADEMIC PROFILE</div>
-
-        <h2>
-          Tokey Sifullah Tanjil
-          <span>Research Assistant in Applied Mathematics</span>
-        </h2>
-
-        <p class="hero-description">
-          I work on mathematical models of nonlinear and complex systems,
-          with research spanning nonlinear waves, plasma dynamics,
-          epidemiological modeling, and computational neuroscience.
-        </p>
-
-        <div class="hero-links">
-          <a href="cv.pdf" target="_blank">Curriculum Vitae ↗</a>
-          <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
-             target="_blank" rel="noopener">Google Scholar ↗</a>
-          <a href="https://orcid.org/0009-0008-6421-7897"
-             target="_blank" rel="noopener">ORCID ↗</a>
-          <a href="mailto:tsifullaht@gmail.com">Email ↗</a>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="section-heading">
-        <span class="num">01.</span>
-        <h2>About Me</h2>
-        <span class="rule"></span>
-      </div>
-
-      <p>
-        I am a Research Assistant in Applied Mathematics with research
-        experience in nonlinear dynamical systems, mathematical modeling,
-        plasma physics, and computational neuroscience. My work has included
-        nonlinear wave propagation, soliton interactions, fractional-order
-        models, epidemiological modeling, and neuron dynamics.
-      </p>
-
-      <p>
-        I began research during my undergraduate studies through mathematical
-        modeling of dengue transmission and later moved into plasma physics
-        and nonlinear wave theory during my Master's. My current research
-        focuses on mathematical models of neuronal dynamics and network
-        behavior.
-      </p>
-    </section>
-
-
-    <!-- RESEARCH -->
-    <section id="research">
-      <div class="section-heading">
-        <span class="num">02.</span>
-        <h2>Research</h2>
-        <span class="rule"></span>
-      </div>
-
-      <div class="research-grid">
-
-        <article class="research-card">
-          <h3>Nonlinear Dynamics</h3>
-          <p>
-            Nonlinear waves, solitons, dynamical systems, stability,
-            and nonlinear wave interactions.
-          </p>
+        <article class="topic">
+          <h3>Nonlinear waves and solitons</h3>
+          <p>Solitary, multi-soliton, periodic and overtaking wave solutions of nonlinear evolution equations, and what happens when such waves meet.</p>
+          <p class="note">This runs through all three published papers.</p>
         </article>
 
-        <article class="research-card">
-          <h3>Plasma Physics</h3>
-          <p>
-            Ion-acoustic and dust-acoustic waves, nonlinear propagation,
-            multi-soliton structures, and dusty plasma.
-          </p>
+        <article class="topic">
+          <h3>Plasma physics</h3>
+          <p>Ion-acoustic waves in the upper ionosphere of Venus, in Cartesian, cylindrical and spherical geometry, and dust-acoustic waves in strongly coupled dusty plasma.</p>
+          <p class="note">Three papers published in <i>Scientific Reports</i> and <i>Advances in Space Research</i>. A study of head-on soliton collisions in dusty plasma is in development.</p>
         </article>
 
-        <article class="research-card">
-          <h3>Mathematical Modeling</h3>
-          <p>
-            Mathematical models of biological and physical systems,
-            including epidemiological and dynamical models.
-          </p>
+        <article class="topic">
+          <h3>Computational neuroscience</h3>
+          <p>Fractional-order Hodgkin&ndash;Huxley neuron models with memristive and calcium-channel dynamics, and a fractal-fractional neuron-network model that merges Hodgkin&ndash;Huxley dynamics with Wilson&ndash;Cowan mean-field theory to describe neurodegenerative disease progression.</p>
+          <p class="note">Current work at CUET. One paper is under submission.</p>
         </article>
 
-        <article class="research-card">
-          <h3>Computational Neuroscience</h3>
-          <p>
-            Neuron dynamics, fractional-order models, Hodgkin–Huxley
-            systems, and network-based modeling.
-          </p>
+        <article class="topic">
+          <h3>Epidemiological modeling</h3>
+          <p>A dengue transmission model that compares urban and rural areas of Bangladesh.</p>
+          <p class="note">Presented at AMSE-2025 and submitted to its proceedings.</p>
         </article>
 
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <div class="section-heading">
-        <span class="num">03.</span>
-        <h2>Selected Publications</h2>
-        <span class="rule"></span>
-      </div>
+  <!-- PUBLICATIONS -->
+  <section class="block" id="publications" aria-labelledby="h-pubs">
+    <h2 id="h-pubs">Publications</h2>
+    <div class="block-body">
 
-      <a class="pub" href="https://doi.org/10.1016/j.asr.2026.09.001"
-         target="_blank" rel="noopener">
+      <h3 class="sub">Journal articles</h3>
 
-        <span class="num">01.</span>
-
-        <!-- Keep your publication image -->
-        <img class="pub-fig" src="pub1.jpg"
-             alt="Figure from publication on ion-acoustic wave structures">
-
-        <div class="body">
-          <p class="title">
-            Cylindrical and Spherical Propagation of Ion-Acoustic
-            Overtaking Multi-Wave Structures in the Upper Ionosphere of Venus
-          </p>
-
-          <p class="authors">
-            M. A. Islam, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
-          </p>
-
-          <p class="venue">
-            <em>Advances in Space Research</em> · 2026 · Q1
-          </p>
-
-          <p class="doi">
-            DOI: 10.1016/j.asr.2026.09.001
-          </p>
-        </div>
-
-        <span class="go" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17 17 7M9 7h8v8"/>
-          </svg>
-        </span>
-      </a>
-
-
-      <a class="pub" href="https://doi.org/10.1038/s41598-026-57659-z"
-         target="_blank" rel="noopener">
-
-        <span class="num">02.</span>
-
-        <!-- Keep your publication image -->
-        <img class="pub-fig" src="pub2.jpg"
-             alt="Figure from publication on dust-acoustic multi-solitons">
-
-        <div class="body">
-          <p class="title">
-            Interacting Dust-Acoustic Multi-Soliton and Periodic Waves
-            in Strongly Coupled Dusty Plasma with Ion-Drag Force
-          </p>
-
-          <p class="authors">
-            S. Akter, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
-          </p>
-
-          <p class="venue">
-            <em>Scientific Reports</em>, 16, 28115 · 2026 · Q1
-          </p>
-
-          <p class="doi">
-            DOI: 10.1038/s41598-026-57659-z
-          </p>
-        </div>
-
-        <span class="go" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17 17 7M9 7h8v8"/>
-          </svg>
-        </span>
-      </a>
-
-
-      <a class="pub" href="https://doi.org/10.1016/j.asr.2025.12.043"
-         target="_blank" rel="noopener">
-
-        <span class="num">03.</span>
-
-        <!-- Keep your publication image -->
-        <img class="pub-fig" src="pub3.jpg"
-             alt="Figure from publication on ion-acoustic solitons">
-
-        <div class="body">
-          <p class="title">
-            Propagation and Interaction of Ion-Acoustic Single,
-            N-Solitons, and Periodic Waves in Venus' Upper Ionosphere
-          </p>
-
-          <p class="authors">
-            S. Akter, <strong>T. S. Tanjil</strong> &amp; M. G. Hafez
-          </p>
-
-          <p class="venue">
-            <em>Advances in Space Research</em>, 77(4), 5236–5253 · 2026 · Q1
-          </p>
-
-          <p class="doi">
-            DOI: 10.1016/j.asr.2025.12.043
-          </p>
-        </div>
-
-        <span class="go" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17 17 7M9 7h8v8"/>
-          </svg>
-        </span>
-      </a>
-
-
-      <details>
-        <summary>Working papers &amp; research in progress</summary>
-        <ul>
-          <li>
-            <strong>Firing Dynamics of a Caputo Fractional-Order Memristive
-            Hodgkin–Huxley Neuron Model with a Calcium Channel</strong>
-            — under submission.
-          </li>
-          <li>
-            <strong>Mathematical Model for Dengue Transmission:
-            A Comparative Study for Urban and Rural Areas in Bangladesh</strong>
-            — submitted; presented at AMSE-2025.
-          </li>
-          <li>
-            <strong>The Head-on Collision in Dust-Acoustic Solitary Waves
-            in an Unmagnetized Dusty Plasma with Trapped Ion Distribution</strong>
-            — under development.
-          </li>
-        </ul>
-      </details>
-
-
-      <details>
-        <summary>Conference presentations</summary>
-        <ul>
-          <li>
-            <strong>4th International Conference on Applied Mathematics
-            in Science and Engineering (AMSE-2025)</strong>, India —
-            August 2025.
-          </li>
-          <li>
-            <strong>24th International Mathematics Conference (24IMC 2025)</strong>,
-            Bangladesh — December 2025.
-          </li>
-        </ul>
-      </details>
-
-      <p class="publication-note">
-        Publication titles link directly to their DOI pages.
-      </p>
-    </section>
-
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="section-heading">
-        <span class="num">04.</span>
-        <h2>Experience</h2>
-        <span class="rule"></span>
-      </div>
-
-      <div class="exp-list">
-
-        <div class="exp-item">
-          <h3>
-            Research Assistant
-            <span>@ Chittagong University of Engineering and Technology (CUET)</span>
-          </h3>
-          <span class="when">December 2025 – Present</span>
-          <p>
-            Working under Prof. Dr. M. G. Hafez on a fractal-fractional
-            hybrid neuron-network model for neurodegenerative disease
-            progression, combining Hodgkin–Huxley dynamics with
-            Wilson–Cowan mean-field theory.
-          </p>
-        </div>
-
-        <div class="exp-item">
-          <h3>
-            Research Assistant
-            <span>@ University of Chittagong</span>
-          </h3>
-          <span class="when">November 2025 – March 2026</span>
-          <p>
-            Worked under Assistant Professor Shahrina Akter on the
-            head-on collision of dust-acoustic solitary waves in an
-            unmagnetized dusty plasma with trapped ion distribution.
-          </p>
-        </div>
-
-        <div class="exp-item">
-          <h3>
-            Teaching Assistant (Intern)
-            <span>@ Katirhat Mohila Degree College</span>
-          </h3>
-          <span class="when">September 2023 – January 2024</span>
-          <p>
-            Completed a five-month teaching internship, teaching HSC
-            first-year mathematics and Business Mathematics for the
-            Management Department.
-          </p>
-        </div>
-
-        <div class="exp-item">
-          <h3>
-            Associate Editor
-            <span>@ Competitive Math Booster</span>
-          </h3>
-          <span class="when">November 2022</span>
-          <p>
-            Edited a mathematics reference book prepared for the
-            BCS competitive examination.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="section-heading">
-        <span class="num">05.</span>
-        <h2>Education</h2>
-        <span class="rule"></span>
-      </div>
-
-      <div class="entry">
-        <span class="when">2022 · Result published 2025</span>
-        <div class="what">M.Sc. in Applied Mathematics</div>
-        <div class="where">
-          University of Chittagong · CGPA 3.73/4.00 · 1st Class · 2nd Position
-        </div>
-      </div>
-
-      <div class="entry">
-        <span class="when">2021 · Result published 2023</span>
-        <div class="what">B.Sc. (Honours) in Mathematics</div>
-        <div class="where">
-          University of Chittagong · CGPA 3.48/4.00
-        </div>
-      </div>
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-heading">
-        <span class="num">06.</span>
-        <h2>Technical Skills</h2>
-        <span class="rule"></span>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-label">MATHEMATICAL SOFTWARE</div>
-        <ul class="interest-list">
-          <li>Maple</li>
-          <li>MATLAB</li>
-          <li>Mathematica</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-label">PROGRAMMING</div>
-        <ul class="interest-list">
-          <li>Python</li>
-          <li>Fortran</li>
-          <li>C++</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-label">TYPESETTING &amp; DOCUMENTATION</div>
-        <ul class="interest-list">
-          <li>LaTeX</li>
-          <li>Microsoft Word</li>
-          <li>Microsoft Excel</li>
-          <li>Microsoft PowerPoint</li>
-        </ul>
-      </div>
-    </section>
-
-
-    <!-- PROFILES -->
-    <section id="profiles">
-      <div class="section-heading">
-        <span class="num">07.</span>
-        <h2>Academic Profiles</h2>
-        <span class="rule"></span>
-      </div>
-
-      <ul class="profile-list">
-        <li>
-          <a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ"
-             target="_blank" rel="noopener">
-            Google Scholar ↗
+      <ul>
+        <li class="pub">
+          <a class="fig" href="https://doi.org/10.1016/j.asr.2026.09.001" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="pub1.jpg" loading="lazy" alt="">
           </a>
+          <div>
+            <h4 class="ptitle"><a href="https://doi.org/10.1016/j.asr.2026.09.001" target="_blank" rel="noopener">Cylindrical and Spherical Propagation of Ion-Acoustic Overtaking Multi-Wave Structures in the Upper Ionosphere of Venus</a></h4>
+            <p class="authors">M. A. Islam, <strong>T. S. Tanjil</strong>, M. G. Hafez</p>
+            <p class="venue"><i>Advances in Space Research</i>, 2026 <span class="tag">Q1</span><br><a class="doi" href="https://doi.org/10.1016/j.asr.2026.09.001" target="_blank" rel="noopener">doi:10.1016/j.asr.2026.09.001</a></p>
+          </div>
         </li>
 
-        <li>
-          <a href="https://www.researchgate.net/profile/Tokey-Sifullah"
-             target="_blank" rel="noopener">
-            ResearchGate ↗
+        <li class="pub">
+          <a class="fig" href="https://doi.org/10.1038/s41598-026-57659-z" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="pub2.jpg" loading="lazy" alt="">
           </a>
+          <div>
+            <h4 class="ptitle"><a href="https://doi.org/10.1038/s41598-026-57659-z" target="_blank" rel="noopener">Interacting Dust-Acoustic Multi-Soliton and Periodic Waves in Strongly Coupled Dusty Plasma with Ion-Drag Force</a></h4>
+            <p class="authors">S. Akter, <strong>T. S. Tanjil</strong>, M. G. Hafez</p>
+            <p class="venue"><i>Scientific Reports</i> 16, 28115, June 2026 <span class="tag">Q1</span><br><a class="doi" href="https://doi.org/10.1038/s41598-026-57659-z" target="_blank" rel="noopener">doi:10.1038/s41598-026-57659-z</a></p>
+          </div>
         </li>
 
-        <li>
-          <a href="https://orcid.org/0009-0008-6421-7897"
-             target="_blank" rel="noopener">
-            ORCID: 0009-0008-6421-7897 ↗
+        <li class="pub">
+          <a class="fig" href="https://doi.org/10.1016/j.asr.2025.12.043" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="pub3.jpg" loading="lazy" alt="">
           </a>
-        </li>
-
-        <li>
-          <a href="cv.pdf" target="_blank">
-            Curriculum Vitae ↗
-          </a>
-        </li>
-
-        <li>
-          <a href="mailto:tsifullaht@gmail.com">
-            tsifullaht@gmail.com ↗
-          </a>
+          <div>
+            <h4 class="ptitle"><a href="https://doi.org/10.1016/j.asr.2025.12.043" target="_blank" rel="noopener">Propagation and Interaction of Ion-Acoustic Single, N-Solitons, and Periodic Waves in Venus&rsquo; Upper Ionosphere</a></h4>
+            <p class="authors">S. Akter, <strong>T. S. Tanjil</strong>, M. G. Hafez</p>
+            <p class="venue"><i>Advances in Space Research</i> 77(4), 5236&ndash;5253, February 2026 <span class="tag">Q1</span><br><a class="doi" href="https://doi.org/10.1016/j.asr.2025.12.043" target="_blank" rel="noopener">doi:10.1016/j.asr.2025.12.043</a></p>
+          </div>
         </li>
       </ul>
-    </section>
+
+      <h3 class="sub">Submitted and in progress</h3>
+
+      <ul>
+        <li class="row">
+          <p class="when">Under submission</p>
+          <div>
+            <p class="ttl">Firing Dynamics of a Caputo Fractional-Order Memristive Hodgkin&ndash;Huxley Neuron Model with a Calcium Channel</p>
+            <p class="note">From the research assistantship at CUET with Prof. M. G. Hafez.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">Submitted</p>
+          <div>
+            <p class="ttl">Mathematical Model for Dengue Transmission: A Comparative Study for Urban and Rural Areas in Bangladesh</p>
+            <p class="note">Submitted to the AMSE-2025 proceedings, with Prof. M. G. Hafez.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">In development</p>
+          <div>
+            <p class="ttl">The Head-on Collision in Dust-Acoustic Solitary Waves in an Unmagnetized Dusty Plasma with Trapped Ion Distribution</p>
+            <p class="note">From the research assistantship at the University of Chittagong with Assistant Prof. Shahrina Akter.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="sub">Conference talks</h3>
+
+      <ul>
+        <li class="row">
+          <p class="when">18 December 2025</p>
+          <div>
+            <p class="ttl">Interacting Dust-Acoustic Multi-Soliton and Periodic Waves in Strongly Coupled Dusty Plasma with Ion-Drag Force</p>
+            <p class="note">24th International Mathematics Conference (24IMC 2025), Bangladesh.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">29 August 2025</p>
+          <div>
+            <p class="ttl">Mathematical Model for Dengue Transmission: A Comparative Study for the Perspective of Urban and Rural Areas in Bangladesh</p>
+            <p class="note">4th International Conference on Applied Mathematics in Science and Engineering (AMSE-2025), India.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="section-heading">
-        <span class="num">08.</span>
-        <h2>Contact</h2>
-        <span class="rule"></span>
-      </div>
+  <!-- EXPERIENCE -->
+  <section class="block" id="experience" aria-labelledby="h-exp">
+    <h2 id="h-exp">Experience</h2>
+    <div class="block-body">
+      <ul>
+        <li class="row">
+          <p class="when">Dec 2025 &ndash; present</p>
+          <div>
+            <h3>Research Assistant</h3>
+            <p class="org">Chittagong University of Engineering and Technology (CUET)</p>
+            <p>Supervised by Prof. Dr. M. G. Hafez. I work on a fractal-fractional hybrid neuron-network model of neurodegenerative disease progression, merging Hodgkin&ndash;Huxley dynamics with Wilson&ndash;Cowan mean-field theory. I also help M.Sc. and Ph.D. students with their research.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">Nov 2025 &ndash; Mar 2026</p>
+          <div>
+            <h3>Research Assistant</h3>
+            <p class="org">University of Chittagong</p>
+            <p>Supervised by Assistant Prof. Shahrina Akter. The project was the head-on collision of dust-acoustic solitary waves in an unmagnetized dusty plasma with a trapped ion distribution.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">Sep 2023 &ndash; Jan 2024</p>
+          <div>
+            <h3>Teaching Assistant (intern)</h3>
+            <p class="org">Katirhat Mohila Degree College, Hathazari, Chattogram</p>
+            <p>A five-month teaching internship. I taught HSC first-year students and ran Business Mathematics classes for the Management Department.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">Nov 2022</p>
+          <div>
+            <h3>Associate Editor</h3>
+            <p class="org"><i>Competitive Math Booster</i>, a mathematics book for the BCS examination</p>
+            <p>Copyright registration no. 27404.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="contact-cta">
-        <p>
-          I am interested in research opportunities in applied mathematics,
-          nonlinear dynamics, mathematical modeling, plasma physics,
-          and computational neuroscience.
-        </p>
 
-        <a class="btn" href="mailto:tsifullaht@gmail.com">
-          Get in touch ↗
-        </a>
-      </div>
-    </section>
+  <!-- EDUCATION AND SKILLS -->
+  <section class="block" id="education" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education and skills</h2>
+    <div class="block-body">
+
+      <h3 class="sub">Education</h3>
+      <ul>
+        <li class="row">
+          <p class="when">2022<br>result published 2025</p>
+          <div>
+            <h3>M.Sc. in Applied Mathematics</h3>
+            <p class="org">University of Chittagong</p>
+            <p class="sans">CGPA 3.73/4.00. First class, 2nd position.</p>
+          </div>
+        </li>
+        <li class="row">
+          <p class="when">2021<br>result published 2023</p>
+          <div>
+            <h3>B.Sc. in Mathematics</h3>
+            <p class="org">University of Chittagong</p>
+            <p class="sans">CGPA 3.48/4.00.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="sub">Skills</h3>
+      <ul>
+        <li class="row">
+          <p class="when">Mathematical software</p>
+          <p class="val">Maple, MATLAB, Mathematica</p>
+        </li>
+        <li class="row">
+          <p class="when">Programming</p>
+          <p class="val">Python, C++, Fortran</p>
+        </li>
+        <li class="row">
+          <p class="when">Writing and office</p>
+          <p class="val">LaTeX, Microsoft Word, Excel and PowerPoint</p>
+        </li>
+        <li class="row">
+          <p class="when">Languages</p>
+          <p class="val">English (fluent working proficiency), Bangla (native)</p>
+        </li>
+        <li class="row">
+          <p class="when">Training</p>
+          <p class="val">Introduction to Computer Application Packages and Unicode Bangla, Bangladesh Computer Council, August to October 2022</p>
+        </li>
+      </ul>
+
+    </div>
+  </section>
 
 
-    <footer>
-      © Tokey Sifullah Tanjil
-    </footer>
+  <!-- CONTACT -->
+  <section class="block" id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <div class="block-body">
+      <p>I welcome messages from PhD supervisors and research groups. Please write to me at</p>
+      <a class="mail" href="mailto:tsifullaht@gmail.com">tsifullaht@gmail.com</a>
 
-  </main>
-</div>
+      <ul class="contact-links">
+        <li class="row">
+          <p class="when">Curriculum vitae</p>
+          <p class="val"><a href="cv.pdf">Download as PDF</a></p>
+        </li>
+        <li class="row">
+          <p class="when">ORCID</p>
+          <p class="val"><a href="https://orcid.org/0009-0008-6421-7897" target="_blank" rel="noopener">0009-0008-6421-7897</a></p>
+        </li>
+        <li class="row">
+          <p class="when">Google Scholar</p>
+          <p class="val"><a href="https://scholar.google.com/citations?user=dAgMZWwAAAAJ" target="_blank" rel="noopener">Tokey Sifullah Tanjil</a></p>
+        </li>
+        <li class="row">
+          <p class="when">ResearchGate</p>
+          <p class="val"><a href="https://www.researchgate.net/profile/Tokey-Sifullah" target="_blank" rel="noopener">Tokey Sifullah</a></p>
+        </li>
+        <li class="row">
+          <p class="when">Location</p>
+          <p class="val">Chattogram, Bangladesh</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
+</main>
 
-<a class="side-email" href="mailto:tsifullaht@gmail.com">
-  tsifullaht@gmail.com
-</a>
-
-
-<script>
-(function(){
-
-  const nav = document.getElementById('site-nav');
-  const links = Array.from(nav.querySelectorAll('a'));
-
-  const sections = links
-    .map(link => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean);
-
-  function onScroll(){
-
-    const position = window.scrollY + 140;
-    let current = sections[0];
-
-    sections.forEach(section => {
-      if(section.offsetTop <= position){
-        current = section;
-      }
-    });
-
-    links.forEach(link => {
-      link.classList.toggle(
-        'active',
-        link.getAttribute('href') === '#' + current.id
-      );
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-})();
-</script>
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; 2026 Tokey Sifullah Tanjil</span>
+    <span>Last updated October 2026</span>
+  </div>
+</footer>
 
 </body>
 </html>
