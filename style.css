@@ -395,3 +395,5 @@ h3{font-size:1.08rem;font-weight:600;line-height:1.3;letter-spacing:-.003em;}
 .hero-facts div:last-child{border-bottom:0;}
 .hero-facts dt{font-size:.82rem;font-weight:600;color:var(--muted);}
 .hero-facts dd{font-size:.95rem;line-height:1.4;margin-top:2px;color:var(--ink);}
+.phone{margin-top:10px;font-family:var(--sans);font-size:1.05rem;color:var(--muted);}
+.phone a{font-weight:600;}
