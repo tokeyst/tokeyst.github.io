@@ -134,7 +134,7 @@ a:hover{color:var(--accent-dark);}
 .hero{padding-block:48px 56px;}
 .hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,1fr) 460px;
+  grid-template-columns:minmax(0,1fr);
   gap:28px 56px;
   align-items:start;
 }
@@ -158,10 +158,10 @@ a:hover{color:var(--accent-dark);}
   display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:1.3rem;
   font-family:var(--sans);font-size:.92rem;
 }
-.id{display:flex;align-items:center;gap:18px;margin-bottom:1.4rem;}
+.id{display:flex;align-items:center;gap:22px;margin-bottom:1.4rem;}
 .id .role{margin-bottom:0;font-size:.95rem;max-width:26em;}
 .portrait{
-  display:block;flex:none;width:84px;height:84px;aspect-ratio:1;
+  display:block;flex:none;width:116px;height:116px;aspect-ratio:1;
   object-fit:cover;object-position:50% 18%;
   border-radius:8px;background:#fff;
   box-shadow:0 0 0 1px var(--navy-line);
@@ -169,7 +169,7 @@ a:hover{color:var(--accent-dark);}
 
 /* ---------- live figure ---------- */
 .sim{
-  margin-top:4px;
+  margin-top:0;
   background:var(--navy-2);
   border:1px solid var(--navy-line);
   border-radius:12px;
@@ -209,6 +209,7 @@ a:hover{color:var(--accent-dark);}
 }
 .dot.amber{background:var(--amber);}
 .dot.sky{background:#a8c8ff;}
+.dot.mint{background:#7fd4b4;}
 .sim figcaption{
   margin-top:12px;padding-top:10px;
   border-top:1px solid var(--navy-line);
@@ -217,6 +218,14 @@ a:hover{color:var(--accent-dark);}
 .sim figcaption i{font-style:italic;}
 .sim figcaption sub{font-size:.75em;line-height:0;}
 .sim-noscript{font-family:var(--sans);font-size:.95rem;color:var(--muted);margin-top:8px;}
+
+.intro{color:var(--muted);margin-bottom:26px;max-width:42em;}
+.lab{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:start;}
+.lab .sim{height:100%;}
+.flow{display:block;width:100%;max-width:340px;height:auto;margin:0 0 10px;}
+#epi-plot{height:200px;}
+.sim h3{font-family:var(--sans);}
+@media (max-width:980px){.lab{grid-template-columns:minmax(0,1fr);}}
 
 /* ---------- facts strip ---------- */
 .facts{
@@ -344,7 +353,7 @@ h3{font-size:1.08rem;font-weight:600;line-height:1.3;letter-spacing:-.003em;}
 /* ---------- phone ---------- */
 @media (max-width:700px){
   body{font-size:.98rem;}
-  .portrait{width:64px;height:64px;}
+  .portrait{width:84px;height:84px;}
   .id{gap:14px;}
   .hero h1{font-size:2rem;}
   .lede{font-size:1.05rem;}
@@ -368,3 +377,9 @@ h3{font-size:1.08rem;font-weight:600;line-height:1.3;letter-spacing:-.003em;}
   .dark{background:#fff;color:#000;}
   .card{break-inside:avoid;}
 }
+
+.glyph .faint{opacity:.35;}
+.flow text{font-family:var(--sans);}
+.hero .wrap{position:relative;}
+.hero-art{position:absolute;right:var(--gutter);top:34px;width:min(350px,30%);height:auto;fill:none;stroke-width:2.2;stroke-linecap:round;pointer-events:none;}
+@media (max-width:980px){.hero-art{display:none;}}

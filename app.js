@@ -254,3 +254,114 @@
     } else { go(); }
   }
 })();
+
+/* Interactive figure: classical SIR epidemic model
+   S' = -beta S I,  I' = beta S I - gamma I,  R' = gamma I,
+   gamma = 1/10 per day, beta = R0 * gamma, I(0) = 0.5 %.  Integrated with RK4. */
+(function () {
+  'use strict';
+  var cv = document.getElementById('epi-plot');
+  var slT = document.getElementById('epi-t'), slR = document.getElementById('epi-r0');
+  var btn = document.getElementById('epi-play');
+  var outT = document.getElementById('epi-tval'), outR = document.getElementById('epi-r0v');
+  var read = document.getElementById('epi-read');
+  if (!cv || !slT || !slR || !btn || !cv.getContext) return;
+
+  var c = cv.getContext('2d');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DAYS = 160, G = 0.1, I0 = 0.005, STEP = 0.5, PLAY_MS = 5500;
+  var CS = '#a8c8ff', CI = '#f5b544', CR = '#7fd4b4';
+  var TEXT = '#b4c5e3', GRID = 'rgba(180,197,227,.22)';
+  var traj = [], t = parseFloat(slT.value), playing = false, raf = 0, last = 0, started = false;
+  var w = 0, h = 0, dpr = 1;
+
+  function solve(R0) {
+    var b = R0 * G, S = 1 - I0, I = I0, R = 0, out = [], n = Math.round(DAYS / STEP), k;
+    function f(s, i) { return [-b * s * i, b * s * i - G * i]; }
+    for (k = 0; k <= n; k++) {
+      out.push([S, I, 1 - S - I]);
+      var a = f(S, I), bb = f(S + STEP / 2 * a[0], I + STEP / 2 * a[1]),
+          cc = f(S + STEP / 2 * bb[0], I + STEP / 2 * bb[1]), d = f(S + STEP * cc[0], I + STEP * cc[1]);
+      S += STEP / 6 * (a[0] + 2 * bb[0] + 2 * cc[0] + d[0]);
+      I += STEP / 6 * (a[1] + 2 * bb[1] + 2 * cc[1] + d[1]);
+    }
+    return out;
+  }
+  function at(day) {
+    var x = Math.max(0, Math.min(DAYS, day)) / STEP, i = Math.floor(x), fr = x - i;
+    var p = traj[i], q = traj[Math.min(i + 1, traj.length - 1)];
+    return [p[0] + (q[0] - p[0]) * fr, p[1] + (q[1] - p[1]) * fr, p[2] + (q[2] - p[2]) * fr];
+  }
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect(); w = r.width; h = r.height;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  }
+  var pl = 36, pr = 12, pt = 12, pb = 26;
+  function sx(d) { return pl + d / DAYS * (w - pl - pr); }
+  function sy(v) { return pt + (1 - v) * (h - pt - pb); }
+
+  function draw() {
+    c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h);
+    c.font = '12px "Source Sans 3", system-ui, sans-serif'; c.fillStyle = TEXT; c.strokeStyle = GRID; c.lineWidth = 1;
+    var v, d;
+    c.textAlign = 'right';
+    for (v = 0; v <= 1.001; v += 0.5) {
+      c.beginPath(); c.moveTo(pl, sy(v)); c.lineTo(w - pr, sy(v)); c.stroke();
+      c.fillText(Math.round(v * 100) + '%', pl - 6, sy(v) + 4);
+    }
+    c.textAlign = 'center';
+    for (d = 0; d < DAYS; d += 40) c.fillText(String(d), sx(d), h - 8);
+    c.textAlign = 'right'; c.fillText('days', w - pr, h - 8);
+    var series = [[0, CS], [2, CR], [1, CI]], s, k, n = Math.floor(t / STEP);
+    c.lineJoin = 'round'; c.lineCap = 'round';
+    series.forEach(function (sr) {
+      c.beginPath(); c.strokeStyle = sr[1]; c.lineWidth = sr[0] === 1 ? 2.6 : 2;
+      for (k = 0; k <= n; k++) { var X = sx(k * STEP), Y = sy(traj[k][sr[0]]); k ? c.lineTo(X, Y) : c.moveTo(X, Y); }
+      var cur = at(t); c.lineTo(sx(t), sy(cur[sr[0]])); c.stroke();
+    });
+    var p = at(t);
+    c.strokeStyle = 'rgba(243,247,254,.5)'; c.setLineDash([3, 4]);
+    c.beginPath(); c.moveTo(sx(t), pt); c.lineTo(sx(t), h - pb); c.stroke(); c.setLineDash([]);
+    series.forEach(function (sr) {
+      c.beginPath(); c.fillStyle = sr[1]; c.arc(sx(t), sy(p[sr[0]]), 3.6, 0, 6.2832); c.fill();
+    });
+  }
+  function text() {
+    var R0 = parseFloat(slR.value), p = at(t), pk = 0, pd = 0, k;
+    for (k = 0; k < traj.length; k++) if (traj[k][1] > pk) { pk = traj[k][1]; pd = k * STEP; }
+    outT.textContent = String(Math.round(t)); outR.textContent = R0.toFixed(2);
+    var msg = '<span class="dot sky"></span>' + Math.round(p[0] * 100) + '% susceptible, <span class="dot amber"></span>' + (p[1] * 100).toFixed(1) + '% infected, <span class="dot mint"></span>' + Math.round(p[2] * 100) + '% recovered. ';
+    msg += R0 <= 1 ? 'With R<sub>0</sub> at most 1 the outbreak dies out without a major wave.'
+      : 'Peak: <b>' + (pk * 100).toFixed(1) + '%</b> infected on day <b>' + Math.round(pd) + '</b>. Herd-immunity threshold: <b>' + Math.round((1 - 1 / R0) * 100) + '%</b>.';
+    read.innerHTML = msg;
+  }
+  function render() { slT.value = String(t); text(); draw(); }
+  function setT(v) { t = Math.max(0, Math.min(DAYS, v)); render(); }
+  function frame(ts) {
+    if (!playing) return;
+    t += (ts - last) / PLAY_MS * DAYS; last = ts;
+    if (t >= DAYS) { t = DAYS; playing = false; btn.textContent = 'Replay'; }
+    render(); if (playing) raf = requestAnimationFrame(frame);
+  }
+  function play() {
+    started = true; if (t >= DAYS) t = 0; playing = true; btn.textContent = 'Pause';
+    last = performance.now(); raf = requestAnimationFrame(frame);
+  }
+  function pause() { playing = false; cancelAnimationFrame(raf); btn.textContent = 'Play'; }
+  btn.addEventListener('click', function () { playing ? pause() : play(); });
+  slT.addEventListener('input', function () { started = true; if (playing) pause(); setT(parseFloat(slT.value)); });
+  slR.addEventListener('input', function () { traj = solve(parseFloat(slR.value)); render(); });
+
+  traj = solve(parseFloat(slR.value)); size();
+  window.addEventListener('resize', function () { size(); draw(); });
+  if (reduce) { t = DAYS; render(); }
+  else {
+    render();
+    var go = function () { if (!started) { t = 0; play(); } };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); setTimeout(go, 350); } }, { threshold: 0.45 });
+      io.observe(document.getElementById('epi'));
+    } else go();
+  }
+})();
