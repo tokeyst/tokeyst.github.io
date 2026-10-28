@@ -365,3 +365,79 @@
     } else go();
   }
 })();
+
+/* Site helpers: citation copy, current-section highlight, gentle reveal. */
+(function () {
+  'use strict';
+  var doc = document.documentElement;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- citations ----
+  var PUBS = {
+    asr26: {
+      text: 'Islam, M. A., Tanjil, T. S., & Hafez, M. G. (2026). Cylindrical and spherical propagation of ion-acoustic overtaking multi-wave structures in the upper ionosphere of Venus. Advances in Space Research. https://doi.org/10.1016/j.asr.2026.09.001',
+      bib: '@article{islam2026cylindrical,\n  author  = {Islam, M. A. and Tanjil, T. S. and Hafez, M. G.},\n  title   = {Cylindrical and Spherical Propagation of Ion-Acoustic Overtaking Multi-Wave Structures in the Upper Ionosphere of {Venus}},\n  journal = {Advances in Space Research},\n  year    = {2026},\n  doi     = {10.1016/j.asr.2026.09.001}\n}'
+    },
+    srep26: {
+      text: 'Akter, S., Tanjil, T. S., & Hafez, M. G. (2026). Interacting dust-acoustic multi-soliton and periodic waves in strongly coupled dusty plasma with ion-drag force. Scientific Reports, 16, 28115. https://doi.org/10.1038/s41598-026-57659-z',
+      bib: '@article{akter2026interacting,\n  author  = {Akter, S. and Tanjil, T. S. and Hafez, M. G.},\n  title   = {Interacting Dust-Acoustic Multi-Soliton and Periodic Waves in Strongly Coupled Dusty Plasma with Ion-Drag Force},\n  journal = {Scientific Reports},\n  volume  = {16},\n  pages   = {28115},\n  year    = {2026},\n  doi     = {10.1038/s41598-026-57659-z}\n}'
+    },
+    asr25: {
+      text: 'Akter, S., Tanjil, T. S., & Hafez, M. G. (2026). Propagation and interaction of ion-acoustic single, N-solitons, and periodic waves in Venus’ upper ionosphere. Advances in Space Research, 77(4), 5236–5253. https://doi.org/10.1016/j.asr.2025.12.043',
+      bib: '@article{akter2026propagation,\n  author  = {Akter, S. and Tanjil, T. S. and Hafez, M. G.},\n  title   = {Propagation and Interaction of Ion-Acoustic Single, {N}-Solitons, and Periodic Waves in {Venus}\' Upper Ionosphere},\n  journal = {Advances in Space Research},\n  volume  = {77},\n  number  = {4},\n  pages   = {5236--5253},\n  year    = {2026},\n  doi     = {10.1016/j.asr.2025.12.043}\n}'
+    }
+  };
+  function copy(str) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(str);
+    return new Promise(function (ok, fail) {
+      var ta = document.createElement('textarea');
+      ta.value = str; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy') ? ok() : fail(); } catch (e) { fail(e); }
+      document.body.removeChild(ta);
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.cite'), function (b) {
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      var p = PUBS[b.getAttribute('data-key')]; if (!p) return;
+      copy(b.getAttribute('data-fmt') === 'bib' ? p.bib : p.text).then(function () {
+        b.textContent = 'Copied'; b.classList.add('done');
+      }, function () { b.textContent = 'Copy failed'; }).then(function () {
+        setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1600);
+      });
+    });
+  });
+
+  if (!('IntersectionObserver' in window)) return;
+
+  // ---- current section in the top menu ----
+  var links = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.menu a[href^="#"]'), function (a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  var ids = Object.keys(links), current = null;
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      if (current) current.classList.remove('on');
+      current = links[e.target.id]; if (current) current.classList.add('on');
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ids.forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+
+  // ---- gentle reveal of cards ----
+  if (reduce) return;
+  var items = document.querySelectorAll('main .card, main .news, main .sim');
+  doc.classList.add('js');
+  var rv = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  Array.prototype.forEach.call(items, function (el) {
+    var r = el.getBoundingClientRect();
+    if (r.top < innerHeight) return;  // already on screen: leave as is
+    el.classList.add('reveal'); rv.observe(el);
+  });
+})();
