@@ -428,7 +428,7 @@
 
   // ---- gentle reveal of cards ----
   if (reduce) return;
-  var items = document.querySelectorAll('main .card, main .news, main .sim');
+  var items = document.querySelectorAll('main .card, main .nfeat, main .ntl, main .sim');
   doc.classList.add('js');
   var rv = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -439,5 +439,27 @@
     var r = el.getBoundingClientRect();
     if (r.top < innerHeight) return;  // already on screen: leave as is
     el.classList.add('reveal'); rv.observe(el);
+  });
+})();
+
+/* News filter */
+(function () {
+  'use strict';
+  var box = document.querySelector('.nfilter'); if (!box) return;
+  var btns = box.querySelectorAll('button');
+  var feats = document.querySelectorAll('.nfeat'), rows = document.querySelectorAll('.ntl li');
+  var featRow = document.querySelector('.nfeat-row'), list = document.querySelector('.ntl'), empty = document.querySelector('.nempty');
+  function apply(f) {
+    var nf = 0, nr = 0;
+    Array.prototype.forEach.call(feats, function (el) { var on = f === 'all' || el.getAttribute('data-cat') === f; el.hidden = !on; if (on) nf++; });
+    Array.prototype.forEach.call(rows, function (el) { var on = f === 'all' || el.getAttribute('data-cat') === f; el.hidden = !on; if (on) nr++; });
+    var vis = Array.prototype.filter.call(rows, function (el) { el.classList.remove('last'); return !el.hidden; });
+    if (vis.length) vis[vis.length - 1].classList.add('last');
+    featRow.hidden = nf === 0; list.hidden = nr === 0; empty.hidden = nf + nr > 0;
+    featRow.style.gridTemplateColumns = nf === 1 ? 'minmax(0,1fr)' : '';
+    Array.prototype.forEach.call(btns, function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === f)); });
+  }
+  Array.prototype.forEach.call(btns, function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-f')); });
   });
 })();
