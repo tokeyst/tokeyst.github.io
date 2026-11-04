@@ -374,6 +374,10 @@
 
   // ---- citations ----
   var PUBS = {
+    ajse26: {
+      text: 'Tanjil, T. S., Akter, S., & Hafez, M. G. (2026). Mathematical model for dengue transmission: A comparative study from the perspective of urban and rural areas in Bangladesh. AIUB Journal of Science and Engineering, 25(2), 199–212. https://doi.org/10.53799/4hgatn90',
+      bib: '@article{tanjil2026mathematical,\n  title   = {Mathematical Model for Dengue Transmission: A Comparative Study from the Perspective of Urban and Rural Areas in {Bangladesh}},\n  author  = {Tanjil, Tokey Sifullah and Akter, Shahrina and Hafez, Md Golam},\n  journal = {AIUB Journal of Science and Engineering (AJSE)},\n  volume  = {25},\n  number  = {2},\n  pages   = {199--212},\n  year    = {2026},\n  doi     = {10.53799/4hgatn90}\n}'
+    },
     asr26: {
       text: 'Islam, M. A., Tanjil, T. S., & Hafez, M. G. (2026). Cylindrical and spherical propagation of ion-acoustic overtaking multi-wave structures in the upper ionosphere of Venus. Advances in Space Research. https://doi.org/10.1016/j.asr.2026.09.001',
       bib: '@article{islam2026cylindrical,\n  author  = {Islam, M. A. and Tanjil, T. S. and Hafez, M. G.},\n  title   = {Cylindrical and Spherical Propagation of Ion-Acoustic Overtaking Multi-Wave Structures in the Upper Ionosphere of {Venus}},\n  journal = {Advances in Space Research},\n  year    = {2026},\n  doi     = {10.1016/j.asr.2026.09.001}\n}'
