@@ -2,7 +2,7 @@
    Each wave is a KdV-type soliton, A sech^2(kappa (x - x(t))), with kappa = 0.35 sqrt(A) and
    speed 1 + A/6 (taller waves are narrower and faster). In the head-on (PLK) picture the waves
    pass through each other, keep their shapes, and each is delayed by a phase shift that grows
-   with the amplitude of the other wave. Illustration only; not fitted to a specific plasma. */
+   with the amplitude of the other wave. Both waves have the same amplitude. Illustration only; not fitted to a specific plasma. */
 (function () {
   'use strict';
 
@@ -23,7 +23,6 @@
   var X0 = -20, X1 = 20;          // plotted range of x
   var T0 = 0, T1 = 18;            // plotted range of t
   var UMAX = 8.4;                 // fixed vertical scale
-  var AL = 2.0;                   // amplitude of the left-moving wave
   var XR0 = -14, XL0 = 14;        // starting positions
   var BETA = 0.9, GAMMA = 1.4;    // phase-shift size and how quickly it builds up
   var PLAY_MS = 8000;
@@ -31,7 +30,7 @@
   var AMBER = '#f5b544', SKY = '#a8c8ff';
   var TEXT = '#b4c5e3', GRID = 'rgba(180,197,227,.22)', INK = '#f3f7fe';
 
-  var AR = parseFloat(slK.value);
+  var AR = parseFloat(slK.value), AL = AR;   // both waves have the same amplitude
   var t = parseFloat(slT.value);
   var playing = false, raf = 0, lastTs = 0, started = false;
   var dpr = 1, geo = {}, mapCanvas = null;
@@ -64,10 +63,8 @@
       : t > tc() + 1.2 ? 'After the collision both keep their shape and speed, but each is delayed.'
       : 'Collision: the waves overlap and the peak reaches ' + peak().toFixed(2) + '.';
     read.innerHTML = phase + ' ' +
-      '<span class="dot amber"></span><b>Right-moving</b>: amplitude ' + AR.toFixed(2) +
-      ', delayed by ' + dR().toFixed(2) + '. ' +
-      '<span class="dot sky" style="margin-left:.5em"></span><b>Left-moving</b>: amplitude ' + AL.toFixed(2) +
-      ', delayed by ' + dL().toFixed(2) + '.';
+      '<span class="dot amber"></span><b>Right-moving</b> and <span class="dot sky" style="margin-left:.2em"></span><b>left-moving</b>: amplitude ' + AR.toFixed(2) +
+      ' each; after the collision each is delayed by ' + dR().toFixed(2) + '.';
   }
 
   function size() {
@@ -232,7 +229,7 @@
 
   btn.addEventListener('click', function () { playing ? pause() : play(); });
   slT.addEventListener('input', function () { if (playing) pause(); t = parseFloat(slT.value); started = true; draw(); });
-  slK.addEventListener('input', function () { AR = parseFloat(slK.value); buildMap(); draw(); });
+  slK.addEventListener('input', function () { AR = AL = parseFloat(slK.value); buildMap(); draw(); });
 
   var dragging = false;
   function mapToT(ev) {

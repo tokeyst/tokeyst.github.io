@@ -34,7 +34,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261104b">
+<link rel="stylesheet" href="style.css?v=20261104c">
 
 <script type="application/ld+json">
 {
@@ -295,7 +295,7 @@
         <p class="sim-hint">Drag the slider to step through time.</p>
       </div>
 
-      <canvas id="sim-profile" role="img" aria-label="Plot of the wave height u against position x at the chosen time. Two solitary waves moving in opposite directions, one tall and one short, meet head-on, overlap and separate."></canvas>
+      <canvas id="sim-profile" role="img" aria-label="Plot of the wave height u against position x at the chosen time. Two equal solitary waves moving in opposite directions meet head-on, overlap and separate."></canvas>
       <canvas id="sim-map" role="img" aria-label="Space and time map of the same collision. Two bright ridges cross in an X, one for each soliton. The dashed lines show where each would travel without interacting."></canvas>
 
       <div class="sim-controls">
@@ -304,15 +304,15 @@
           <input id="sim-t" type="range" min="0" max="18" step="0.02" value="0">
           <output id="sim-tval" for="sim-t">t = 0.00</output>
         </label>
-        <label class="ctl wide">Amplitude of the right-moving soliton
-          <input id="sim-k2" type="range" min="2.5" max="6" step="0.05" value="4.5">
-          <output id="sim-amp" for="sim-k2">4.50</output>
+        <label class="ctl wide">Amplitude of both solitons
+          <input id="sim-k2" type="range" min="1.5" max="4" step="0.05" value="3">
+          <output id="sim-amp" for="sim-k2">3.00</output>
         </label>
       </div>
 
       <p class="sim-read" id="sim-read" aria-live="polite"></p>
 
-      <figcaption>Figure 1. Illustration of a head-on collision of two counter-propagating solitary waves, the setting of my current work on dust-acoustic waves. The waves pass through each other, keep their shapes, and each comes out slightly delayed (a phase shift). Lower map: position against time, time upward. Dashed lines show where each wave would be without the collision.</figcaption>
+      <figcaption>Figure 1. Illustration of a head-on collision of two equal-amplitude, counter-propagating solitary waves, the setting of my current work on dust-acoustic waves. The waves pass through each other, keep their shapes, and each comes out slightly delayed (a phase shift). Lower map: position against time, time upward. Dashed lines show where each wave would be without the collision.</figcaption>
       <noscript><p class="sim-noscript">This figure needs JavaScript to run.</p></noscript>
     </figure>
     <figure class="sim dark" id="epi">
@@ -476,7 +476,7 @@
               <p class="when">Oct 2026 &ndash; present</p>
               <h4>Adjunct Lecturer</h4>
               <p class="org">Department of Electronic and Telecommunication Engineering (ETE), International Islamic University Chittagong (IIUC)</p>
-              <p>I teach undergraduate mathematics courses: Mathematics-I (Differential and Integral Calculus) and Mathematics-III (Matrices, Linear Systems and Vector Analysis).</p>
+              <p>I teach B.Sc. Engineering mathematics courses.</p>
             </li>
             <li>
               <p class="when">Dec 2025 &ndash; present</p>
@@ -564,7 +564,7 @@
   </div>
 </section>
 
-<script src="app.js?v=20261104b" defer></script>
+<script src="app.js?v=20261104c" defer></script>
 <script data-goatcounter="https://tokeyst.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
