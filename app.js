@@ -1,7 +1,8 @@
-/* Interactive figure: two-soliton collision of the KdV equation
-   u_t + 6 u u_x + u_xxx = 0, with u = 2 (ln f)_xx and
-   f = 1 + e1 + e2 + A e1 e2,  e_i = exp(2 k_i (x - x0_i) - 8 k_i^3 t),
-   A = ((k2 - k1) / (k2 + k1))^2.  Soliton i has amplitude 2 k_i^2 and speed 4 k_i^2. */
+/* Interactive figure: head-on collision of two counter-propagating solitary waves.
+   Each wave is a KdV-type soliton, A sech^2(kappa (x - x(t))), with kappa = 0.35 sqrt(A) and
+   speed 1 + A/6 (taller waves are narrower and faster). In the head-on (PLK) picture the waves
+   pass through each other, keep their shapes, and each is delayed by a phase shift that grows
+   with the amplitude of the other wave. Illustration only; not fitted to a specific plasma. */
 (function () {
   'use strict';
 
@@ -19,50 +20,54 @@
   var ctxM = cvM.getContext('2d');
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var X0 = -12, X1 = 34;          // plotted range of x
-  var T0 = -0.6, T1 = 2.4;        // plotted range of t
-  var UMAX = 8.2;                 // fixed vertical scale
-  var K1 = 1.0, X01 = 3, X02 = -4;
-  var PLAY_MS = 7000;             // time for one full run
+  var X0 = -20, X1 = 20;          // plotted range of x
+  var T0 = 0, T1 = 18;            // plotted range of t
+  var UMAX = 8.4;                 // fixed vertical scale
+  var AL = 2.0;                   // amplitude of the left-moving wave
+  var XR0 = -14, XL0 = 14;        // starting positions
+  var BETA = 0.9, GAMMA = 1.4;    // phase-shift size and how quickly it builds up
+  var PLAY_MS = 8000;
 
   var AMBER = '#f5b544', SKY = '#a8c8ff';
   var TEXT = '#b4c5e3', GRID = 'rgba(180,197,227,.22)', INK = '#f3f7fe';
 
-  var k2 = parseFloat(slK.value);
+  var AR = parseFloat(slK.value);
   var t = parseFloat(slT.value);
   var playing = false, raf = 0, lastTs = 0, started = false;
   var dpr = 1, geo = {}, mapCanvas = null;
 
-  function A() { var r = (k2 - K1) / (k2 + K1); return r * r; }
-  function shiftL() { return -Math.log(A()); }
-
-  function u(x, tt) {
-    var q1 = 2 * K1, q2 = 2 * k2, a = A();
-    var e1 = Math.exp(q1 * (x - X01) - 8 * K1 * K1 * K1 * tt);
-    var e2 = Math.exp(q2 * (x - X02) - 8 * k2 * k2 * k2 * tt);
-    var e12 = a * e1 * e2;
-    var f = 1 + e1 + e2 + e12;
-    var fx = q1 * e1 + q2 * e2 + (q1 + q2) * e12;
-    var fxx = q1 * q1 * e1 + q2 * q2 * e2 + (q1 + q2) * (q1 + q2) * e12;
-    return 2 * (f * fxx - fx * fx) / (f * f);
-  }
+  function kap(a) { return 0.35 * Math.sqrt(a); }
+  function vR() { return 1 + AR / 6; }
+  function vL() { return -(1 + AL / 6); }
+  function tc() { return (XL0 - XR0) / (vR() - vL()); }         // time the free paths cross
+  function dR() { return BETA * Math.sqrt(AL); }                // delay of the right-moving wave
+  function dL() { return BETA * Math.sqrt(AR); }                // delay of the left-moving wave
+  function S(tt) { return 0.5 * (1 + Math.tanh(GAMMA * (tt - tc()))); }
   function sech2(z) { var c = Math.cosh(z); return 1 / (c * c); }
 
-  // centers of the two solitons if they did not interact (initial asymptotes)
-  function freeShort(tt) { return X01 + shiftL() / (2 * K1) + 4 * K1 * K1 * tt; }
-  function freeTall(tt)  { return X02 + 4 * k2 * k2 * tt; }
+  function freeR(tt) { return XR0 + vR() * tt; }
+  function freeL(tt) { return XL0 + vL() * tt; }
+  function posR(tt) { return freeR(tt) - dR() * S(tt); }
+  function posL(tt) { return freeL(tt) + dL() * S(tt); }
+
+  function u(x, tt) {
+    return AR * sech2(kap(AR) * (x - posR(tt))) + AL * sech2(kap(AL) * (x - posL(tt)));
+  }
 
   function fmtT(v) { return (v < 0 ? '−' : '') + Math.abs(v).toFixed(2); }
+  function peak() { var m = 0; for (var x = X0; x <= X1; x += 0.05) m = Math.max(m, u(x, t)); return m; }
 
   function updateText() {
     outT.textContent = 't = ' + fmtT(t);
-    outA.textContent = (2 * k2 * k2).toFixed(2);
-    var L = shiftL();
-    read.innerHTML =
-      '<span class="dot amber"></span><b>Taller</b>: amplitude ' + (2 * k2 * k2).toFixed(2) +
-      ', ends ' + (L / (2 * k2)).toFixed(2) + ' ahead of its dashed line. ' +
-      '<span class="dot sky" style="margin-left:.5em"></span><b>Shorter</b>: amplitude ' + (2 * K1 * K1).toFixed(2) +
-      ', ends ' + (L / (2 * K1)).toFixed(2) + ' behind.';
+    outA.textContent = AR.toFixed(2);
+    var phase = t < tc() - 1.2 ? 'The two waves travel towards each other.'
+      : t > tc() + 1.2 ? 'After the collision both keep their shape and speed, but each is delayed.'
+      : 'Collision: the waves overlap and the peak reaches ' + peak().toFixed(2) + '.';
+    read.innerHTML = phase + ' ' +
+      '<span class="dot amber"></span><b>Right-moving</b>: amplitude ' + AR.toFixed(2) +
+      ', delayed by ' + dR().toFixed(2) + '. ' +
+      '<span class="dot sky" style="margin-left:.5em"></span><b>Left-moving</b>: amplitude ' + AL.toFixed(2) +
+      ', delayed by ' + dL().toFixed(2) + '.';
   }
 
   function size() {
@@ -108,11 +113,10 @@
     var pt = 14, pb = 26, ph = h - pt - pb;
     var sy = function (v) { return pt + ph - (v / UMAX) * ph; };
 
-    // baseline, x ticks
     c.strokeStyle = GRID; c.lineWidth = 1; c.fillStyle = TEXT;
     c.font = '12px "Source Sans 3", system-ui, sans-serif';
     c.textAlign = 'center';
-    for (var xv = -10; xv <= 30; xv += 10) {
+    for (var xv = -20; xv < 20; xv += 10) {
       var px = sx(xv, w);
       c.beginPath(); c.moveTo(px, pt); c.lineTo(px, pt + ph); c.stroke();
       c.fillText(String(xv).replace('-', '−'), px, h - 8);
@@ -126,11 +130,11 @@
       c.beginPath(); c.moveTo(geo.pl, sy(yv)); c.lineTo(w - geo.pr, sy(yv)); c.stroke();
     }
 
-    // dashed free solitons
-    function free(center, amp, kk, color) {
+    // dashed: each wave on its own, without the collision
+    function free(center, amp, color) {
       c.save(); c.setLineDash([5, 5]); c.strokeStyle = color; c.lineWidth = 1.4; c.globalAlpha = .85;
       c.beginPath();
-      var n = 160;
+      var n = 200, kk = kap(amp);
       for (var i = 0; i <= n; i++) {
         var x = X0 + (X1 - X0) * i / n;
         var y = sy(amp * sech2(kk * (x - center)));
@@ -138,11 +142,21 @@
       }
       c.stroke(); c.restore();
     }
-    free(freeShort(t), 2 * K1 * K1, K1, SKY);
-    free(freeTall(t), 2 * k2 * k2, k2, AMBER);
+    free(freeR(t), AR, AMBER);
+    free(freeL(t), AL, SKY);
+
+    // direction arrows above each wave
+    function arrow(x, amp, dir, color) {
+      if (x < X0 + 1 || x > X1 - 1) return;
+      var X = sx(x, w), Y = sy(amp) - 10;
+      c.save(); c.strokeStyle = color; c.fillStyle = color; c.lineWidth = 1.6;
+      c.beginPath(); c.moveTo(X - 9 * dir, Y); c.lineTo(X + 7 * dir, Y); c.stroke();
+      c.beginPath(); c.moveTo(X + 11 * dir, Y); c.lineTo(X + 5 * dir, Y - 4); c.lineTo(X + 5 * dir, Y + 4); c.closePath(); c.fill();
+      c.restore();
+    }
 
     // actual profile
-    var n = Math.max(120, Math.round((w - geo.pl - geo.pr) / 1.5));
+    var n = Math.max(160, Math.round((w - geo.pl - geo.pr) / 1.5));
     var grad = c.createLinearGradient(0, pt, 0, pt + ph);
     grad.addColorStop(0, 'rgba(243,247,254,.28)'); grad.addColorStop(1, 'rgba(243,247,254,0)');
     c.beginPath();
@@ -160,6 +174,11 @@
       if (j === 0) c.moveTo(sx(xx, w), yy); else c.lineTo(sx(xx, w), yy);
     }
     c.strokeStyle = INK; c.lineWidth = 2.2; c.lineJoin = 'round'; c.stroke();
+
+    if (Math.abs(t - tc()) > 1.6) {
+      arrow(posR(t), AR, 1, AMBER);
+      arrow(posL(t), AL, -1, SKY);
+    }
   }
 
   function drawMap() {
@@ -171,7 +190,6 @@
     c.drawImage(mapCanvas, geo.pl, pt, pw, ph);
     var ty = function (tt) { return pt + ph - (tt - T0) / (T1 - T0) * ph; };
 
-    // dashed straight trajectories of the free solitons
     function line(fn, color) {
       c.save();
       c.beginPath(); c.rect(geo.pl, pt, pw, ph); c.clip();
@@ -180,10 +198,9 @@
       c.moveTo(sx(fn(T0), w), ty(T0)); c.lineTo(sx(fn(T1), w), ty(T1));
       c.stroke(); c.restore();
     }
-    line(freeShort, SKY);
-    line(freeTall, AMBER);
+    line(freeR, AMBER);
+    line(freeL, SKY);
 
-    // time marker
     var y = ty(t);
     c.strokeStyle = '#fff'; c.lineWidth = 1.6;
     c.beginPath(); c.moveTo(geo.pl, y); c.lineTo(w - geo.pr, y); c.stroke();
@@ -215,9 +232,8 @@
 
   btn.addEventListener('click', function () { playing ? pause() : play(); });
   slT.addEventListener('input', function () { if (playing) pause(); t = parseFloat(slT.value); started = true; draw(); });
-  slK.addEventListener('input', function () { k2 = parseFloat(slK.value); buildMap(); draw(); });
+  slK.addEventListener('input', function () { AR = parseFloat(slK.value); buildMap(); draw(); });
 
-  // dragging on the map also moves time
   var dragging = false;
   function mapToT(ev) {
     var r = cvM.getBoundingClientRect();
@@ -239,10 +255,7 @@
 
   size();
   if (reduce) {
-    // no automatic motion: show the moment of closest approach
-    t = (X01 - X02) / (4 * (k2 * k2 - K1 * K1));
-    slT.value = String(t);
-    draw();
+    t = tc(); slT.value = String(t); draw();
   } else {
     draw();
     var go = function () { if (!started) play(); };
